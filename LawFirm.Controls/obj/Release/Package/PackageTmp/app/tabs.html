@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Tabs</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:400,700,400italic,700italic%7CSource+Sans+Pro:300,300italic,400,400italic,700,900%7CMerriweather:700italic">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <!-- Page-->
+    <div class="page">
+      <header class="page-head">
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-default" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="53px" data-xl-stick-up-offset="53px" data-xxl-stick-up-offset="53px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-inner">
+              <div class="rd-navbar-aside-wrap">
+                <div class="rd-navbar-aside">
+                  <div class="rd-navbar-aside-toggle" data-rd-navbar-toggle=".rd-navbar-aside"><span></span></div>
+                  <div class="rd-navbar-aside-content">
+                    <ul class="rd-navbar-aside-group list-units">
+                      <li>
+                        <div class="unit unit-horizontal unit-spacing-xs align-items-center">
+                          <div class="unit-left unit-left-icon"><span class="novi-icon icon icon-xxs icon-secondary material-icons-phone"></span></div>
+                          <div class="unit-body"><a class="link-dusty-gray" href="tel:#">+1 (232) 349–8447</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit unit-horizontal unit-spacing-xs align-items-center">
+                          <div class="unit-left unit-left-icon"><span class="novi-icon icon icon-xxs icon-secondary fa-envelope-o"></span></div>
+                          <div class="unit-body"><a class="link-dusty-gray" href="mailto:#">info@demolink.org</a></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="rd-navbar-aside-group">
+                      <ul class="list-inline list-inline-reset">
+                        <li><a class="novi-icon icon icon-black icon-xxs-smaller fa fa-facebook" href="#"></a></li>
+                        <li><a class="novi-icon icon icon-black icon-xxs-smaller fa fa-twitter" href="#"></a></li>
+                        <li><a class="novi-icon icon icon-black icon-xxs-smaller fa fa-google-plus" href="#"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="rd-navbar-search">
+                  <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live" data-search-live-count="6">
+                    <div class="form-wrap">
+                      <label class="form-label" for="rd-search-form-input">Search...</label>
+                      <input class="form-input form-control" id="rd-search-form-input" type="text" name="s" autocomplete="off">
+                    </div>
+                    <button class="rd-search-submit" type="submit"></button>
+                  </form>
+                  <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                  <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search"></button>
+                </div>
+              </div>
+              <div class="rd-navbar-group">
+                <div class="rd-navbar-panel">
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button><a class="rd-navbar-brand brand" href="index.html"><img src="images/logo-default-155x32.png" alt="" width="155" height="32"/></a>
+                </div>
+                <div class="rd-navbar-nav-wrap">
+                  <div class="rd-navbar-nav-inner">
+                    <div class="rd-navbar-btn-wrap"><a class="button button-smaller button-primary-outline" href="appointment.html">Appointment</a></div>
+                    <ul class="rd-navbar-nav">
+                      <li><a href="index.html">Home</a>
+                      </li>
+                      <li><a href="about-us.html">About Us</a>
+                      </li>
+                      <li><a href="services.html">Services</a>
+                      </li>
+                      <li><a href="#">Cases</a>
+                        <ul class="rd-navbar-dropdown">
+                          <li><a href="gallery-grid.html">Gallery grid</a>
+                          </li>
+                          <li><a href="gallery-masonry.html">Gallery masonry</a>
+                          </li>
+                          <li><a href="gallery-cobbles.html">Gallery cobbles</a>
+                          </li>
+                          <li><a href="gallery-item.html">Gallery item</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Blog</a>
+                        <ul class="rd-navbar-dropdown">
+                          <li><a href="blog-classic.html">Blog classic</a>
+                          </li>
+                          <li><a href="blog-grid.html">Blog grid</a>
+                          </li>
+                          <li><a href="blog-line.html">Blog line</a>
+                          </li>
+                          <li><a href="blog-masonry.html">Blog masonry</a>
+                          </li>
+                          <li><a href="blog-post.html">Blog post</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="active"><a href="#">Pages</a>
+                        <ul class="rd-navbar-megamenu">
+                          <li>
+                            <h5 class="rd-megamenu-header">Cases</h5>
+                            <ul class="rd-navbar-list">
+                              <li><a href="gallery-grid.html">Gallery grid</a></li>
+                              <li><a href="gallery-masonry.html">Gallery masonry</a></li>
+                              <li><a href="gallery-cobbles.html">Gallery cobbles</a></li>
+                              <li><a href="gallery-item.html">Gallery item</a></li>
+                            </ul>
+                            <h5 class="rd-megamenu-header">Pages</h5>
+                            <ul class="rd-navbar-list">
+                              <li><a href="about-us.html">About us</a></li>
+                              <li><a href="services.html">Services</a></li>
+                              <li><a href="extras.html">Extras</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h5 class="rd-megamenu-header">Pages</h5>
+                            <ul class="rd-navbar-list">
+                              <li><a href="appointment.html">Appointment</a></li>
+                              <li><a href="clients.html">Clients</a></li>
+                              <li><a href="clients-testimonials.html">Clients testimonials</a></li>
+                              <li><a href="our-team.html">Our team</a></li>
+                              <li><a href="team-member-profile.html">Team member profile</a></li>
+                              <li><a href="careers.html">Careers</a></li>
+                              <li><a href="pricing.html">Pricing</a></li>
+                              <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h5 class="rd-megamenu-header">Extras</h5>
+                            <ul class="rd-navbar-list">
+                              <li><a href="404-page.html">404 page</a></li>
+                              <li><a href="503-page.html">503 page</a></li>
+                              <li><a href="maintenance.html">Maintenance</a></li>
+                              <li><a href="coming-soon.html">Coming soon</a></li>
+                              <li><a href="login.html">Login</a></li>
+                              <li><a href="register.html">Register</a></li>
+                              <li><a href="search-results.html">Search results</a></li>
+                              <li><a href="privacy-policy.html">Privacy policy</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h5 class="rd-megamenu-header">Components</h5>
+                            <ul class="rd-navbar-list">
+                              <li><a href="accordion.html">Accordion</a></li>
+                              <li><a href="buttons.html">Buttons</a></li>
+                              <li><a href="grid.html">Grid</a></li>
+                              <li><a href="forms.html">Forms</a></li>
+                              <li><a href="icons.html">Icons</a></li>
+                              <li><a href="icon-lists.html">Icon lists</a></li>
+                              <li><a href="progress-bars.html">Progress bars</a></li>
+                              <li><a href="tabs.html">Tabs</a></li>
+                              <li><a href="table-styles.html">Table styles</a></li>
+                              <li><a href="typography.html">Typography</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="contact-us.html">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <section class="section-30 section-md-40 section-lg-66 section-xl-bottom-90 bg-gray-dark page-title-wrap" style="background-image: url(images/bg-image-1.jpg);">
+        <div class="container">
+          <div class="page-title">
+            <h2>Tabs</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-top-60 section-md-top-90">
+        <div class="container">
+          <h3 class="text-center">Horizontal Tabs</h3>
+          <div class="row justify-content-md-center">
+            <div class="col-xl-10">
+              <div class="tabs-custom tabs-horizontal tabs-corporate" id="tabs-1">
+                <ul class="nav nav-tabs">
+                  <li><a class="active" href="#tabs-1-1" data-toggle="tab">Tab 1</a></li>
+                  <li><a href="#tabs-1-2" data-toggle="tab">Tab 2</a></li>
+                  <li><a href="#tabs-1-3" data-toggle="tab">Tab 3</a></li>
+                  <li><a href="#tabs-1-4" data-toggle="tab">Tab 4</a></li>
+                  <li><a href="#tabs-1-5" data-toggle="tab">Tab 5</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-1-1">
+                    <p>Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients.</p>
+                    <p>Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-1-2">
+                    <p>Duis molestie eros est, id porttitor eros facilisis eu. Donec eget viverra tortor. Fusce mollis viverra felis, id convallis ante mattis sed. Proin posuere maximus cursus. Sed nulla mi, elementum at bibendum sed, tempus eget lacus. Vivamus pharetra tempor quam, sit amet faucibus quam iaculis quis. Aenean lacus purus, porta in est a, rutrum venenatis nunc. Sed mattis facilisis lectus, quis fermentum erat commodo eu. Nunc leo sem, lacinia at quam vel, pharetra tristique metus. </p>
+                    <p>Mauris vel sodales risus. Nam vel purus justo. Duis posuere nibh massa, sit amet laoreet urna sollicitudin non. Aliquam ut elit vitae nunc convallis malesuada. Cras ac nisl ac est mattis varius ut non lorem. Etiam finibus at tortor ut tincidunt. Integer sodales sem mauris, nec feugiat enim volutpat ut.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-1-3">
+                    <p>Vivamus nec facilisis eros. Nulla pretium placerat tortor, nec ultricies quam gravida eget. Phasellus urna dolor, scelerisque nec mi vitae, facilisis ullamcorper mauris. Ut sit amet auctor ante. Quisque aliquam sodales vestibulum. Morbi lacus purus, luctus ut metus ac, accumsan ornare tortor. Nam condimentum ultrices tristique. Ut tempus tortor a auctor porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vitae lacus massa.</p>
+                    <p>Suspendisse ornare justo id libero volutpat vehicula. Etiam vestibulum aliquet lacus id euismod. Nullam nec sapien turpis. Cras egestas felis nec lobortis aliquet. Integer tincidunt leo porta erat viverra, sed vulputate nibh maximus. Curabitur fringilla ultrices libero maximus scelerisque. Donec in hendrerit tortor. Vivamus consectetur, lorem nec aliquet tempus, libero metus sollicitudin turpis, ut finibus risus sapien ut metus.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-1-4">
+                    <p>Praesent maximus tristique eros quis rutrum. Donec vitae aliquet tellus. In eu dui viverra, convallis nibh a, varius justo. Suspendisse tempus fringilla purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vulputate tempus hendrerit. Fusce id nisl at massa pulvinar tincidunt. Nam tristique vehicula nisi, non varius metus imperdiet elementum. Vestibulum ullamcorper efficitur lacus nec finibus. </p>
+                    <p>Praesent lacinia eros eget magna convallis tincidunt. Mauris vel mi ut diam eleifend placerat in et leo. In euismod purus vitae odio tempus consequat. Nam posuere, arcu at bibendum dignissim, felis justo efficitur dolor, id fermentum elit dui ut quam. Integer lobortis, tortor tristique dignissim aliquam, turpis metus ullamcorper ligula, sed pharetra eros neque vitae purus. Suspendisse porta luctus blandit.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-1-5">
+                    <p>Phasellus rutrum felis mi, ut accumsan tellus gravida a. Aliquam laoreet quam condimentum erat varius, tincidunt tincidunt neque bibendum. Duis nec dolor justo. In et nisi suscipit mauris aliquet dictum nec laoreet mi. In ut interdum erat, nec vestibulum nisl.</p>
+                    <p>Pellentesque fringilla mi purus, vitae mollis velit fermentum ac. Curabitur quis augue a nisi scelerisque rutrum quis eget nisi. Mauris enim odio, egestas quis bibendum a, semper et est. Nulla facilisis vulputate elit ut eleifend. Suspendisse lacus turpis, dictum ut vehicula eu, porttitor a lorem. Pellentesque faucibus sagittis ante, vitae volutpat justo aliquet vel. Integer laoreet iaculis efficitur. Suspendisse lacinia neque nisl, in sagittis metus mattis non. Nam massa sapien, tristique ac iaculis eget, lacinia ac est. Nulla maximus ullamcorper sapien nec convallis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-top-60 section-md-top-90">
+        <div class="container">
+          <h3 class="text-center">Vertical Tabs</h3>
+          <div class="row justify-content-md-center">
+            <div class="col-xl-10">
+              <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-2">
+                <ul class="nav nav-tabs">
+                  <li><a class="active" href="#tabs-2-1" data-toggle="tab">Tab 1</a></li>
+                  <li><a href="#tabs-2-2" data-toggle="tab">Tab 2</a></li>
+                  <li><a href="#tabs-2-3" data-toggle="tab">Tab 3</a></li>
+                  <li><a href="#tabs-2-4" data-toggle="tab">Tab 4</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-2-1">
+                    <p>Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships.</p>
+                    <p>In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-2-2">
+                    <p>Phasellus rutrum felis mi, ut accumsan tellus gravida a. Aliquam laoreet quam condimentum erat varius, tincidunt tincidunt neque bibendum. Duis nec dolor justo. In et nisi suscipit mauris aliquet dictum nec laoreet mi. In ut interdum erat, nec vestibulum nisl.</p>
+                    <p>Pellentesque fringilla mi purus, vitae mollis velit fermentum ac. Curabitur quis augue a nisi scelerisque rutrum quis eget nisi. Mauris enim odio, egestas quis bibendum a, semper et est. Nulla facilisis vulputate elit ut eleifend. Suspendisse lacus turpis, dictum ut vehicula eu, porttitor a lorem. Pellentesque faucibus sagittis ante, vitae volutpat justo aliquet vel. Integer laoreet iaculis efficitur. Suspendisse lacinia neque nisl, in sagittis metus mattis non. Nam massa sapien, tristique ac iaculis eget, lacinia ac est. Nulla maximus ullamcorper sapien nec convallis.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-2-3">
+                    <p>Vivamus nec facilisis eros. Nulla pretium placerat tortor, nec ultricies quam gravida eget. Phasellus urna dolor, scelerisque nec mi vitae, facilisis ullamcorper mauris. Ut sit amet auctor ante. Quisque aliquam sodales vestibulum. Morbi lacus purus, luctus ut metus ac, accumsan ornare tortor. Nam condimentum ultrices tristique. Ut tempus tortor a auctor porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vitae lacus massa.</p>
+                    <p>Suspendisse ornare justo id libero volutpat vehicula. Etiam vestibulum aliquet lacus id euismod. Nullam nec sapien turpis. Cras egestas felis nec lobortis aliquet. Integer tincidunt leo porta erat viverra, sed vulputate nibh maximus. Curabitur fringilla ultrices libero maximus scelerisque. Donec in hendrerit tortor. Vivamus consectetur, lorem nec aliquet tempus, libero metus sollicitudin turpis, ut finibus risus sapien ut metus.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-2-4">
+                    <p>Etiam maximus tortor sapien, quis condimentum quam faucibus in. Nullam sapien neque, vehicula quis lorem et, eleifend vehicula justo. Sed hendrerit leo sed tortor efficitur venenatis. Pellentesque quis leo quis orci tristique imperdiet vel et lorem. Quisque lacinia magna eleifend nisi tristique venenatis. Curabitur condimentum ligula hendrerit semper feugiat. Ut arcu lectus, aliquam at ultrices non, euismod a orci. Nulla volutpat purus justo, nec congue nulla sollicitudin placerat. Quisque sit amet gravida ligula.</p>
+                    <p>Vestibulum varius tristique scelerisque. Morbi viverra congue mollis. Praesent purus diam, porttitor at purus eu, venenatis maximus erat. Aenean consectetur libero nibh, ut scelerisque velit sollicitudin eu. Vestibulum mattis justo ac consectetur placerat. Vivamus vitae nisi convallis, vulputate tortor eget, dictum lorem. Vivamus ut facilisis lectus. Proin quis nisi dui. Phasellus elementum tortor eget eleifend laoreet. Phasellus turpis lectus, posuere vel nunc nec, efficitur consectetur tellus.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-top-60 section-md-top-90">
+        <div class="container">
+          <h3 class="text-center">Tabs Line</h3>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8 col-xl-6">
+              <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-3">
+                <ul class="nav nav-tabs">
+                  <li><a class="active" href="#tabs-3-1" data-toggle="tab">Tab 1</a></li>
+                  <li><a href="#tabs-3-2" data-toggle="tab">Tab 2</a></li>
+                  <li><a href="#tabs-3-3" data-toggle="tab">Tab 3</a></li>
+                  <li><a href="#tabs-3-4" data-toggle="tab">Tab 4</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-3-1">
+                    <p>Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-3-2">
+                    <p>Quisque viverra massa in dui elementum, in mattis purus laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin interdum suscipit mi, vitae cursus metus fringilla sit amet. Nullam est urna, luctus eget metus id, suscipit dictum neque. Quisque pellentesque sagittis odio, id ullamcorper risus. Donec semper venenatis lacus non sodales. Nullam libero velit, tristique non est id, ornare fringilla ipsum. In in euismod risus. Nulla quis nulla vitae augue efficitur efficitur sit amet et mi. Duis tincidunt vehicula dolor a imperdiet. Aliquam quis bibendum lacus. Aliquam eget odio vitae nulla laoreet dapibus.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-3-3">
+                    <p>Curabitur dolor ligula, faucibus eu ex ac, semper sagittis massa. Nunc sagittis fringilla sem, sit amet sagittis elit mollis at. Cras porttitor aliquet augue non tincidunt. Fusce eu hendrerit neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia fringilla neque a euismod. Etiam ornare scelerisque ligula, quis pulvinar ipsum tincidunt et. Suspendisse ante turpis, blandit sit amet ante venenatis, elementum pretium diam. Cras tincidunt justo nec neque consequat, ut pellentesque libero vehicula. Ut pretium maximus enim, non dictum metus pulvinar non. Aliquam id nisl et ante tempus lacinia in vel mauris.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-3-4">
+                    <p>Donec quis lacus ut nunc vulputate condimentum. Aliquam porta, metus eget mattis vehicula, mauris sapien commodo eros, in suscipit augue magna hendrerit nulla. Duis tortor odio, elementum ultrices eros mattis, accumsan bibendum ex. Donec lobortis nulla at dapibus posuere. Donec posuere, metus vel consectetur iaculis, enim ligula faucibus dui, eu pretium libero nisl eu dui. Donec tristique eu erat eu fermentum. Sed eleifend sagittis sapien, eu molestie ante. Phasellus sodales diam vel ligula pharetra mollis. In molestie sit amet ex eleifend semper. Aliquam erat volutpat. Vivamus scelerisque pretium sem. Fusce consectetur dictum magna, a pulvinar diam finibus id. Cras vestibulum semper mauris ut porttitor.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-60 section-md-90 section-xl-bottom-120">
+        <div class="container">
+          <h3 class="text-center">Tabs Gallery</h3>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8 col-xl-6">
+              <div class="tabs-custom tabs-horizontal tabs-minimal" id="tabs-4">
+                <ul class="nav nav-tabs justify-content-center text-center">
+                  <li><a class="active" href="#tabs-4-1" data-toggle="tab">Tab 1</a></li>
+                  <li><a href="#tabs-4-2" data-toggle="tab">Tab 2</a></li>
+                  <li><a href="#tabs-4-3" data-toggle="tab">Tab 3</a></li>
+                  <li><a href="#tabs-4-4" data-toggle="tab">Tab 4</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-4-1">
+                    <p>Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-4-2">
+                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin pretium aliquet neque, fermentum sagittis neque porta in. Duis mattis commodo libero, ac ultrices arcu auctor a. Maecenas pulvinar lorem vel dolor pellentesque, a feugiat est rhoncus. Praesent tincidunt leo a varius dapibus. Etiam venenatis, nisl eget auctor interdum, nisi justo posuere nunc, et congue nibh elit sed purus. Aenean sed ligula interdum, sagittis mi non, consectetur metus. In vehicula at ipsum sollicitudin laoreet. Nullam eget volutpat arcu, sed suscipit elit.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-4-3">
+                    <p>Nunc vel sagittis sapien, sed tincidunt urna. Sed dapibus, massa quis gravida sollicitudin, augue dolor pharetra nulla, vel faucibus lacus nibh nec purus. Maecenas a mauris mauris. Vivamus laoreet metus quis magna gravida rutrum. Duis lacinia leo vitae dictum ullamcorper. Praesent mollis nisl eget ante mattis facilisis. Donec laoreet, arcu vel venenatis vehicula, magna eros pharetra eros, eget efficitur eros tortor id felis. Maecenas dignissim mi ante, quis ultrices ipsum sodales a. Nullam ut nisi in sem porta volutpat. Fusce consectetur lorem nec gravida ultrices. Etiam fringilla aliquet congue. Nulla vel vestibulum quam. Vivamus condimentum blandit velit vitae fermentum. Nunc placerat eget erat vitae eleifend. Curabitur tincidunt blandit justo.</p>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-4-4">
+                    <p>Ut imperdiet ultricies velit, ut scelerisque dolor hendrerit ac. Donec et euismod risus, nec egestas purus. Duis vulputate diam quis tempus lobortis. Ut porttitor convallis neque. Fusce convallis tortor augue, eget mollis augue cursus eu. Sed augue justo, scelerisque at tortor eget, egestas ornare sapien. Vivamus congue, tellus eu suscipit pretium, enim mi varius sem, egestas tempor turpis metus at magna. Nulla aliquam mi dolor, nec malesuada orci porttitor vitae. Ut eu dolor tincidunt, semper augue in, consectetur mi. Integer sed arcu sodales, vehicula quam nec, fermentum neque. Suspendisse ornare nulla sed imperdiet hendrerit. Aliquam tincidunt pretium lacus, at finibus nibh eleifend in.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-foot context-dark">
+        <div class="section-40 section-md-75">
+          <div class="container">
+            <div class="row justify-content-sm-center">
+              <div class="col-sm-9 col-md-11 col-xl-12">
+                <div class="row row-50">
+                  <div class="col-md-6 col-lg-10 col-xl-3">
+                    <div class="inset-xl-right-20" style="max-width: 510px;"><a class="brand" href="index.html"><img src="images/logo-inverse-155x32.png" alt="" width="155" height="32"/></a>
+                      <p>
+                        If you or your business is facing a legal
+                        challenge that calls for sound advice and skilled representation, contact us today to arrange a free  consultation with an attorney.
+                      </p><a class="link link-group link-group-animated link-bold" href="appointment.html"><span>Free Consultation</span><span class="novi-icon icon icon-xxs icon-primary fa fa-angle-right"></span></a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-4">
+                    <p class="h7">Quick links</p>
+                    <div class="row">
+                      <div class="col-6">
+                        <ul class="list-marked-variant-2">                   
+                          <li><a href="#">Family Law</a></li>
+                          <li><a href="#">Starting a Business</a></li>
+                          <li><a href="#">Business Contracts</a></li>
+                          <li><a href="#">Wills & Trusts</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="list-marked-variant-2">
+                          <li><a href="#">Criminal Law</a></li>
+                          <li><a href="#">Employment Law</a></li>
+                          <li><a href="#">Personal Injuries</a></li>
+                          <li><a href="#">Real Estate Law  </a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-2">
+                    <p class="h7">Contact us </p>
+                    <address class="contact-info text-left">
+                      <div class="unit unit-horizontal unit-spacing-sm align-items-center">
+                        <div class="unit-left"><span class="novi-icon icon icon-xs icon-storm-gray material-icons-phone"></span></div>
+                        <div class="unit-body"><a class="link-white" href="tel:#">+123 234 984 47 45</a></div>
+                      </div>
+                      <div class="unit unit-horizontal unit-spacing-sm align-items-center">
+                        <div class="unit-left"><span class="novi-icon icon icon-xs icon-storm-gray fa fa-envelope-o"></span></div>
+                        <div class="unit-body"><a class="link-white" href="mailto:#">info@demolink.org</a></div>
+                      </div>
+                      <div class="unit unit-horizontal unit-spacing-sm">
+                        <div class="unit-left"><span class="novi-icon icon icon-xs icon-storm-gray material-icons-place"></span></div>
+                        <div class="unit-body"><a class="link-white d-inline" href="#">
+                            6036 Richmond hwy,
+                            Alexandria, VA USA 22303</a></div>
+                      </div>
+                    </address>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <p class="h7">Recent Posts</p>
+                          <article class="post post-preview post-preview-inverse"><a href="blog-post.html">
+                              <div class="unit unit-horizontal unit-spacing-lg">
+                                <div class="unit-left">
+                                  <figure class="post-image"><img src="images/post-preview-4-70x70.jpg" alt="" width="70" height="70"/>
+                                  </figure>
+                                </div>
+                                <div class="unit-body">
+                                  <div class="post-header">
+                                    <p>Help Us Make the Law Accessible for Everyone</p>
+                                  </div>
+                                  <div class="post-meta">
+                                    <ul class="list-meta">
+                                      <li>
+                                        <time datetime="2017-06-23">June 23, 2017 </time>
+                                      </li>
+                                      <li>3 Comments</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div></a></article>
+                          <article class="post post-preview post-preview-inverse"><a href="blog-post.html">
+                              <div class="unit unit-horizontal unit-spacing-lg">
+                                <div class="unit-left">
+                                  <figure class="post-image"><img src="images/post-preview-5-70x70.jpg" alt="" width="70" height="70"/>
+                                  </figure>
+                                </div>
+                                <div class="unit-body">
+                                  <div class="post-header">
+                                    <p>Legal Documents Every Landlord Needs </p>
+                                  </div>
+                                  <div class="post-meta">
+                                    <ul class="list-meta">
+                                      <li>
+                                        <time datetime="2017-06-23">June 20, 2017</time>
+                                      </li>
+                                      <li>3 Comments</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div></a></article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <hr>
+        </div>
+        <div class="section-35">
+          <div class="container text-center">
+            <div class="row row-15 flex-md-row-reverse justify-content-md-between align-items-md-center">
+              <div class="col-md-6 text-md-right">
+                <div class="group-sm group-middle">
+                  <p class="font-italic text-white">Follow Us:</p>
+                  <ul class="list-inline list-inline-reset">
+                    <li><a class="novi-icon icon icon-default icon-xxs-smaller fa fa-facebook" href="#"></a></li>
+                    <li><a class="novi-icon icon icon-default icon-xxs-smaller fa fa-twitter" href="#"></a></li>
+                    <li><a class="novi-icon icon icon-default icon-xxs-smaller fa fa-google-plus" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 text-md-left">
+                <p class="rights"><span class="copyright-year"></span><span>&nbsp;&#169;&nbsp;</span><span>LawFirm.&nbsp;</span><a class="link-white-v2" href="privacy-policy.html">Privacy Policy</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <div class="page-loader page-loader-variant-1">
+      <div><a class="brand" href="index.html"><img src="images/logo-default-155x32.png" alt="" width="155" height="32"/></a>
+        <div class="page-loader-body">
+          <div id="spinningSquaresG">
+            <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_2"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_3"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_4"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_5"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_7"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

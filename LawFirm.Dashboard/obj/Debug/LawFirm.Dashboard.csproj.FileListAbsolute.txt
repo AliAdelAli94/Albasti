@@ -1,0 +1,6 @@
+F:\Git\proj\df\LawFirm.Dashboard\bin\LawFirm.Dashboard.dll.config
+F:\Git\proj\df\LawFirm.Dashboard\bin\LawFirm.Dashboard.dll
+F:\Git\proj\df\LawFirm.Dashboard\bin\LawFirm.Dashboard.pdb
+F:\Git\proj\df\LawFirm.Dashboard\obj\Debug\LawFirm.Dashboard.csprojResolveAssemblyReference.cache
+F:\Git\proj\df\LawFirm.Dashboard\obj\Debug\LawFirm.Dashboard.dll
+F:\Git\proj\df\LawFirm.Dashboard\obj\Debug\LawFirm.Dashboard.pdb

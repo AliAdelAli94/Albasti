@@ -1,0 +1,16 @@
+D:\hf\df\df\LawFirm.DAL\bin\Debug\LawFirm.DAL.dll.config
+D:\hf\df\df\LawFirm.DAL\bin\Debug\LawFirm.DAL.dll
+D:\hf\df\df\LawFirm.DAL\bin\Debug\LawFirm.DAL.pdb
+D:\hf\df\df\LawFirm.DAL\bin\Debug\EntityFramework.dll
+D:\hf\df\df\LawFirm.DAL\bin\Debug\EntityFramework.xml
+D:\hf\df\df\LawFirm.DAL\obj\Debug\LawFirm.DAL.csprojResolveAssemblyReference.cache
+D:\hf\df\df\LawFirm.DAL\obj\Debug\LawFirm.DAL.dll
+D:\hf\df\df\LawFirm.DAL\obj\Debug\LawFirm.DAL.pdb
+F:\Git\proj\df\LawFirm.DAL\bin\Debug\LawFirm.DAL.dll.config
+F:\Git\proj\df\LawFirm.DAL\bin\Debug\LawFirm.DAL.dll
+F:\Git\proj\df\LawFirm.DAL\bin\Debug\LawFirm.DAL.pdb
+F:\Git\proj\df\LawFirm.DAL\bin\Debug\EntityFramework.dll
+F:\Git\proj\df\LawFirm.DAL\bin\Debug\EntityFramework.xml
+F:\Git\proj\df\LawFirm.DAL\obj\Debug\LawFirm.DAL.csprojResolveAssemblyReference.cache
+F:\Git\proj\df\LawFirm.DAL\obj\Debug\LawFirm.DAL.dll
+F:\Git\proj\df\LawFirm.DAL\obj\Debug\LawFirm.DAL.pdb

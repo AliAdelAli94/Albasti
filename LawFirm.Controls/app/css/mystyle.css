@@ -1,0 +1,15 @@
+@media (min-width: 1200px){
+    .chatButton{
+        margin-top: 0px;
+    }
+
+}
+
+.chatButton{
+    margin-top: 0px;
+}
+
+.blockquote-complex cite:after{
+    content: "";
+}
+

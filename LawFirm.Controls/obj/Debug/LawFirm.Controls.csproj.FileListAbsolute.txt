@@ -1,0 +1,30 @@
+C:\Users\Ali Abo Saada\Favorites\Documents\Visual Studio 2013\Projects\LawFirm\LawFirm.Controls\bin\LawFirm.Controls.dll.config
+C:\Users\Ali Abo Saada\Favorites\Documents\Visual Studio 2013\Projects\LawFirm\LawFirm.Controls\bin\LawFirm.Controls.dll
+C:\Users\Ali Abo Saada\Favorites\Documents\Visual Studio 2013\Projects\LawFirm\LawFirm.Controls\bin\LawFirm.Controls.pdb
+C:\Users\Ali Abo Saada\Favorites\Documents\Visual Studio 2013\Projects\LawFirm\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
+C:\Users\Ali Abo Saada\Favorites\Documents\Visual Studio 2013\Projects\LawFirm\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
+C:\Users\Ali Abo Saada\Favorites\Documents\Visual Studio 2013\Projects\LawFirm\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb
+F:\Git\LawFirm\LawFirmmRepo\LawFirm.Controls\bin\LawFirm.Controls.dll.config
+F:\Git\LawFirm\LawFirmmRepo\LawFirm.Controls\bin\LawFirm.Controls.dll
+F:\Git\LawFirm\LawFirmmRepo\LawFirm.Controls\bin\LawFirm.Controls.pdb
+F:\Git\LawFirm\LawFirmmRepo\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
+F:\Git\LawFirm\LawFirmmRepo\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
+F:\Git\LawFirm\LawFirmmRepo\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb
+F:\Git\proj\LawFirm.Controls\bin\LawFirm.Controls.dll.config
+F:\Git\proj\LawFirm.Controls\bin\LawFirm.Controls.dll
+F:\Git\proj\LawFirm.Controls\bin\LawFirm.Controls.pdb
+F:\Git\proj\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
+F:\Git\proj\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb
+F:\Git\proj\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
+D:\hf\df\df\LawFirm.Controls\bin\LawFirm.Controls.dll.config
+D:\hf\df\df\LawFirm.Controls\bin\LawFirm.Controls.dll
+D:\hf\df\df\LawFirm.Controls\bin\LawFirm.Controls.pdb
+D:\hf\df\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
+D:\hf\df\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
+D:\hf\df\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb
+F:\Git\proj\df\LawFirm.Controls\bin\LawFirm.Controls.dll.config
+F:\Git\proj\df\LawFirm.Controls\bin\LawFirm.Controls.dll
+F:\Git\proj\df\LawFirm.Controls\bin\LawFirm.Controls.pdb
+F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
+F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
+F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb

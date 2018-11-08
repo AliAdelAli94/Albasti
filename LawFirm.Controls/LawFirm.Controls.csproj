@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78BCD364-404B-459D-B9CA-6062168607FF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LawFirm.Controls</RootNamespace>
+    <AssemblyName>LawFirm.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\arbitration.html" />
+    <Content Include="app\bankruptcy.html" />
+    <Content Include="app\bat\phpmailer\class.phpmailer.php" />
+    <Content Include="app\bat\phpmailer\class.pop3.php" />
+    <Content Include="app\bat\phpmailer\class.smtp.php" />
+    <Content Include="app\bat\phpmailer\PHPMailerAutoload.php" />
+    <Content Include="app\bat\rd-mailform.php" />
+    <Content Include="app\bat\rd-mailform.tpl" />
+    <Content Include="app\bat\rd-search.php" />
+    <Content Include="app\bat\twitter_api\config.php" />
+    <Content Include="app\bat\twitter_api\tweet.php" />
+    <Content Include="app\bat\twitter_api\twitteroauth\OAuth.php" />
+    <Content Include="app\bat\twitter_api\twitteroauth\twitteroauth.php" />
+    <Content Include="app\civil-law.html" />
+    <Content Include="app\contract-drafting.html" />
+    <Content Include="app\criminal-law.html" />
+    <Content Include="app\expert-opinion.html" />
+    <Content Include="app\family-law.html" />
+    <Content Include="app\firm-overview.html" />
+    <Content Include="app\fonts\36-slim-icons.eot" />
+    <Content Include="app\fonts\36-slim-icons.ttf" />
+    <Content Include="app\fonts\36-slim-icons.woff" />
+    <Content Include="app\fonts\fl-bigmug-line.eot" />
+    <Content Include="app\fonts\fl-bigmug-line.ttf" />
+    <Content Include="app\fonts\fl-bigmug-line.woff" />
+    <Content Include="app\fonts\fl-flat-icons-set-2.eot" />
+    <Content Include="app\fonts\fl-flat-icons-set-2.ttf" />
+    <Content Include="app\fonts\fl-flat-icons-set-2.woff" />
+    <Content Include="app\fonts\fontawesome-webfont.eot" />
+    <Content Include="app\fonts\fontawesome-webfont.ttf" />
+    <Content Include="app\fonts\fontawesome-webfont.woff" />
+    <Content Include="app\fonts\fontawesome-webfont.woff2" />
+    <Content Include="app\fonts\FontAwesome.otf" />
+    <Content Include="app\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="app\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="app\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="app\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="app\fonts\MaterialIcons-Regular.eot" />
+    <Content Include="app\fonts\MaterialIcons-Regular.ijmap" />
+    <Content Include="app\fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="app\fonts\MaterialIcons-Regular.woff" />
+    <Content Include="app\fonts\MaterialIcons-Regular.woff2" />
+    <Content Include="app\fonts\Mercury-Regular.eot" />
+    <Content Include="app\fonts\Mercury-Regular.ttf" />
+    <Content Include="app\fonts\Mercury-Regular.woff" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\404-page.html" />
+    <Content Include="app\css\503-page.html" />
+    <Content Include="app\about-us.html" />
+    <Content Include="app\accordion.html" />
+    <Content Include="app\appointment.html" />
+    <Content Include="app\blog-classic.html" />
+    <Content Include="app\blog-grid.html" />
+    <Content Include="app\blog-line.html" />
+    <Content Include="app\blog-masonry.html" />
+    <Content Include="app\blog-post.html" />
+    <Content Include="app\buttons.html" />
+    <Content Include="app\careers.html" />
+    <Content Include="app\chat.html" />
+    <Content Include="app\clients-testimonials.html" />
+    <Content Include="app\clients.html" />
+    <Content Include="app\coming-soon.html" />
+    <Content Include="app\contact-us.html" />
+    <Content Include="app\css\bootstrap.css" />
+    <Content Include="app\css\bootstrap.min.css" />
+    <Content Include="app\css\chatstyle.css" />
+    <Content Include="app\css\fonts.css" />
+    <Content Include="app\css\mystyle.css" />
+    <Content Include="app\css\style.css" />
+    <Content Include="app\extras.html" />
+    <Content Include="app\faq.html" />
+    <Content Include="app\fonts\36-slim-icons.svg" />
+    <Content Include="app\fonts\fl-bigmug-line.svg" />
+    <Content Include="app\fonts\fl-flat-icons-set-2.svg" />
+    <Content Include="app\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="app\fonts\Mercury-Regular.svg" />
+    <Content Include="app\footer.html" />
+    <Content Include="app\forms.html" />
+    <Content Include="app\gallery-cobbles.html" />
+    <Content Include="app\gallery-grid.html" />
+    <Content Include="app\gallery-item.html" />
+    <Content Include="app\gallery-masonry.html" />
+    <Content Include="app\government-regulations.html" />
+    <Content Include="app\grid.html" />
+    <Content Include="app\header.html" />
+    <Content Include="app\home.html" />
+    <Content Include="app\icon-lists.html" />
+    <Content Include="app\icons.html" />
+    <Content Include="app\js\angularjs\lawfirmService.js" />
+    <Content Include="app\testemonials.html" />
+    <Content Include="app\why-retainer-services.html" />
+    <Content Include="images\about-1-670x578.png" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\amgad.jpg" />
+    <Content Include="images\amr.jpg" />
+    <Content Include="images\baverli.jpg" />
+    <Content Include="images\bg-image-1.jpg" />
+    <Content Include="images\bg-image-2.jpg" />
+    <Content Include="images\bg-image-3.jpg" />
+    <Content Include="images\bg-special.jpg" />
+    <Content Include="images\blog-classic-1-971x649.jpg" />
+    <Content Include="images\blog-classic-2-113x113.jpg" />
+    <Content Include="images\blog-classic-3-113x113.jpg" />
+    <Content Include="images\blog-classic-4-970x545.jpg" />
+    <Content Include="images\blog-classic-5-113x113.jpg" />
+    <Content Include="images\blog-classic-6-970x545.jpg" />
+    <Content Include="images\blog-classic-7-970x545.jpg" />
+    <Content Include="images\blog-classic-8-970x545.jpg" />
+    <Content Include="images\blog-classic-9-113x113.jpg" />
+    <Content Include="images\blog-grid-1-570x253.jpg" />
+    <Content Include="images\blog-grid-2-570x253.jpg" />
+    <Content Include="images\blog-grid-3-570x253.jpg" />
+    <Content Include="images\blog-grid-4-570x253.jpg" />
+    <Content Include="images\blog-grid-5-570x253.jpg" />
+    <Content Include="images\blog-line-1-771x515.jpg" />
+    <Content Include="images\blog-line-2-772x435.jpg" />
+    <Content Include="images\blog-line-3-770x433.jpg" />
+    <Content Include="images\blog-line-4-770x433.jpg" />
+    <Content Include="images\blog-line-5-770x433.jpg" />
+    <Content Include="images\blog-masonry-1-570x322.jpg" />
+    <Content Include="images\blog-masonry-2-570x322.jpg" />
+    <Content Include="images\blog-masonry-3-570x322.jpg" />
+    <Content Include="images\business-person.png" />
+    <Content Include="images\careers-1-1171x519.jpg" />
+    <Content Include="images\careers-2-1171x519.jpg" />
+    <Content Include="images\careers-3-1171x519.jpg" />
+    <Content Include="images\careers-4-1171x519.jpg" />
+    <Content Include="images\clients-1-126x68.png" />
+    <Content Include="images\clients-10-95x101.png" />
+    <Content Include="images\clients-11-126x68.png" />
+    <Content Include="images\clients-12-132x83.png" />
+    <Content Include="images\clients-2-126x100.png" />
+    <Content Include="images\clients-3-132x83.png" />
+    <Content Include="images\clients-4-169x68.png" />
+    <Content Include="images\clients-5-141x88.png" />
+    <Content Include="images\clients-6-138x55.png" />
+    <Content Include="images\clients-7-104x84.png" />
+    <Content Include="images\clients-8-144x68.png" />
+    <Content Include="images\clients-9-105x94.png" />
+    <Content Include="images\clients-light-1-162x76.png" />
+    <Content Include="images\clients-light-2-153x69.png" />
+    <Content Include="images\clients-light-3-132x69.png" />
+    <Content Include="images\clients-light-4-146x58.png" />
+    <Content Include="images\clients-parallax-1.jpg" />
+    <Content Include="images\clients-testimonials-1-68x68.jpg" />
+    <Content Include="images\clients-testimonials-10-113x113.jpg" />
+    <Content Include="images\clients-testimonials-11-113x113.jpg" />
+    <Content Include="images\clients-testimonials-12-113x113.jpg" />
+    <Content Include="images\clients-testimonials-2-68x68.jpg" />
+    <Content Include="images\clients-testimonials-3-150x150.jpg" />
+    <Content Include="images\clients-testimonials-4-150x150.jpg" />
+    <Content Include="images\clients-testimonials-5-150x150.jpg" />
+    <Content Include="images\clients-testimonials-6-150x150.jpg" />
+    <Content Include="images\clients-testimonials-7-113x113.jpg" />
+    <Content Include="images\clients-testimonials-8-113x113.jpg" />
+    <Content Include="images\clients-testimonials-9-113x113.jpg" />
+    <Content Include="images\clients-testimonials-parallax-1.jpg" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\fe.jpg" />
+    <Content Include="images\gallery-1-1200x797_original.jpg" />
+    <Content Include="images\gallery-2-1200x795_original.jpg" />
+    <Content Include="images\gallery-3-1200x801_original.jpg" />
+    <Content Include="images\gallery-4-1200x801_original.jpg" />
+    <Content Include="images\gallery-5-1200x911_original.jpg" />
+    <Content Include="images\gallery-6-1200x798_original.jpg" />
+    <Content Include="images\gallery-7-1200x800_original.jpg" />
+    <Content Include="images\gallery-8-1200x607_original.jpg" />
+    <Content Include="images\gallery-9-1200x800_original.jpg" />
+    <Content Include="images\gallery-cobbles-1-390x601.jpg" />
+    <Content Include="images\gallery-cobbles-2-390x301.jpg" />
+    <Content Include="images\gallery-cobbles-3-390x301.jpg" />
+    <Content Include="images\gallery-cobbles-4-780x300.jpg" />
+    <Content Include="images\gallery-cobbles-5-780x600.jpg" />
+    <Content Include="images\gallery-cobbles-6-390x300.jpg" />
+    <Content Include="images\gallery-cobbles-7-390x300.jpg" />
+    <Content Include="images\gallery-grid-1-370x278.jpg" />
+    <Content Include="images\gallery-grid-2-370x278.jpg" />
+    <Content Include="images\gallery-grid-3-370x278.jpg" />
+    <Content Include="images\gallery-grid-4-370x278.jpg" />
+    <Content Include="images\gallery-grid-5-370x278.jpg" />
+    <Content Include="images\gallery-grid-6-370x278.jpg" />
+    <Content Include="images\gallery-grid-7-370x278.jpg" />
+    <Content Include="images\gallery-grid-8-370x278.jpg" />
+    <Content Include="images\gallery-grid-9-370x278.jpg" />
+    <Content Include="images\gallery-item-1-1170x883.jpg" />
+    <Content Include="images\gallery-item-2-220x224.jpg" />
+    <Content Include="images\gallery-item-3-220x224.jpg" />
+    <Content Include="images\gallery-item-4-220x224.jpg" />
+    <Content Include="images\gallery-item-5-220x224.jpg" />
+    <Content Include="images\gallery-masonry-1-770x586.jpg" />
+    <Content Include="images\gallery-masonry-2-370x278.jpg" />
+    <Content Include="images\gallery-masonry-3-371x586.jpg" />
+    <Content Include="images\gallery-masonry-4-373x278.jpg" />
+    <Content Include="images\gallery-masonry-5-373x278.jpg" />
+    <Content Include="images\gallery-masonry-6-769x384.jpg" />
+    <Content Include="images\gallery-masonry-7-371x384.jpg" />
+    <Content Include="images\gmap_marker.png" />
+    <Content Include="images\gmap_marker_active.png" />
+    <Content Include="images\home-1.jpg" />
+    <Content Include="images\home-2-342x338.jpg" />
+    <Content Include="images\home-3-569x472.png" />
+    <Content Include="images\home-4-472x753.png" />
+    <Content Include="images\home-5-268x182.jpg" />
+    <Content Include="images\home-6-268x182.jpg" />
+    <Content Include="images\home-7-268x182.jpg" />
+    <Content Include="images\home-8-268x182.jpg" />
+    <Content Include="images\home-aside-image-1-960x560.jpg" />
+    <Content Include="images\home-slider-slide-1.jpg" />
+    <Content Include="images\home-slider-slide-2.jpg" />
+    <Content Include="images\home-slider-slide-3.jpg" />
+    <Content Include="images\ie8-panel\warning_bar_0000_us.jpg" />
+    <Content Include="images\khalid.jpg" />
+    <Content Include="images\logo-default-155x32.png" />
+    <Content Include="images\logo-inverse-155x32.png" />
+    <Content Include="images\marisa.jpg" />
+    <Content Include="images\mohamadosama.jpg" />
+    <Content Include="images\mrakbar.jpg" />
+    <Content Include="images\Mrayman.jpg" />
+    <Content Include="images\Mrtariq.jpg" />
+    <Content Include="images\najmi.jpg" />
+    <Content Include="images\photoswipe-controls.png" />
+    <Content Include="images\photoswipe-controls.svg" />
+    <Content Include="images\post-1-870x412.jpg" />
+    <Content Include="images\post-2-70x71.jpg" />
+    <Content Include="images\post-3-70x71.jpg" />
+    <Content Include="images\post-4-70x71.jpg" />
+    <Content Include="images\post-preview-1-70x70.jpg" />
+    <Content Include="images\post-preview-2-70x70.jpg" />
+    <Content Include="images\post-preview-3-70x70.jpg" />
+    <Content Include="images\post-preview-4-70x70.jpg" />
+    <Content Include="images\post-preview-5-70x70.jpg" />
+    <Content Include="images\preloader.gif" />
+    <Content Include="images\preloader.png" />
+    <Content Include="images\profile-1-570x570.jpg" />
+    <Content Include="images\progress-bars-parallax-1.jpg" />
+    <Content Include="images\Salha1.jpg" />
+    <Content Include="images\services-1-570x537.png" />
+    <Content Include="images\team-1-189x189.jpg" />
+    <Content Include="images\team-10-246x300.jpg" />
+    <Content Include="images\team-11-246x300.jpg" />
+    <Content Include="images\team-12-246x300.jpg" />
+    <Content Include="images\team-2-189x189.jpg" />
+    <Content Include="images\team-3-189x189.jpg" />
+    <Content Include="images\team-4-189x189.jpg" />
+    <Content Include="images\team-5-189x189.jpg" />
+    <Content Include="images\team-6-189x189.jpg" />
+    <Content Include="images\team-7-189x189.jpg" />
+    <Content Include="images\team-8-189x189.jpg" />
+    <Content Include="images\team-9-246x300.jpg" />
+    <Content Include="images\textarea-pattern-light.png" />
+    <Content Include="images\tm-logo.jpg" />
+    <Content Include="images\twitter-blank.jpg" />
+    <Content Include="images\typography-1-1169x610.jpg" />
+    <Content Include="images\typography-2-570x386.jpg" />
+    <Content Include="images\typography-3-570x386.jpg" />
+    <Content Include="images\_blank.png" />
+    <Content Include="app\js\angular-ui-router.min.js" />
+    <Content Include="index.html" />
+    <Content Include="app\insurance-law.html" />
+    <Content Include="app\intellectual-property-law.html" />
+    <Content Include="app\js\angular.min.js" />
+    <Content Include="app\js\angularjs\app.js" />
+    <Content Include="app\js\boostrap.min.js" />
+    <Content Include="app\js\core.min.js" />
+    <Content Include="app\js\html5shiv.min.js" />
+    <Content Include="app\js\jquery.min.js" />
+    <Content Include="app\js\chatscript.js" />
+    <Content Include="app\js\pointer-events.min.js" />
+    <Content Include="app\js\script.js" />
+    <Content Include="app\labor-law.html" />
+    <Content Include="app\login.html" />
+    <Content Include="app\maintenance.html" />
+    <Content Include="app\maritime-law.html" />
+    <Content Include="app\medical-malpractice.html" />
+    <Content Include="app\our-team.html" />
+    <Content Include="app\practice-areas.html" />
+    <Content Include="app\pricing.html" />
+    <Content Include="app\privacy-policy.html" />
+    <Content Include="app\progress-bars.html" />
+    <Content Include="app\register.html" />
+    <Content Include="app\search-results.html" />
+    <Content Include="app\services.html" />
+    <Content Include="app\sharia-law.html" />
+    <Content Include="app\table-styles.html" />
+    <Content Include="app\tabs.html" />
+    <Content Include="app\team-member-profile.html" />
+    <Content Include="app\typography.html" />
+    <Content Include="app\commercial-corporate.html" />
+    <Content Include="app\wills-trust.html" />
+    <Content Include="Global.asax" />
+    <Content Include="app\litigation.html" />
+    <Content Include="app\realestate-construction.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45806</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45886/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
