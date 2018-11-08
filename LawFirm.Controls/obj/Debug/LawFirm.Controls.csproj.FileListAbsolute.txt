@@ -28,3 +28,9 @@ F:\Git\proj\df\LawFirm.Controls\bin\LawFirm.Controls.pdb
 F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
 F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
 F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb
+F:\Current\LawFirm.Controls\bin\LawFirm.Controls.dll.config
+F:\Current\LawFirm.Controls\bin\LawFirm.Controls.dll
+F:\Current\LawFirm.Controls\bin\LawFirm.Controls.pdb
+F:\Current\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
+F:\Current\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
+F:\Current\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb

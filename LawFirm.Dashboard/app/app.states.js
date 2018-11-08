@@ -648,6 +648,7 @@ altairApp
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
+                                'lazy_pagination',
                                 'app/components/custompages/faqs_list_ctrl.js'
                             ]);
                         }]

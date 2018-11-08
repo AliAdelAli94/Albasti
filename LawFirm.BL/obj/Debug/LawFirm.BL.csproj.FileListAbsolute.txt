@@ -16,3 +16,12 @@ F:\Git\proj\df\LawFirm.BL\bin\Debug\EntityFramework.xml
 F:\Git\proj\df\LawFirm.BL\obj\Debug\LawFirm.BL.csprojResolveAssemblyReference.cache
 F:\Git\proj\df\LawFirm.BL\obj\Debug\LawFirm.BL.dll
 F:\Git\proj\df\LawFirm.BL\obj\Debug\LawFirm.BL.pdb
+F:\Current\LawFirm.BL\bin\Debug\LawFirm.BL.dll
+F:\Current\LawFirm.BL\bin\Debug\LawFirm.BL.pdb
+F:\Current\LawFirm.BL\bin\Debug\LawFirm.DAL.dll
+F:\Current\LawFirm.BL\bin\Debug\EntityFramework.dll
+F:\Current\LawFirm.BL\bin\Debug\LawFirm.DAL.pdb
+F:\Current\LawFirm.BL\bin\Debug\EntityFramework.xml
+F:\Current\LawFirm.BL\obj\Debug\LawFirm.BL.csprojResolveAssemblyReference.cache
+F:\Current\LawFirm.BL\obj\Debug\LawFirm.BL.dll
+F:\Current\LawFirm.BL\obj\Debug\LawFirm.BL.pdb
