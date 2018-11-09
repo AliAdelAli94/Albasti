@@ -641,15 +641,45 @@ altairApp
                     template: '<div ui-view autoscroll="false"/>',
                     abstract: true
                 })
+                .state("restricted.custompages.faq_details", {
+                    url: "/faq_details",
+                    templateUrl: 'app/components/custompages/faqs_details_view.html',
+                    controller: 'faqs_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'app/components/custompages/faqs_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'FAQ Details'
+                    }
+                })
+                .state("restricted.custompages.faq_edit", {
+                    url: "/faq_edit",
+                    templateUrl: 'app/components/custompages/faq_editView.html',
+                    controller: 'faqs_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'app/components/custompages/faqs_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'FAQ Edit'
+                    }
+                })
                 .state("restricted.custompages.faqlist", {
                     url: "/faqlist",
                     templateUrl: 'app/components/custompages/faqs_list_view.html',
-                    controller: 'faq_listCtrl',
+                    controller: 'faqs_ctrl',
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_pagination',
-                                'app/components/custompages/faqs_list_ctrl.js'
+                                'app/components/custompages/faqs_ctrl.js'
                             ]);
                         }]
                     },

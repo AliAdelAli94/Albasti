@@ -1,0 +1,49 @@
+﻿<div id="page_content">
+    <div id="page_heading">
+        <h1>FAQ Details</h1>
+    </div>
+    <div id="page_content_inner">
+        <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+            <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <div class="uk-float-right">
+                            <input type="checkbox" ui-switch ng-model="faq.active" name="product_edit_active_control" id="product_edit_active_control" />
+                        </div>
+                        <label class="uk-display-block uk-margin-small-top" for="product_edit_active_control">Active</label>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+                <div class="md-card">
+                    <div class="md-card-toolbar">
+                        <h3 class="md-card-toolbar-heading-text">
+                            Details
+                        </h3>
+                    </div>
+                    <div class="md-card-content large-padding">
+                        <div class="uk-grid uk-grid-divider uk-grid-medium">
+                            <div class="uk-width-large-2-2">
+                                <p>
+                                    <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">FAQ Question</span>
+                                    {{faq.question}}
+
+                                </p>
+                                <hr class="uk-grid-divider">
+                                <p>
+                                    <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">FAQ Answer</span>
+                                    {{faq.answer}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-primary" ui-sref="restricted.ecommerce.product_edit">
+        <i class="material-icons">&#xE150;</i>
+    </a>
+</div>

@@ -57,8 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\components\custompages\faqs_list_ctrl.js" />
+    <Content Include="app\components\custompages\faqs_details_view.html" />
+    <Content Include="app\components\custompages\faqs_ctrl.js" />
     <Content Include="app\components\custompages\faqs_list_view.html" />
+    <Content Include="app\components\custompages\faq_editView.html" />
     <Content Include="app\services\dashservice.js" />
     <Content Include="assets\icons\material-design-icons\MaterialIcons-Regular.eot" />
     <Content Include="assets\icons\material-design-icons\MaterialIcons-Regular.ijmap" />
