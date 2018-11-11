@@ -6,8 +6,8 @@ altairApp
 
             // Use $urlRouterProvider to configure any redirects (when) and invalid urls (otherwise).
             $urlRouterProvider
-                .when('/dashboard', '/')
-                .otherwise('/');
+                .when('/blank', '/')
+                .otherwise('/login');
 
             $stateProvider
             // -- ERROR PAGES --
@@ -642,7 +642,7 @@ altairApp
                     abstract: true
                 })
                 .state("restricted.custompages.faq_details", {
-                    url: "/faq_details",
+                    url: "/faq_details/:id",
                     templateUrl: 'app/components/custompages/faqs_details_view.html',
                     controller: 'faqs_ctrl',
                     resolve: {
@@ -657,7 +657,7 @@ altairApp
                     }
                 })
                 .state("restricted.custompages.faq_edit", {
-                    url: "/faq_edit",
+                    url: "/faq_edit/:id",
                     templateUrl: 'app/components/custompages/faq_editView.html',
                     controller: 'faqs_ctrl',
                     resolve: {

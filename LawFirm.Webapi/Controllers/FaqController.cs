@@ -36,27 +36,7 @@ namespace LawFirm.Webapi.Controllers
             }
         }
 
-        [HttpPost]
-        [Route("Faq/GetAllFaqDashboard/")]
-        public IHttpActionResult GetAllFaqDashboard(int jtStartIndex, int jtPageSize)
-        {
-            try
-            {
-                var data = this.iFaqBL.GetAllFaq();
-                return Ok(new FAQDto()
-                {
-                    Result = "OK",
-                    TotalRecordCount = data.Count,
-                    Records = data
-                });
-            }
-            catch (Exception exp)
-            {
-                return null;
-            }
-        }
-
-
+        
         [HttpPost]
         [Route("Faq/AddFaqDashboard/")]
         public IHttpActionResult AddFaqDashboard(FAQ item)
@@ -64,11 +44,7 @@ namespace LawFirm.Webapi.Controllers
             try
             {
                 item = this.iFaqBL.AddFaq(item);
-                return Ok(new FaqAddDto()
-                {
-                    Result = "OK",
-                    Record = item
-                });
+                return Ok(item);
             }
             catch (Exception exp)
             {
@@ -86,10 +62,7 @@ namespace LawFirm.Webapi.Controllers
                 {
                     return null;
                 }
-                return Ok(new
-                {
-                    Result = "OK"
-                });
+                return Ok(true);
             }
             catch (Exception exp)
             {
@@ -107,10 +80,7 @@ namespace LawFirm.Webapi.Controllers
                 {
                     return null;
                 }
-                return Ok(new
-                {
-                    Result = "OK"
-                });
+                return Ok(true);
             }
             catch (Exception exp)
             {

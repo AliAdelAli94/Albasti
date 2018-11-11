@@ -151,8 +151,6 @@
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\FaqController.cs" />
-    <Compile Include="DTOs\FaqAddDto.cs" />
-    <Compile Include="DTOs\FAQDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
