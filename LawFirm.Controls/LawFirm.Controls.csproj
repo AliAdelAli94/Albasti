@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -155,7 +156,11 @@
     <Content Include="app\home.html" />
     <Content Include="app\icon-lists.html" />
     <Content Include="app\icons.html" />
+    <Content Include="app\js\angularjs\ChatController.js" />
+    <Content Include="app\js\angularjs\factories.js" />
     <Content Include="app\js\angularjs\lawfirmService.js" />
+    <Content Include="app\js\jquery-1.6.4.min.js" />
+    <Content Include="app\js\jquery.signalR-2.3.0.min.js" />
     <Content Include="app\testemonials.html" />
     <Content Include="app\why-retainer-services.html" />
     <Content Include="images\about-1-670x578.png" />

@@ -2,8 +2,7 @@
 
 app.run(function ($rootScope) {
     $rootScope.$on("$includeContentLoaded", function (event, templateName) {
-        if (templateName == "/app/chat.html")
-        {
+        if (templateName == "/app/chat.html") {
             load_chat_js();
         }
     });
@@ -32,7 +31,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "/app/arbitration.html"
         })
         .state("civil-law", {
-            url:'/civil-law',
+            url: '/civil-law',
             templateUrl: "/app/civil-law.html"
         })
         .state("commercial-corporate", {
@@ -40,65 +39,65 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "/app/commercial-corporate.html"
         })
         .state("intellectual-property-law", {
-            url:"/intellectual-property-law",
+            url: "/intellectual-property-law",
             templateUrl: "/app/intellectual-property-law.html"
         })
         .state("realestate-construction", {
-            url:"/realestate-construction",
+            url: "/realestate-construction",
             templateUrl: "/app/realestate-construction.html"
         })
         .state("family-law", {
-            url:"/family-law",
+            url: "/family-law",
             templateUrl: "/app/family-law.html"
         })
         .state("criminal-law", {
-            url:"/criminal-law",
+            url: "/criminal-law",
             templateUrl: "/app/criminal-law.html"
         })
         .state("labor-law", {
-            url:"/labor-law",
+            url: "/labor-law",
             templateUrl: "/app/labor-law.html"
         })
         .state("practice-areas", {
-            url:"/practice-areas",
+            url: "/practice-areas",
             templateUrl: "/app/practice-areas.html"
         })
         .state("wills-trust", {
-            url:"/wills-trust",
+            url: "/wills-trust",
             templateUrl: "/app/wills-trust.html"
         })
         .state("maritime-law", {
-            url:"/maritime-law",
+            url: "/maritime-law",
             templateUrl: "/app/maritime-law.html"
         })
         .state("sharia-law", {
-            url:"/sharia-law",
+            url: "/sharia-law",
             templateUrl: "/app/sharia-law.html"
         })
         .state("medical-malpractice", {
-            url:"/medical-malpractice",
+            url: "/medical-malpractice",
             templateUrl: "/app/medical-malpractice.html"
         })
         .state("insurance-law", {
-            url:"/insurance-law",
+            url: "/insurance-law",
             templateUrl: "/app/insurance-law.html"
         })
         .state("government-regulations", {
-            url:"/government-regulations",
+            url: "/government-regulations",
             templateUrl: "/app/government-regulations.html"
         })
         .state("expert-opinion", {
-            url:"/expert-opinion",
+            url: "/expert-opinion",
             templateUrl: "/app/expert-opinion.html"
         })
 
         .state("contract-drafting", {
-            url:"/contract-drafting",
+            url: "/contract-drafting",
             templateUrl: "/app/contract-drafting.html"
         })
 
         .state("bankruptcy", {
-            url:"/bankruptcy",
+            url: "/bankruptcy",
             templateUrl: "/app/bankruptcy.html"
         })
 
@@ -126,7 +125,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 
 app.controller("mainController", function ($scope) {
-        
+
     $scope.ShowTab = function (tabName) {
 
 
@@ -210,7 +209,7 @@ app.controller("bankruptcyController", function () {
 
     load_js();
 
-});   
+});
 
 app.controller("insuranceLawController", function () {
 
@@ -229,7 +228,7 @@ app.controller("contractDraftingController", function () {
     load_js();
 
 });
-    
+
 app.controller("maritimeLawController", function () {
 
     load_js();
@@ -253,7 +252,7 @@ app.controller("expertOpinionController", function () {
     load_js();
 
 });
-    
+
 app.controller("civillawController", function () {
 
     load_js();
@@ -264,11 +263,11 @@ app.controller("willTrustController", function () {
     load_js();
 });
 
-app.controller("about-us",function(){
+app.controller("about-us", function () {
 
     load_js();
 });
-    
+
 app.controller("IntellectualPropertyController", function () {
 
     load_js();
@@ -314,7 +313,7 @@ app.controller("criminalLawController", function () {
     load_js();
 });
 
-app.controller("home",['$scope','lawfirmService',function($scope,lawfirmService){
+app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
 
     load_js();
 
@@ -322,31 +321,28 @@ app.controller("home",['$scope','lawfirmService',function($scope,lawfirmService)
         debugger;
         $scope.faqs = angular.copy(response.data, $scope.faqs);
         $scope.firstFaq = response.data[0];
-        $scope.restFaqs = response.data.slice(1,response.data.length)
+        $scope.restFaqs = response.data.slice(1, response.data.length)
 
-        },
+    },
         function (response) { });
 
 }]);
 
 
-
-
-function load_js()
-{
-var head= document.getElementsByTagName('head')[0];
-var script= document.createElement('script');
-script.src= '/app/js/script.js';
-head.appendChild(script);
-//var script2= document.createElement('script');
-//script.src= '/app/js/chatscript.js';
-//head.appendChild(script2);
+function load_js() {
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = '/app/js/script.js';
+    head.appendChild(script);
+    //var script2= document.createElement('script');
+    //script.src= '/app/js/chatscript.js';
+    //head.appendChild(script2);
 }
 
 function load_chat_js() {
-var head = document.getElementsByTagName('head')[0];
-var script = document.createElement('script');
-script.src = '/app/js/chatscript.js';
-head.appendChild(script);
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = '/app/js/chatscript.js';
+    head.appendChild(script);
 }
 
