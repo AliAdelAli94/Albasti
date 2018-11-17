@@ -1,5 +1,5 @@
 ﻿
-app.controller("chatController", function ($scope, $rootScope) {
+app.controller("chatController", function ($scope, $rootScope, signalR) {
 
     var msgContent = document.getElementById("msgContent");
     msgContent.addEventListener("keydown", function (e) {

@@ -23,3 +23,6 @@ F:\Current\LawFirm.SignalR\bin\Simple.Owin.Cors.dll
 F:\Current\LawFirm.SignalR\bin\System.Web.Cors.dll
 F:\Current\LawFirm.SignalR\bin\Microsoft.Owin.Cors.xml
 F:\Current\LawFirm.SignalR\bin\Simple.Owin.Cors.xml
+F:\Current\LawFirm.SignalR\bin\Microsoft.AspNet.SignalR.Core.pdb
+F:\Current\LawFirm.SignalR\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+F:\Current\LawFirm.SignalR\bin\Newtonsoft.Json.pdb

@@ -8,6 +8,8 @@ app.run(function ($rootScope) {
     });
 });
 
+app.value('$', $);
+
 app.config(function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
@@ -359,7 +361,9 @@ app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmSer
 
 'use strict';
 
-app.factory("signalR", ['$rootScope', function ($rootScope) {
+app.factory("signalR", ['$rootScope','$', function ($rootScope , $) {
+
+    $.connection.hub.url = 'http://localhost:50131/signalr/';
 
     var $hub = $.connection.chatHub;
     var connection = null;
