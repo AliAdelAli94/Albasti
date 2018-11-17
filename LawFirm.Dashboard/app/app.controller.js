@@ -166,6 +166,17 @@ angular
                     title: 'FAQ',
                     icon: '&#xE8C0;',
                     link: 'restricted.custompages.faqlist'
+                },
+                {
+                    title: 'Testimonials',
+                    icon: '&#xE8C0;',
+                    link: 'restricted.custompages.testimoniallist'
+                }
+                ,
+                {
+                    title: 'Careers',
+                    icon: '&#xE8C0;',
+                    link: 'restricted.custompages.careerslist'
                 }
             ]
 

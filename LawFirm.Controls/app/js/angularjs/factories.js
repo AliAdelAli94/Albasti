@@ -1,4 +1,9 @@
-﻿app.factory("signalR", function ($rootScope) {
+﻿'use strict';
+
+app.factory("signalR", ['backendServerUrl', '$rootScope', function ($rootScope, backendServerUrl) {
+
+    var connection = $.hubConnection(backendServerUrl);
+
 
     var $hub = $.connection.chatHub;
     var connection = null;
@@ -45,4 +50,4 @@
 
     }
     return signalR;
-});
+}]);

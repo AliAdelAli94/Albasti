@@ -39,8 +39,9 @@ namespace LawFirm.Webapi
         {
             container.RegisterType<IUnitOfWork, UnitOfWork>();
             container.RegisterType<IFaqlBL, FaqBL>();
+            container.RegisterType<ITestemonialsBl, TestemonialsBl>();
             container.RegisterType<IBlogBL, BlogBL>();
-
+            container.RegisterType<ICareerBl, CareerBl>();
 
         }
     }

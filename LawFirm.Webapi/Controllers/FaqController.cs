@@ -53,12 +53,12 @@ namespace LawFirm.Webapi.Controllers
         }
 
         [HttpPost]
-        [Route("Faq/DeleteFaqDashboard/")]
-        public IHttpActionResult DeleteFaqDashboard(FAQ item)
+        [Route("Faq/DeleteFaqDashboard/{id}")]
+        public IHttpActionResult DeleteFaqDashboard(int id)
         {
             try
             {
-                if (!this.iFaqBL.DeleteFaq(item))
+                if (!this.iFaqBL.DeleteFaq(id))
                 {
                     return null;
                 }

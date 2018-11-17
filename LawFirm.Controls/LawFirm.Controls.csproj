@@ -104,6 +104,9 @@
     <Content Include="app\fonts\Mercury-Regular.eot" />
     <Content Include="app\fonts\Mercury-Regular.ttf" />
     <Content Include="app\fonts\Mercury-Regular.woff" />
+    <Content Include="app\js\jquery-1.6.4.min.js" />
+    <Content Include="app\js\jquery.signalR-2.3.0.min.js" />
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -159,8 +162,6 @@
     <Content Include="app\js\angularjs\ChatController.js" />
     <Content Include="app\js\angularjs\factories.js" />
     <Content Include="app\js\angularjs\lawfirmService.js" />
-    <Content Include="app\js\jquery-1.6.4.min.js" />
-    <Content Include="app\js\jquery.signalR-2.3.0.min.js" />
     <Content Include="app\testemonials.html" />
     <Content Include="app\why-retainer-services.html" />
     <Content Include="images\about-1-670x578.png" />
@@ -364,6 +365,9 @@
     <Content Include="Global.asax" />
     <Content Include="app\litigation.html" />
     <Content Include="app\realestate-construction.html" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.0.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

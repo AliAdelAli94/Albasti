@@ -1,0 +1,62 @@
+﻿<div id="page_content">
+    <div id="page_heading">
+        <h1>Testimonial Edit</h1>
+    </div>
+    <div id="page_content_inner">
+        <form action="" class="uk-form-stacked" id="testimonial_edit_form">
+            <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <div class="uk-float-right">
+                                <input type="checkbox" ui-switch ng-model="product.active" name="product_edit_active_control" id="product_edit_active_control" />
+                            </div>
+                            <label class="uk-display-block uk-margin-small-top" for="product_edit_active_control">Active</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+                    <div class="md-card">
+                        <div class="md-card-toolbar">
+                            <h3 class="md-card-toolbar-heading-text">
+                                Details
+                            </h3>
+                        </div>
+                        <div class="md-card-content large-padding">
+                            <div class="uk-grid uk-grid-divider uk-grid-medium">
+
+                                <div class="uk-width-large-1-2">
+                                    <div class="uk-form-row">
+                                        <label for="testimonial_edit_clientname_control">Client Name</label>
+                                        <input type="text" class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="testimonial_edit_clientname_control" id="testimonial_edit_clientname_control" ng-model="currenTestemonial.person" md-input />
+                                    </div>
+                                    <div class="uk-form-row">
+                                        <label for="testimonial_edit_clienttitle_control">Client Title</label>
+                                        <input type="text" class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="testimonial_edit_clienttitle_control" id="testimonial_edit_clienttitle_control" ng-model="currenTestemonial.personTitle" md-input />
+                                    </div>
+                                </div>
+
+                                <div class="uk-width-large-1-2">
+                                    <div class="uk-form-row">
+                                        <label for="testimonial_title_control">Title</label>
+                                        <input type="text" class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="testimonial_title_control" id="testimonial_title_control" ng-model="currenTestemonial.title" md-input />
+                                    </div>
+                                    <div class="uk-form-row">
+                                        <label for="testimonial_content_control">Content</label>
+                                        <textarea class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="testimonial_content_control" id="testimonial_content_control" cols="30" rows="4" ng-model="currenTestemonial.tcontent" md-input textarea-autosize></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-primary" ng-click="Submit(currenTestemonial)">
+        <i class="material-icons">&#xE161;</i>
+    </a>
+</div>

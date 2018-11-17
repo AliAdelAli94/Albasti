@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Classes\CareerBl.cs" />
     <Compile Include="BL\Classes\FaqBL.cs" />
+    <Compile Include="BL\Classes\TestemonialsBl.cs" />
+    <Compile Include="BL\Interfaces\ICareerBl.cs" />
     <Compile Include="BL\Interfaces\IFaqlBL.cs" />
+    <Compile Include="BL\Interfaces\ITestemonialsBl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BL\Classes\BlogBL.cs" />
     <Compile Include="BL\Interfaces\IBlogBL.cs" />

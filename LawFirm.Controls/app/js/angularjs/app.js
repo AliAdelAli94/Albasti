@@ -1,12 +1,12 @@
 ﻿var app = angular.module("LawFirmApp", ['ui.router']);
 
-app.run(function ($rootScope) {
-    $rootScope.$on("$includeContentLoaded", function (event, templateName) {
-        if (templateName == "/app/chat.html") {
-            load_chat_js();
-        }
-    });
-});
+//app.run(function ($rootScope) {
+//    $rootScope.$on("$includeContentLoaded", function (event, templateName) {
+//        if (templateName == "/app/chat.html") {
+//            load_chat_js();
+//        }
+//    });
+//});
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -121,7 +121,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
              url: "/ourteam",
              templateUrl: "/app/our-team.html"
          })
+        .state("careers", {
+            url: "/careers",
+            templateUrl: "/app/careers.html"
+        })
+        .state("appointment", {
+            url: "/appointment",
+            templateUrl: "/app/appointment.html"
+        })
+    
 });
+
+app.value('backendServerUrl', 'http://localhost:50131/signalr/hubs');
 
 
 app.controller("mainController", function ($scope) {
@@ -313,6 +324,17 @@ app.controller("criminalLawController", function () {
     load_js();
 });
 
+app.controller("careersController", function () {
+
+    load_js();
+});
+
+app.controller("appointmentController", function () {
+
+    load_js();
+});
+
+
 app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
 
     load_js();
@@ -326,17 +348,73 @@ app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmSer
     },
         function (response) { });
 
+
+    lawfirmService.GetAllTestimonial(function (response) {
+        debugger;
+        $scope.testemonials = response.data;
+    },
+        function (response) { });
+
+    
+
 }]);
 
+'use strict';
+
+app.factory("signalR", ['$rootScope', function ($rootScope) {
+
+    var $hub = $.connection.chatHub;
+    var connection = null;
+    var signalR = {
+
+        startHub: function () {
+            console.log("started");
+            connection = $.connection.hub.start();
+        },
+
+        ////////////////////// SERVER METHODS/////////////////
+
+        StartChat: function (username, email) {
+            connection.done(function () {
+                $hub.server.startChat(username, email);
+            });
+        },
+
+        sendMessage: function (message, toCID) {
+            connection.done(function () {
+                $hub.server.sendMessage(message, toCID);
+            });
+        },
+
+        adminLogin: function (email) {
+            connection.done(function () {
+                $hub.server.adminLogin(email);
+            });
+        },
+
+        //////////////////////// CLIENT METHODS ////////////////////            
+
+        userAssigned: function (callback) {
+            $hub.client.userAssigned = callback;
+        },
+
+        getAdminData: function (callback) {
+            $hub.client.getAdminData = callback;
+        },
+
+        recieveMessage: function (callback) {
+            $hub.client.recieveMessage = callback;
+        },
+
+    }
+    return signalR;
+}]);
 
 function load_js() {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.src = '/app/js/script.js';
     head.appendChild(script);
-    //var script2= document.createElement('script');
-    //script.src= '/app/js/chatscript.js';
-    //head.appendChild(script2);
 }
 
 function load_chat_js() {

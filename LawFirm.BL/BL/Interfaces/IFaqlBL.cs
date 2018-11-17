@@ -11,7 +11,7 @@ namespace LawFirm.BL
     {
         List<FAQ> GetAllFaq();
         FAQ AddFaq(FAQ item);
-        bool DeleteFaq(FAQ item);
+        bool DeleteFaq(int id);
         bool UpdateFaq(FAQ item);
 
 

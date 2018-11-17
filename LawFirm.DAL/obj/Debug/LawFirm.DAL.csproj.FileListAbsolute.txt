@@ -19,6 +19,6 @@ F:\Current\LawFirm.DAL\bin\Debug\LawFirm.DAL.dll
 F:\Current\LawFirm.DAL\bin\Debug\LawFirm.DAL.pdb
 F:\Current\LawFirm.DAL\bin\Debug\EntityFramework.dll
 F:\Current\LawFirm.DAL\bin\Debug\EntityFramework.xml
-F:\Current\LawFirm.DAL\obj\Debug\LawFirm.DAL.csprojResolveAssemblyReference.cache
 F:\Current\LawFirm.DAL\obj\Debug\LawFirm.DAL.dll
 F:\Current\LawFirm.DAL\obj\Debug\LawFirm.DAL.pdb
+F:\Current\LawFirm.DAL\obj\Debug\LawFirm.DAL.csprojResolveAssemblyReference.cache

@@ -29,7 +29,7 @@ altairApp
                     templateUrl: 'app/components/pages/loginView.html',
                     controller: 'loginCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_iCheck',
                                 'app/components/pages/loginController.js'
@@ -55,7 +55,7 @@ altairApp
                         }
                     },
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_selectizeJS',
                                 'lazy_switchery',
@@ -63,7 +63,7 @@ altairApp
                                 'lazy_autosize',
                                 'lazy_iCheck',
                                 'lazy_style_switcher'
-                            ],{ serie: true });
+                            ], { serie: true });
                         }]
                     }
                 })
@@ -73,7 +73,7 @@ altairApp
                     templateUrl: 'app/components/dashboard/dashboardView.html',
                     controller: 'dashboardCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 // ocLazyLoad config (app/app.js)
                                 'lazy_countUp',
@@ -85,15 +85,15 @@ altairApp
                                 'lazy_google_maps',
                                 'lazy_clndr',
                                 'app/components/dashboard/dashboardController.js'
-                            ], {serie: true} );
+                            ], { serie: true });
                         }],
-                        sale_chart_data: function($http){
-                            return $http({method: 'GET', url: 'data/mg_dashboard_chart.min.json'})
+                        sale_chart_data: function ($http) {
+                            return $http({ method: 'GET', url: 'data/mg_dashboard_chart.min.json' })
                                 .then(function (data) {
                                     return data.data;
                                 });
                         },
-                        user_data: function($http){
+                        user_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/user_data.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -116,7 +116,7 @@ altairApp
                     templateUrl: 'app/components/forms/regularView.html',
                     controller: 'regularCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/forms/regularController.js');
                         }]
                     },
@@ -129,13 +129,13 @@ altairApp
                     templateUrl: 'app/components/forms/advancedView.html',
                     controller: 'advancedCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_ionRangeSlider',
                                 'lazy_masked_inputs',
                                 'lazy_character_counter',
                                 'app/components/forms/advancedController.js'
-                            ], {serie:true} );
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -147,7 +147,7 @@ altairApp
                     templateUrl: 'app/components/forms/file_uploadView.html',
                     controller: 'file_uploadCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/forms/file_uploadController.js');
                         }]
                     },
@@ -160,7 +160,7 @@ altairApp
                     templateUrl: 'app/components/forms/validationView.html',
                     controller: 'validationCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_parsleyjs',
                                 'app/components/forms/validationController.js'
@@ -176,11 +176,11 @@ altairApp
                     templateUrl: 'app/components/forms/wizardView.html',
                     controller: 'wizardCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_wizard',
                                 'app/components/forms/wizardController.js'
-                            ], {serie:true});
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -192,11 +192,11 @@ altairApp
                     templateUrl: 'app/components/forms/wysiwyg_ckeditorView.html',
                     controller: 'ckeditorCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_ckeditor',
                                 'app/components/forms/wysiwyg_ckeditorController.js'
-                            ], {serie:true});
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -208,11 +208,11 @@ altairApp
                     templateUrl: 'app/components/forms/wysiwyg_tinymceView.html',
                     controller: 'tinymceCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_tinymce',
                                 'app/components/forms/wysiwyg_tinymceController.js'
-                            ], {serie:true});
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -231,7 +231,7 @@ altairApp
                     templateUrl: 'app/components/layout/top_menuView.html',
                     controller: 'top_menuCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/layout/top_menuController.js');
                         }]
                     },
@@ -244,7 +244,7 @@ altairApp
                     templateUrl: 'app/components/layout/full_headerView.html',
                     controller: 'full_headerCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/layout/full_headerController.js');
                         }]
                     },
@@ -259,7 +259,7 @@ altairApp
                     template: '<div ui-view autoscroll="false"/>',
                     abstract: true,
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('lazy_KendoUI');
                         }]
                     }
@@ -269,7 +269,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/autocompleteView.html',
                     controller: 'autocompleteCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/autocompleteController.js');
                         }]
                     },
@@ -282,7 +282,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/calendarView.html',
                     controller: 'calendarCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/calendarController.js');
                         }]
                     },
@@ -302,7 +302,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/comboboxView.html',
                     controller: 'comboboxCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/comboboxController.js');
                         }]
                     },
@@ -315,7 +315,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/datepickerView.html',
                     controller: 'datepickerCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/datepickerController.js');
                         }]
                     },
@@ -328,7 +328,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/datetimepickerView.html',
                     controller: 'datetimepickerCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/datetimepickerController.js');
                         }]
                     },
@@ -341,7 +341,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/dropdown_listView.html',
                     controller: 'dropdownListCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/dropdown_listController.js');
                         }]
                     },
@@ -354,7 +354,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/masked_inputView.html',
                     controller: 'maskedInputCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/masked_inputController.js');
                         }]
                     },
@@ -367,7 +367,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/menuView.html',
                     controller: 'menuCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/menuController.js');
                         }]
                     },
@@ -380,7 +380,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/multiselectView.html',
                     controller: 'multiselectCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/multiselectController.js');
                         }]
                     },
@@ -393,7 +393,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/numeric_textboxView.html',
                     controller: 'numericTextboxCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/numeric_textboxController.js');
                         }]
                     },
@@ -420,7 +420,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/toolbarView.html',
                     controller: 'toolbarCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/toolbarController.js');
                         }]
                     },
@@ -433,7 +433,7 @@ altairApp
                     templateUrl: 'app/components/kendoUI/windowView.html',
                     controller: 'windowCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/kendoUI/windowController.js');
                         }]
                     },
@@ -473,7 +473,7 @@ altairApp
                     templateUrl: 'app/components/components/cardsView.html',
                     controller: 'cardsCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/components/cardsController.js');
                         }]
                     },
@@ -542,7 +542,7 @@ altairApp
                     templateUrl: 'app/components/components/nestableView.html',
                     controller: 'nestableCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/components/nestableController.js');
                         }]
                     },
@@ -555,7 +555,7 @@ altairApp
                     templateUrl: 'app/components/components/notificationsView.html',
                     controller: 'notificationsCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/components/notificationsController.js');
                         }]
                     },
@@ -575,7 +575,7 @@ altairApp
                     templateUrl: 'app/components/components/preloadersView.html',
                     controller: 'preloadersCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/components/preloadersController.js');
                         }]
                     },
@@ -588,11 +588,11 @@ altairApp
                     templateUrl: 'app/components/components/sortableView.html',
                     controller: 'sortableCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_dragula',
                                 'app/components/components/sortableController.js'
-                            ], {serie:true} );
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -656,6 +656,22 @@ altairApp
                         pageTitle: 'FAQ Details'
                     }
                 })
+                 .state("restricted.custompages.faq_add", {
+                     url: "/faq_add",
+                     templateUrl: 'app/components/custompages/faq_editView.html',
+                     controller: 'faqs_ctrl',
+                     resolve: {
+                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                             return $ocLazyLoad.load([
+                                 'app/components/custompages/faqs_ctrl.js'
+                             ]);
+                         }]
+                     },
+                     data: {
+                         pageTitle: 'FAQ Add'
+                     }
+                 })
+
                 .state("restricted.custompages.faq_edit", {
                     url: "/faq_edit/:id",
                     templateUrl: 'app/components/custompages/faq_editView.html',
@@ -687,6 +703,136 @@ altairApp
                         pageTitle: 'FAQ Items List'
                     }
                 })
+                .state("restricted.custompages.testimoniallist", {
+                    url: "/testimoniallist",
+                    templateUrl: 'app/components/custompages/testimonials_list_view.html',
+                    controller: 'testemonials_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'lazy_pagination',
+                                'app/components/custompages/testemonials_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Testimonials Items List'
+                    }
+                })
+                .state("restricted.custompages.testemonial_details", {
+                    url: "/testemonial_details/:id",
+                    templateUrl: 'app/components/custompages/testemonial_details_view.html',
+                    controller: 'testemonials_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'app/components/custompages/testemonials_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'FAQ Details'
+                    }
+                })
+                 .state("restricted.custompages.testemonial_add", {
+                     url: "/testemonial_add",
+                     templateUrl: 'app/components/custompages/testemonial_editView.html',
+                     controller: 'testemonials_ctrl',
+                     resolve: {
+                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                             return $ocLazyLoad.load([
+                                 'app/components/custompages/testemonials_ctrl.js'
+                             ]);
+                         }]
+                     },
+                     data: {
+                         pageTitle: 'Add Testimonial'
+                     }
+                 })
+
+                .state("restricted.custompages.testemonial_edit", {
+                    url: "/testemonial_edit/:id",
+                    templateUrl: 'app/components/custompages/testemonial_editView.html',
+                    controller: 'testemonials_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'app/components/custompages/testemonials_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Testimonial Edit'
+                    }
+                })
+
+                //------------------------------ Careers ----------------------------
+
+                .state("restricted.custompages.careerslist", {
+                    url: "/careerslist",
+                    templateUrl: 'app/components/custompages/careers_list_view.html',
+                    controller: 'careers_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'lazy_pagination',
+                                'app/components/custompages/careers_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Careers Items List'
+                    }
+                })
+                .state("restricted.custompages.career_details", {
+                    url: "/career_details/:id",
+                    templateUrl: 'app/components/custompages/career_details_view.html',
+                    controller: 'careers_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'app/components/custompages/careers_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'FAQ Details'
+                    }
+                })
+                 .state("restricted.custompages.career_add", {
+                     url: "/career_add",
+                     templateUrl: 'app/components/custompages/career_editView.html',
+                     controller: 'careers_ctrl',
+                     resolve: {
+                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                             return $ocLazyLoad.load([
+                                 'app/components/custompages/careers_ctrl.js'
+                             ]);
+                         }]
+                     },
+                     data: {
+                         pageTitle: 'Add Career'
+                     }
+                 })
+
+                .state("restricted.custompages.career_edit", {
+                    url: "/career_edit/:id",
+                    templateUrl: 'app/components/custompages/career_editView.html',
+                    controller: 'careers_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'app/components/custompages/careers_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Testimonial Edit'
+                    }
+                })
+                //------------------------------ End Careers ------------------------
+
+
                 // ------------------------------------- End My Pages ----------------------
             // -- E-COMMERCE --
                 .state("restricted.ecommerce", {
@@ -699,7 +845,7 @@ altairApp
                     templateUrl: 'app/components/ecommerce/product_detailsView.html',
                     controller: 'productCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/ecommerce/productController.js'
                             ]);
@@ -714,7 +860,7 @@ altairApp
                     templateUrl: 'app/components/ecommerce/product_editView.html',
                     controller: 'productCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/ecommerce/productController.js'
                             ]);
@@ -729,17 +875,17 @@ altairApp
                     templateUrl: 'app/components/ecommerce/products_listView.html',
                     controller: 'products_listCtrl',
                     resolve: {
-                        products_data: function($http){
-                            return $http({method: 'GET', url: 'data/ecommerce_products.json'})
+                        products_data: function ($http) {
+                            return $http({ method: 'GET', url: 'data/ecommerce_products.json' })
                                 .then(function (data) {
                                     return data.data;
                                 });
                         },
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_pagination',
                                 'app/components/ecommerce/products_listController.js'
-                            ], { serie: true } );
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -751,16 +897,16 @@ altairApp
                     templateUrl: 'app/components/ecommerce/products_gridView.html',
                     controller: 'products_gridCtrl',
                     resolve: {
-                        products_data: function($http){
-                            return $http({method: 'GET', url: 'data/ecommerce_products.json'})
+                        products_data: function ($http) {
+                            return $http({ method: 'GET', url: 'data/ecommerce_products.json' })
                                 .then(function (data) {
                                     return data.data;
                                 });
                         },
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/ecommerce/products_gridController.js'
-                            ], { serie: true } );
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -778,7 +924,7 @@ altairApp
                     templateUrl: 'app/components/plugins/calendarView.html',
                     controller: 'calendarCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_fullcalendar',
                                 'app/components/plugins/calendarController.js'
@@ -794,7 +940,7 @@ altairApp
                     templateUrl: 'app/components/plugins/code_editorView.html',
                     controller: 'code_editorCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_codemirror',
                                 'app/components/plugins/code_editorController.js'
@@ -810,33 +956,33 @@ altairApp
                     templateUrl: 'app/components/plugins/chartsView.html',
                     controller: 'chartsCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_charts_chartist',
                                 'lazy_charts_metricsgraphics',
                                 'lazy_charts_c3',
                                 'app/components/plugins/chartsController.js'
-                            ], {serie: true});
+                            ], { serie: true });
                         }],
-                        mg_chart_linked_1: function($http){
+                        mg_chart_linked_1: function ($http) {
                             return $http({ method: 'GET', url: 'data/mg_brief-1.json' })
                                 .then(function (data) {
                                     return data.data;
                                 });
                         },
-                        mg_chart_linked_2: function($http){
+                        mg_chart_linked_2: function ($http) {
                             return $http({ method: 'GET', url: 'data/mg_brief-2.json' })
                                 .then(function (data) {
                                     return data.data;
                                 });
                         },
-                        mg_confidence_band: function($http){
+                        mg_confidence_band: function ($http) {
                             return $http({ method: 'GET', url: 'data/mg_confidence_band.json' })
                                 .then(function (data) {
                                     return data.data;
                                 });
                         },
-                        mg_currency: function($http){
+                        mg_currency: function ($http) {
                             return $http({ method: 'GET', url: 'data/mg_some_currency.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -851,7 +997,7 @@ altairApp
                     url: "/datatables",
                     templateUrl: 'app/components/plugins/datatablesView.html',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'bower_components/angular-resource/angular-resource.min.js',
                                 'lazy_datatables',
@@ -868,11 +1014,11 @@ altairApp
                     templateUrl: 'app/components/plugins/diff_viewView.html',
                     controller: 'diff_viewCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_diff',
                                 'app/components/plugins/diff_viewController.js'
-                            ],{serie:true});
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -884,7 +1030,7 @@ altairApp
                     controller: 'gantt_chartCtrl',
                     templateUrl: 'app/components/plugins/gantt_chartView.html',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_gantt_chart',
                                 'app/components/plugins/gantt_chartController.js'
@@ -899,7 +1045,7 @@ altairApp
                     url: "/google_maps",
                     templateUrl: 'app/components/plugins/google_mapsView.html',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_google_maps',
                                 'app/components/plugins/google_mapsController.js'
@@ -915,13 +1061,13 @@ altairApp
                     templateUrl: 'app/components/plugins/tablesorterView.html',
                     controller: 'tablesorterCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_tablesorter',
                                 'app/components/plugins/tablesorterController.js'
-                            ],{serie:true});
+                            ], { serie: true });
                         }],
-                        ts_data: function($http){
+                        ts_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/tablesorter.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -937,7 +1083,7 @@ altairApp
                     templateUrl: 'app/components/plugins/vector_mapsView.html',
                     controller: 'vector_mapsCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_vector_maps',
                                 'app/components/plugins/vector_mapsController.js'
@@ -967,7 +1113,7 @@ altairApp
                     templateUrl: 'app/components/pages/chatView.html',
                     controller: 'chatCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/chatController.js'
                             ]);
@@ -982,12 +1128,12 @@ altairApp
                     templateUrl: 'app/components/pages/contact_listView.html',
                     controller: 'contact_listCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/contact_listController.js'
-                            ],{serie: true});
+                            ], { serie: true });
                         }],
-                        contact_list: function($http){
+                        contact_list: function ($http) {
                             return $http({ method: 'GET', url: 'data/contact_list.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1003,10 +1149,10 @@ altairApp
                     templateUrl: 'app/components/pages/galleryView.html',
                     controller: 'galleryCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/galleryController.js'
-                            ],{serie: true});
+                            ], { serie: true });
                         }]
                     },
                     data: {
@@ -1018,12 +1164,12 @@ altairApp
                     templateUrl: 'app/components/pages/helpView.html',
                     controller: 'helpCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/helpController.js'
-                            ],{serie: true});
+                            ], { serie: true });
                         }],
-                        help_data: function($http){
+                        help_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/help_faq.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1040,10 +1186,10 @@ altairApp
                     templateUrl: 'app/components/pages/invoices_listView.html',
                     controller: 'invoicesCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/pages/invoicesController.js');
                         }],
-                        invoices_data: function($http){
+                        invoices_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/invoices_data.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1088,10 +1234,10 @@ altairApp
                     templateUrl: 'app/components/pages/mailboxView.html',
                     controller: 'mailboxCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/pages/mailboxController.js');
                         }],
-                        messages: function($http){
+                        messages: function ($http) {
                             return $http({ method: 'GET', url: 'data/mailbox_data.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1107,12 +1253,12 @@ altairApp
                     templateUrl: 'app/components/pages/notesView.html',
                     controller: 'notesCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/notesController.js'
                             ]);
                         }],
-                        notes_data: function($http){
+                        notes_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/notes_data.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1135,13 +1281,13 @@ altairApp
                     templateUrl: 'app/components/pages/scrum_boardView.html',
                     controller: 'scrum_boardCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_dragula',
                                 'app/components/pages/scrum_boardController.js'
-                            ],{serie: true});
+                            ], { serie: true });
                         }],
-                        tasks_list: function($http){
+                        tasks_list: function ($http) {
                             return $http({ method: 'GET', url: 'data/tasks_list.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1157,7 +1303,7 @@ altairApp
                     templateUrl: 'app/components/pages/settingsView.html',
                     controller: 'settingsCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load('app/components/pages/settingsController.js')
                         }]
                     },
@@ -1170,12 +1316,12 @@ altairApp
                     templateUrl: 'app/components/pages/snippetsView.html',
                     controller: 'snippetsCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/snippetsController.js'
                             ]);
                         }],
-                        snippets_data: function($http){
+                        snippets_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/snippets.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1191,12 +1337,12 @@ altairApp
                     templateUrl: 'app/components/pages/todoView.html',
                     controller: 'todoCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/todoController.js'
                             ]);
                         }],
-                        todo_data: function($http){
+                        todo_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/todo_data.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1212,12 +1358,12 @@ altairApp
                     templateUrl: 'app/components/pages/user_profileView.html',
                     controller: 'user_profileCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/user_profileController.js'
                             ]);
                         }],
-                        user_data: function($http){
+                        user_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/user_data.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1233,18 +1379,18 @@ altairApp
                     templateUrl: 'app/components/pages/user_editView.html',
                     controller: 'user_editCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/user_editController.js'
                             ]);
                         }],
-                        user_data: function($http){
+                        user_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/user_data.json' })
                                 .then(function (data) {
                                     return data.data;
                                 });
                         },
-                        groups_data: function($http){
+                        groups_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/groups_data.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1266,7 +1412,7 @@ altairApp
                                 'app/components/pages/issuesController.js'
                             ]);
                         }],
-                        issues_data: function($http){
+                        issues_data: function ($http) {
                             return $http({ method: 'GET', url: 'data/issues.json' })
                                 .then(function (data) {
                                     return data.data;
@@ -1295,12 +1441,12 @@ altairApp
                     template: '<div ui-view autoscroll="false" ng-class="{ \'uk-height-1-1\': page_full_height }" />',
                     controller: 'blogCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'app/components/pages/blogController.js'
                             ]);
                         }],
-                        blog_articles: function($http){
+                        blog_articles: function ($http) {
                             return $http({ method: 'GET', url: 'data/blog_articles.json' })
                                 .then(function (data) {
                                     return data.data;

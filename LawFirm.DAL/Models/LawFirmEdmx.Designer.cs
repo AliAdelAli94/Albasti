@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\Git\proj\df\LawFirm.DAL\Models\LawFirmEdmx.edmx'. 
+﻿// T4 code generation is enabled for model 'F:\Current\LawFirm.DAL\Models\LawFirmEdmx.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

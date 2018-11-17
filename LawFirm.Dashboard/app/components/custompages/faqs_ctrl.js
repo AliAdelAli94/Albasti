@@ -13,33 +13,34 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
 
     $scope.filter_pageSize = ['5', '10', '15'];
 
+    GetAllFaqData();
 
-    dashService.GetAllFaq(function (response) {
-        debugger;
-        $scope.faqs = response.data;
+    EditFaq = function () {
 
-        if ($stateParams != null) {
-            if ($stateParams.id != null) {
-
-                $scope.currenFaq = $filter('filter')($scope.faqs, { id: parseInt($stateParams.id) }, true)[0];
-            }
-        }
-
-    },
+        dashService.EditFaq($scope.currenFaq, function (response) {
+            console.log(response);
+        },
     function (response) { });
 
-
-    $scope.EditFaq = function () {
-
     };
 
 
-    $scope.AddFaq = function() {
+    AddFaq = function () {
+
+        dashService.AddFaqDashboard($scope.currenFaq, function (response) {
+            console.log(response);
+        },
+    function (response) { });
 
     };
 
-    $scope.DeleteFaq = function () {
+    $scope.DeleteFaq = function (id) {
+        dashService.DeleteFaqDashboard(id, function (response) {
 
+            GetAllFaqData();
+
+        },
+          function (response) { });
     };
 
 
@@ -52,6 +53,41 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
         }
         return false;
     }
+
+
+    function GetAllFaqData() {
+
+        dashService.GetAllFaq(
+            function (response) {
+                debugger;
+                $scope.faqs = response.data;
+
+                if ($stateParams != null) {
+                    if ($stateParams.id != null) {
+                        $scope.action = "edit";
+                        $scope.currenFaq = $filter('filter')($scope.faqs, { id: parseInt($stateParams.id) }, true)[0];
+                    }
+                    else
+                    {
+                        $scope.action = "insert";
+                    }
+                }
+            },
+            function (response) { });
+    };
+
+
+    $scope.Submit = function (item) {
+
+        if($scope.action == "edit")
+        {
+            EditFaq(item);
+        }
+        else if ($scope.action == "insert")
+        {
+            AddFaq(item);
+        }
+    };
 
 
 }]);

@@ -59,11 +59,11 @@ namespace LawFirm.BL
             }
         }
 
-        public bool DeleteFaq(FAQ item)
+        public bool DeleteFaq(int id)
         {
             try
             {
-                this.iUnitOfWork.FaqRepository.Delete(item.id);
+                this.iUnitOfWork.FaqRepository.Delete(id);
                 this.iUnitOfWork.Save();
                 return true;
             }
