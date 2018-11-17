@@ -1,12 +1,12 @@
 ﻿var app = angular.module("LawFirmApp", ['ui.router']);
 
-//app.run(function ($rootScope) {
-//    $rootScope.$on("$includeContentLoaded", function (event, templateName) {
-//        if (templateName == "/app/chat.html") {
-//            load_chat_js();
-//        }
-//    });
-//});
+app.run(function ($rootScope) {
+    $rootScope.$on("$includeContentLoaded", function (event, templateName) {
+        if (templateName == "/app/chat.html") {
+            load_chat_js();
+        }
+    });
+});
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -131,8 +131,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
     
 });
-
-app.value('backendServerUrl', 'http://localhost:50131/signalr/hubs');
 
 
 app.controller("mainController", function ($scope) {

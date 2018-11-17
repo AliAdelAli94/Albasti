@@ -104,8 +104,6 @@
     <Content Include="app\fonts\Mercury-Regular.eot" />
     <Content Include="app\fonts\Mercury-Regular.ttf" />
     <Content Include="app\fonts\Mercury-Regular.woff" />
-    <Content Include="app\js\jquery-1.6.4.min.js" />
-    <Content Include="app\js\jquery.signalR-2.3.0.min.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Web.Debug.config">
