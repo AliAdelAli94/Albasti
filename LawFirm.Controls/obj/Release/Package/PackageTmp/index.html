@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
-
     <link rel="stylesheet" href="/app/css/bootstrap.css">
     <link rel="stylesheet" href="/app/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:400,700,400italic,700italic%7CSource+Sans+Pro:300,300italic,400,400italic,700,900%7CMerriweather:700italic">
@@ -16,17 +15,23 @@
     <link rel="stylesheet" href="/app/css/chatstyle.css">
     <link rel="stylesheet" href="/app/css/mystyle.css">
 
+    <script src="/app/js/jquery.min.js"></script>
+    <script src="/app/js/signalR/jquery.signalR-2.4.0.min.js"></script>
+    <script type="text/javascript" src="http://localhost:50131/signalr/hubs"></script>
+
     <script src="/app/js/angular.min.js"></script>
     <script src="/app/js/angular-ui-router.min.js"></script>
-
-    <script src="/app/js/jquery.min.js"></script>
     <script src="/app/js/boostrap.min.js"></script>
+
+
+
 
     <script src="/app/js/angularjs/app.js"></script>
     <script src="/app/js/angularjs/lawfirmService.js"></script>
+    <!--<script src="/app/js/angularjs/factories.js"></script>-->
+    <script src="/app/js/angularjs/ChatController.js"></script>
 
     <script src="/app/js/core.min.js"></script>
-    
 
 
     <!--[if lt IE 10]>
@@ -35,36 +40,32 @@
         <![endif]-->
 </head>
 <body ng-app="LawFirmApp">
-
     <!-- Page-->
-    <div class="page" ng-controller = "mainController">
+    <div class="page" ng-controller="mainController">
         <header class="page-head" ng-include="'/app/header.html'"></header>
-
         <div ui-view>
-
         </div>
-
         <div ng-include="'/app/footer.html'"></div>
     </div>
-<!--
-    <div class="page-loader page-loader-variant-1">
-        <div>
-            <a class="brand" href="index.html"><img src="images/logo-default-155x32.png" alt="" width="155" height="32" /></a>
-            <div class="page-loader-body">
-                <div id="spinningSquaresG">
-                    <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
-                    <div class="spinningSquaresG" id="spinningSquaresG_2"></div>
-                    <div class="spinningSquaresG" id="spinningSquaresG_3"></div>
-                    <div class="spinningSquaresG" id="spinningSquaresG_4"></div>
-                    <div class="spinningSquaresG" id="spinningSquaresG_5"></div>
-                    <div class="spinningSquaresG" id="spinningSquaresG_6"></div>
-                    <div class="spinningSquaresG" id="spinningSquaresG_7"></div>
-                    <div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+    <!--
+        <div class="page-loader page-loader-variant-1">
+            <div>
+                <a class="brand" href="index.html"><img src="images/logo-default-155x32.png" alt="" width="155" height="32" /></a>
+                <div class="page-loader-body">
+                    <div id="spinningSquaresG">
+                        <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
+                        <div class="spinningSquaresG" id="spinningSquaresG_2"></div>
+                        <div class="spinningSquaresG" id="spinningSquaresG_3"></div>
+                        <div class="spinningSquaresG" id="spinningSquaresG_4"></div>
+                        <div class="spinningSquaresG" id="spinningSquaresG_5"></div>
+                        <div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+                        <div class="spinningSquaresG" id="spinningSquaresG_7"></div>
+                        <div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
--->
+    -->
     <div class="snackbars" id="form-output-global"></div>
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="pswp__bg"></div>
@@ -101,8 +102,6 @@
         </div>
     </div>
     <div ng-include="'/app/chat.html'"></div>
-
-    
 
 </body>
 </html>

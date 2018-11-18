@@ -2,7 +2,7 @@
 
     function ($http) {
 
-     var WebApiUrl = "http://localhost:20833/";
+        var WebApiUrl = "http://chatappp.somee.com/";
 
      this.GetAllFaq = function (Success, Fail) {
          $http({

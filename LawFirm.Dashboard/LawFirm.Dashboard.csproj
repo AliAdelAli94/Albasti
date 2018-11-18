@@ -2029,6 +2029,7 @@
     <Content Include="data\user_data.min.json" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
+    <None Include="Properties\PublishProfiles\DashboardLocal.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
