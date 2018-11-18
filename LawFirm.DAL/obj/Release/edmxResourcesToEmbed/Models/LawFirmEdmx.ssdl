@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LawFirmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Blogs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="blogDate" Type="datetime" Nullable="false" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="category" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Careers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="location" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="postDate" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="jobType" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="commentBody" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="commenterName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="commenterEmail" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="blogId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Experiences">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="val" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="expertId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Experts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="content1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="quote" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="content2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FAQs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="question" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="answer" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Paragraphs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="paragraph" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="blogId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Testimonials">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tcontent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="person" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="personTitle" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Comments_Blogs">
+    <End Role="Blogs" Type="Self.Blogs" Multiplicity="1" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blogs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="blogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Experiences_Experts">
+    <End Role="Experts" Type="Self.Experts" Multiplicity="1" />
+    <End Role="Experiences" Type="Self.Experiences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Experts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Experiences">
+        <PropertyRef Name="expertId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Paragraphs_Blogs">
+    <End Role="Blogs" Type="Self.Blogs" Multiplicity="1" />
+    <End Role="Paragraphs" Type="Self.Paragraphs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blogs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Paragraphs">
+        <PropertyRef Name="blogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LawFirmModelStoreContainer">
+    <EntitySet Name="Blogs" EntityType="Self.Blogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Careers" EntityType="Self.Careers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Experiences" EntityType="Self.Experiences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Experts" EntityType="Self.Experts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQs" EntityType="Self.FAQs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Paragraphs" EntityType="Self.Paragraphs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Testimonials" EntityType="Self.Testimonials" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Comments_Blogs" Association="Self.FK_Comments_Blogs">
+      <End Role="Blogs" EntitySet="Blogs" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Experiences_Experts" Association="Self.FK_Experiences_Experts">
+      <End Role="Experts" EntitySet="Experts" />
+      <End Role="Experiences" EntitySet="Experiences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Paragraphs_Blogs" Association="Self.FK_Paragraphs_Blogs">
+      <End Role="Blogs" EntitySet="Blogs" />
+      <End Role="Paragraphs" EntitySet="Paragraphs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

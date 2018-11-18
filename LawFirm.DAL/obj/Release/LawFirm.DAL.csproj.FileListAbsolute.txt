@@ -1,0 +1,8 @@
+F:\Current\LawFirm.DAL\bin\Release\LawFirm.DAL.dll.config
+F:\Current\LawFirm.DAL\bin\Release\LawFirm.DAL.dll
+F:\Current\LawFirm.DAL\bin\Release\LawFirm.DAL.pdb
+F:\Current\LawFirm.DAL\bin\Release\EntityFramework.dll
+F:\Current\LawFirm.DAL\bin\Release\EntityFramework.xml
+F:\Current\LawFirm.DAL\obj\Release\LawFirm.DAL.csprojResolveAssemblyReference.cache
+F:\Current\LawFirm.DAL\obj\Release\LawFirm.DAL.dll
+F:\Current\LawFirm.DAL\obj\Release\LawFirm.DAL.pdb
