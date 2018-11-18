@@ -2,6 +2,7 @@
 using LawFirm.DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,13 @@ namespace LawFirm.BL
         {
             try
             {
-                return this.iUnitOfWork.CareerRepository.Get().ToList();
+                List<Career> data = this.iUnitOfWork.CareerRepository.Get().ToList();
+                foreach (var item in data)
+                {
+                    string currentDate = DateTime.ParseExact(item.postDate, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture).ToString();
+                    item.postDate = currentDate.Split(' ')[0];
+                }
+                return data;
             }
             catch (Exception ex)
             {

@@ -25,11 +25,6 @@ namespace LawFirm.Webapi.Controllers
             try
             {
 
-                List<Career> data = this.iCareerBL.GetAllCareers();
-                foreach (var item in data)
-                {
-                    DateTime currentDate = DateTime.ParseExact(item.postDate,"dd/MM/yyyy HH:mm:ss",CultureInfo.InvariantCulture);
-                }
                 return Ok(this.iCareerBL.GetAllCareers());
             }
             catch (Exception exp)

@@ -2,7 +2,8 @@
 
     function ($http) {
 
-        var WebApiUrl = "http://chatappp.somee.com/";
+       // var WebApiUrl = "http://chatappp.somee.com/";
+     var WebApiUrl = "http://localhost:20833/";
 
      this.GetAllFaq = function (Success, Fail) {
          $http({
@@ -27,6 +28,17 @@
          });
      };
 
+
+     this.GetAllCareers = function (Success, Fail) {
+         $http({
+             method: 'GET',
+             url: WebApiUrl + 'career/GetAllCareers'
+         }).then(function (response) {
+             Success(response);
+         }, function (response) {
+             Fail(response);
+         });
+     };
 
  }]);
 

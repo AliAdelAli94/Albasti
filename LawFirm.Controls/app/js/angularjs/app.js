@@ -324,9 +324,17 @@ app.controller("criminalLawController", function () {
     load_js();
 });
 
-app.controller("careersController", function () {
+app.controller("careersController", function ($scope, lawfirmService) {
 
     load_js();
+
+    lawfirmService.GetAllCareers(function (response) {
+
+        $scope.careers = response.data;
+
+    },
+        function (response) { });
+
 });
 
 app.controller("appointmentController", function () {
