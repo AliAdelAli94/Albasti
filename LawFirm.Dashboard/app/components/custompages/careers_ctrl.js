@@ -6,7 +6,8 @@
         'dashService',
         '$stateParams',
         '$filter',
-function ($scope, $rootScope, dashService, $stateParams, $filter) {
+        '$state',
+function ($scope, $rootScope, dashService, $stateParams, $filter, $state) {
 
 
     $scope.pageSize = 10;
@@ -18,15 +19,23 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
     EditCareer = function () {
 
         dashService.EditCareer($scope.currentCareer, function (response) {
+
+            alert('Career is Edited');
+            $state.go('restricted.custompages.careerslist');
+  
         },
     function (response) { });
-
+        
     };
 
 
     AddCareer = function () {
 
         dashService.AddCareer($scope.currentCareer, function (response) {
+
+            alert('Career is Added');
+            $state.go('restricted.custompages.careerslist');
+
         },
     function (response) { });
 
@@ -34,6 +43,7 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
 
     $scope.DeleteCareer = function (id) {
         dashService.DeleteCareer(id, function (response) {
+            alert('Career is Deleted');
 
             GetAllCareersData();
         },
@@ -61,9 +71,11 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
                 if ($stateParams != null) {
                     if ($stateParams.id != null) {
                         $scope.action = "edit";
+                        $scope.title = "Career Edit";
                         $scope.currentCareer = $filter('filter')($scope.careers, { id: parseInt($stateParams.id) }, true)[0];
                     }
                     else {
+                        $scope.title = "Add Career";
                         $scope.action = "insert";
                     }
                 }
@@ -74,13 +86,22 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
 
     $scope.Submit = function (item) {
 
+        var $form = $('#career_edit_form');
+
         if ($scope.action == "edit") {
-            EditCareer(item);
+
+            if ($form.parsley().validate()) {
+                EditCareer(item);
+            }
         }
         else if ($scope.action == "insert") {
-            var x = formatDate(new Date());
-            item.postDate = x;
-            AddCareer(item);
+
+            if ($form.parsley().validate()) {
+
+                var x = formatDate(new Date());
+                item.postDate = x;
+                AddCareer(item);
+            }
         }
     };
 

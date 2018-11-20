@@ -663,6 +663,7 @@ altairApp
                      resolve: {
                          deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                              return $ocLazyLoad.load([
+                                 'lazy_parsleyjs',
                                  'app/components/custompages/faqs_ctrl.js'
                              ]);
                          }]
@@ -679,6 +680,7 @@ altairApp
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
                                 'app/components/custompages/faqs_ctrl.js'
                             ]);
                         }]
@@ -731,7 +733,7 @@ altairApp
                         }]
                     },
                     data: {
-                        pageTitle: 'FAQ Details'
+                        pageTitle: 'Testimonials Details'
                     }
                 })
                  .state("restricted.custompages.testemonial_add", {
@@ -741,6 +743,7 @@ altairApp
                      resolve: {
                          deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                              return $ocLazyLoad.load([
+                                 'lazy_parsleyjs',
                                  'app/components/custompages/testemonials_ctrl.js'
                              ]);
                          }]
@@ -757,6 +760,7 @@ altairApp
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
                                 'app/components/custompages/testemonials_ctrl.js'
                             ]);
                         }]
@@ -806,6 +810,7 @@ altairApp
                      resolve: {
                          deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                              return $ocLazyLoad.load([
+                                 'lazy_parsleyjs',
                                  'app/components/custompages/careers_ctrl.js'
                              ]);
                          }]
@@ -822,12 +827,13 @@ altairApp
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
                                 'app/components/custompages/careers_ctrl.js'
                             ]);
                         }]
                     },
                     data: {
-                        pageTitle: 'Testimonial Edit'
+                        pageTitle: 'Craeer Edit'
                     }
                 })
                 //------------------------------ End Careers ------------------------

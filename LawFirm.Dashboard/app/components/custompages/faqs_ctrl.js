@@ -6,7 +6,8 @@ angular
         'dashService',
         '$stateParams',
         '$filter',
-function ($scope, $rootScope, dashService, $stateParams, $filter) {
+        '$state',
+function ($scope, $rootScope, dashService, $stateParams, $filter, $state) {
 
 
     $scope.pageSize = 10;
@@ -18,7 +19,8 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
     EditFaq = function () {
 
         dashService.EditFaq($scope.currenFaq, function (response) {
-            console.log(response);
+            alert('Faq is edited');
+            $state.go('restricted.custompages.faqlist');
         },
     function (response) { });
 
@@ -28,7 +30,8 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
     AddFaq = function () {
 
         dashService.AddFaqDashboard($scope.currenFaq, function (response) {
-            console.log(response);
+            alert('Faq is inserted');
+            $state.go('restricted.custompages.faqlist');
         },
     function (response) { });
 
@@ -36,7 +39,7 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
 
     $scope.DeleteFaq = function (id) {
         dashService.DeleteFaqDashboard(id, function (response) {
-
+            alert('Faq is Deleted');
             GetAllFaqData();
 
         },
@@ -67,8 +70,7 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
                         $scope.action = "edit";
                         $scope.currenFaq = $filter('filter')($scope.faqs, { id: parseInt($stateParams.id) }, true)[0];
                     }
-                    else
-                    {
+                    else {
                         $scope.action = "insert";
                     }
                 }
@@ -79,13 +81,18 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
 
     $scope.Submit = function (item) {
 
-        if($scope.action == "edit")
-        {
-            EditFaq(item);
+        var $form = $('#faq_edit_form');
+
+        if ($scope.action == "edit") {
+            if ($form.parsley().validate()) {
+
+                EditFaq(item);
+            }
         }
-        else if ($scope.action == "insert")
-        {
-            AddFaq(item);
+        else if ($scope.action == "insert") {
+            if ($form.parsley().validate()) {
+                AddFaq(item);
+            }
         }
     };
 

@@ -22,11 +22,6 @@ namespace LawFirm.BL
             try
             {
                 List<Career> data = this.iUnitOfWork.CareerRepository.Get().ToList();
-                foreach (var item in data)
-                {
-                    string currentDate = DateTime.ParseExact(item.postDate, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture).ToString();
-                    item.postDate = currentDate.Split(' ')[0];
-                }
                 return data;
             }
             catch (Exception ex)
@@ -39,9 +34,10 @@ namespace LawFirm.BL
         {
             try
             {
+                item.postDate = item.postDate.Split(' ')[0];
                 this.iUnitOfWork.CareerRepository.Insert(item);
                 this.iUnitOfWork.Save();
-                if (item.id == null || item.id == 0)
+                if (item.id == 0)
                 {
                     return null;
                 }
