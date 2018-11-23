@@ -42,6 +42,7 @@ namespace LawFirm.Webapi
             container.RegisterType<ITestemonialsBl, TestemonialsBl>();
             container.RegisterType<IBlogBL, BlogBL>();
             container.RegisterType<ICareerBl, CareerBl>();
+            container.RegisterType<IUserBl, UserBl>();
 
         }
     }

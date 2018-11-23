@@ -48,6 +48,8 @@ public partial class LawFirmEntities : DbContext
 
     public DbSet<Testimonial> Testimonials { get; set; }
 
+    public DbSet<user> users { get; set; }
+
 }
 
 }

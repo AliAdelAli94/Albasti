@@ -16,6 +16,7 @@
         <AssociationConnector Association="LawFirmModel.FK_Comments_Blogs" ManuallyRouted="false" />
         <AssociationConnector Association="LawFirmModel.FK_Paragraphs_Blogs" ManuallyRouted="false" />
         <AssociationConnector Association="LawFirmModel.FK_Experiences_Experts" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LawFirmModel.user" Width="1.5" PointX="8.5" PointY="6.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

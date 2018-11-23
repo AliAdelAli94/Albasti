@@ -84,6 +84,17 @@
           <Property Name="person" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="personTitle" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="isactive" Type="bit" Nullable="false" />
+          <Property Name="isonline" Type="bit" Nullable="false" />
+        </EntityType>
         <Association Name="FK_Comments_Blogs">
           <End Role="Blogs" Type="Self.Blogs" Multiplicity="1" />
           <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
@@ -129,6 +140,7 @@
           <EntitySet Name="FAQs" EntityType="Self.FAQs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paragraphs" EntityType="Self.Paragraphs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Testimonials" EntityType="Self.Testimonials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Comments_Blogs" Association="Self.FK_Comments_Blogs">
             <End Role="Blogs" EntitySet="Blogs" />
             <End Role="Comments" EntitySet="Comments" />
@@ -288,7 +300,19 @@
             <End Role="Experts" EntitySet="Experts" />
             <End Role="Experiences" EntitySet="Experiences" />
           </AssociationSet>
+          <EntitySet Name="users" EntityType="LawFirmModel.user" />
         </EntityContainer>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="isactive" Type="Boolean" Nullable="false" DefaultValue="False" />
+          <Property Name="isonline" Type="Boolean" Nullable="false" DefaultValue="False" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -379,6 +403,18 @@
                 <ScalarProperty Name="tcontent" ColumnName="tcontent" />
                 <ScalarProperty Name="person" ColumnName="person" />
                 <ScalarProperty Name="personTitle" ColumnName="personTitle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="LawFirmModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="isonline" ColumnName="isonline" />
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

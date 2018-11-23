@@ -153,6 +153,9 @@
     <Compile Include="Controllers\CareerController.cs" />
     <Compile Include="Controllers\FaqController.cs" />
     <Compile Include="Controllers\TestemonialController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="DTO\LoginDto.cs" />
+    <Compile Include="DTO\RegisterDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

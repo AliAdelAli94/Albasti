@@ -345,7 +345,6 @@ app.controller("appointmentController", function () {
 
 app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
 
-    load_js();
 
     lawfirmService.GetAllFaq(function (response) {
         debugger;
@@ -358,67 +357,14 @@ app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmSer
 
 
     lawfirmService.GetAllTestimonial(function (response) {
-        debugger;
         $scope.testemonials = response.data;
+        load_js();
+
     },
         function (response) { });
 
-    
-
 }]);
 
-'use strict';
-
-app.factory("signalR", ['$rootScope','$', function ($rootScope , $) {
-
-    $.connection.hub.url = 'http://localhost:50131/signalr/';
-
-    var $hub = $.connection.chatHub;
-    var connection = null;
-    var signalR = {
-
-        startHub: function () {
-            console.log("started");
-            connection = $.connection.hub.start();
-        },
-
-        ////////////////////// SERVER METHODS/////////////////
-
-        StartChat: function (username, email) {
-            connection.done(function () {
-                $hub.server.startChat(username, email);
-            });
-        },
-
-        sendMessage: function (message, toCID) {
-            connection.done(function () {
-                $hub.server.sendMessage(message, toCID);
-            });
-        },
-
-        adminLogin: function (email) {
-            connection.done(function () {
-                $hub.server.adminLogin(email);
-            });
-        },
-
-        //////////////////////// CLIENT METHODS ////////////////////            
-
-        userAssigned: function (callback) {
-            $hub.client.userAssigned = callback;
-        },
-
-        getAdminData: function (callback) {
-            $hub.client.getAdminData = callback;
-        },
-
-        recieveMessage: function (callback) {
-            $hub.client.recieveMessage = callback;
-        },
-
-    }
-    return signalR;
-}]);
 
 function load_js() {
     var head = document.getElementsByTagName('head')[0];

@@ -21,6 +21,8 @@ namespace LawFirm.DAL
 
         GenericRepository<Testimonial> TestimonialRepository { get; }
 
+        GenericRepository<user> UserRepository { get; }
+
         void Save();
         void Dispose();
     }

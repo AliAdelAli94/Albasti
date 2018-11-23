@@ -1,9 +1,8 @@
 ﻿'use strict';
 
-app.factory("signalR", ['backendServerUrl', '$rootScope', function ($rootScope, backendServerUrl) {
+app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
 
-    var connection = $.hubConnection(backendServerUrl);
-
+    $.connection.hub.url = 'http://localhost:50131/signalr/';
 
     var $hub = $.connection.chatHub;
     var connection = null;

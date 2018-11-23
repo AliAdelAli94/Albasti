@@ -14,6 +14,7 @@ namespace LawFirm.DAL
         private GenericRepository<FAQ> faqRepository;
         private GenericRepository<Paragraph> paragraphRepository;
         private GenericRepository<Testimonial> testimonialRepository;
+        private GenericRepository<user> userRepository;
 
 
         private bool disposed = false;
@@ -118,6 +119,19 @@ namespace LawFirm.DAL
                 }
 
                 return this.testimonialRepository;
+            }
+        }
+
+        public GenericRepository<user> UserRepository
+        {
+            get
+            {
+                if (this.userRepository == null)
+                {
+                    this.userRepository = new GenericRepository<user>(this.context);
+                }
+
+                return this.userRepository;
             }
         }
 
