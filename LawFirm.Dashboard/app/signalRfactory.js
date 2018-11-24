@@ -9,23 +9,23 @@ altairApp
     var signalR = {
 
         startHub: function () {
-            console.log("started");
+            console.log("Connection Estabished");
             connection = $.connection.hub.start();
         },
 
-        ////////////////////// SERVER METHODS/////////////////
+        ////////////////////// SERVER METHODS /////////////////
 
-        StartChat: function (username, email) {
-            connection.done(function () {
-                $hub.server.startChat(username, email);
-            });
-        },
+        //StartChat: function (username, email) {
+        //    connection.done(function () {
+        //        $hub.server.startChat(username, email);
+        //    });
+        //},
 
-        sendMessage: function (message, toCID) {
-            connection.done(function () {
-                $hub.server.sendMessage(message, toCID);
-            });
-        },
+        //sendMessage: function (message, toCID) {
+        //    connection.done(function () {
+        //        $hub.server.sendMessage(message, toCID);
+        //    });
+        //},
 
         adminLogin: function (email) {
             connection.done(function () {
@@ -33,19 +33,31 @@ altairApp
             });
         },
 
-        //////////////////////// CLIENT METHODS ////////////////////            
+        takeThisUser: function (cid) {
+            connection.done(function () {
+                $hub.server.takeThisUser(cid);
+            });
+        },
+
+        
+        //////////////////////// CLIENT METHODS ////////////////////    
+
 
         userAssigned: function (callback) {
             $hub.client.userAssigned = callback;
         },
 
-        getAdminData: function (callback) {
-            $hub.client.getAdminData = callback;
+        userTaken: function (callback) {
+            $hub.client.userTaken = callback;
         },
 
-        recieveMessage: function (callback) {
-            $hub.client.recieveMessage = callback;
-        },
+        //getAdminData: function (callback) {
+        //    $hub.client.getAdminData = callback;
+        //},
+
+        //recieveMessage: function (callback) {
+        //    $hub.client.recieveMessage = callback;
+        //},
 
     }
     return signalR;

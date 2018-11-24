@@ -61,5 +61,35 @@ namespace LawFirm.Webapi.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("User/MakeAdminOnline/")]
+        public IHttpActionResult MakeAdminOnline(string email)
+        {
+            try
+            {
+                return Ok(this.iUserBL.MakeAdminOnline(email));
+            }
+            catch (Exception exp)
+            {
+                return null;
+            }
+        }
+
+        [HttpGet]
+        [Route("User/GetNumberOfOnlineUsers/")]
+        public IHttpActionResult GetNumberOfOnlineUsers()
+        {
+            try
+            {
+                return Ok(this.iUserBL.GetNumberOfOnlineUsers());
+            }
+            catch (Exception exp)
+            {
+                return null;
+            }
+        }
+
+        
+
     }
 }

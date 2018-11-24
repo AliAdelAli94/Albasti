@@ -12,8 +12,6 @@ angular
             $scope.userRegisterNow = {};
             $scope.loginUserNow = {};
 
-            signalR.startHub();
-
 
             $scope.registerFormActive = false;
 
@@ -111,6 +109,8 @@ angular
                             else
                             {
                                 sessionStorage.setItem("userID", response.data);
+                                signalR.startHub();
+                                signalR.adminLogin($scope.loginUserNow.Email);
                                 $state.go('restricted.custompages.chat')
                             }
                         }

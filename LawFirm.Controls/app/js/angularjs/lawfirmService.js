@@ -40,6 +40,20 @@
          });
      };
 
+
+     this.GetNumberOfOnlineUsers = function (Success, Fail) {
+         $http({
+             method: 'GET',
+             url: WebApiUrl + 'user/GetNumberOfOnlineUsers'
+         }).then(function (response) {
+             Success(response);
+         }, function (response) {
+             Fail(response);
+         });
+     };
+
+     
+
  }]);
 
 

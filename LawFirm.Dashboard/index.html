@@ -60,7 +60,7 @@
     <!-- main stylesheet -->
     <link rel="stylesheet" href="assets/css/main.min.css" media="all" id="main_stylesheet">
 </head>
-<body class="{{main_theme}}" data-uk-observe ng-class="{
+<body ng-controller="mainCtrl" class="{{main_theme}}" data-uk-observe ng-class="{
     'sidebar_main_active': primarySidebarActive && !miniSidebarActive && !topMenuActive && (!$state.is('login') && !$state.includes('error')),
     'sidebar_main_open': primarySidebarOpen && !miniSidebarActive && !topMenuActive && largeScreen && (!$state.is('login') && !$state.includes('error')),
     'sidebar_mini': miniSidebarActive && largeScreen && (!$state.is('login') && !$state.includes('error')),

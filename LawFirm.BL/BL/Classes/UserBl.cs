@@ -21,7 +21,7 @@ namespace LawFirm.BL
             this.passwordEncruption = new PasswordEncruption();
         }
 
-        public bool RegisterUser(string useName , string email , string password)
+        public bool RegisterUser(string useName, string email, string password)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace LawFirm.BL
             try
             {
                 user item = this.iUnitOfWork.UserRepository.Get(u => u.email == email).FirstOrDefault();
-                if(item == null)
+                if (item == null)
                 {
                     return false;
                 }
@@ -60,26 +60,57 @@ namespace LawFirm.BL
             }
         }
 
-        public string Login(string email , string password)
+        public string Login(string email, string password)
         {
             try
             {
                 password = passwordEncruption.Encrypt(password);
                 user item = this.iUnitOfWork.UserRepository.Get(u => u.email == email && u.password == password).FirstOrDefault();
-                if(item == null)
+                if (item == null)
                 {
                     return null;
                 }
-                if(item.isactive == false)
+                if (item.isactive == false)
                 {
                     return "00";
                 }
                 return item.id.ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return null;
             }
         }
+
+        public bool MakeAdminOnline(string email)
+        {
+            try
+            {
+                user item = this.iUnitOfWork.UserRepository.Get(u => u.email == email).FirstOrDefault();
+                item.isonline = true;
+                this.iUnitOfWork.UserRepository.Update(item);
+                this.iUnitOfWork.Save();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+
+        public int GetNumberOfOnlineUsers()
+        {
+            try
+            {
+                return this.iUnitOfWork.UserRepository.Get(u => u.isonline == true).Count();
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
+
     }
 }

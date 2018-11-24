@@ -6,57 +6,34 @@ angular
 
         function ($rootScope,$scope) {
 
-            console.log(sessionStorage.getItem('userID'));
+            $scope.users = [];
+
+            $scope.$on('addNewUser', function ($event, data) {
+
+                $scope.users.push(data);
+                $scope.$apply();
+            });
+
+            $scope.TakeThisUser = function (cID) {
+                $scope.$parent.TakeThisUser(cID);
+            };
+
+
+            $scope.$on('userTaken', function ($event, data) {
+                for (var i = 0 ; i < $scope.users.length ; i++)
+                {
+                    if($scope.users[i].CID == data)
+                    {
+                        $scope.users.splice(i, 1);
+                        break;
+                    }
+                }
+                $scope.$apply();
+            });
+
 
             $rootScope.page_full_height = true;
             $rootScope.headerDoubleHeightActive = true;
-
-            $scope.chat_users = [
-                {
-                    "id": 0,
-                    "name": "Lue Feest",
-                    "description": "Lorem ipsum dolor sit amet.",
-                    "avatar": "assets/img/avatars/avatar_11_tn.png",
-                    "status": "online"
-
-                },
-                {
-                    "id": 1,
-                    "name": "Roosevelt Stoltenberg",
-                    "description": "Lorem ipsum dolor sit amet.",
-                    "avatar": "assets/img/avatars/avatar_03_tn.png",
-                    "status": "online"
-
-                },
-                {
-                    "id": 2,
-                    "name": "Casimer Smitham",
-                    "description": "Et quis eligendi ex.",
-                    "avatar": "assets/img/avatars/avatar_05_tn.png",
-                    "status": "afk"
-                },
-                {
-                    "id": 3,
-                    "name": "Katarina Fadel",
-                    "description": "Facere laboriosam molestiae doloribus culpa.",
-                    "avatar": "assets/img/avatars/avatar_08_tn.png",
-                    "status": "online"
-                },
-                {
-                    "id": 4,
-                    "name": "Caterina Homenick",
-                    "description": "Corporis doloribus aut voluptate ut aut.",
-                    "avatar": "assets/img/avatars/avatar_06_tn.png",
-                    "status": "offline"
-                },
-                {
-                    "id": 5,
-                    "name": "Mark Leffler",
-                    "description": "Nihil et ea.",
-                    "avatar": "assets/img/avatars/avatar_07_tn.png",
-                    "status": "online"
-                }
-            ];
 
             $scope.chat_messages = [
                 {

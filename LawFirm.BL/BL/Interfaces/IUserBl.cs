@@ -14,5 +14,10 @@ namespace LawFirm.BL
         bool CheckUserExist(string email);
 
         string Login(string email, string password);
+
+        bool MakeAdminOnline(string email);
+
+        int GetNumberOfOnlineUsers();
+
     }
 }
