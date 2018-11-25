@@ -21,11 +21,11 @@ altairApp
         //    });
         //},
 
-        //sendMessage: function (message, toCID) {
-        //    connection.done(function () {
-        //        $hub.server.sendMessage(message, toCID);
-        //    });
-        //},
+        sendMessage: function (message, toCID) {
+            connection.done(function () {
+                $hub.server.sendMessage(message, toCID);
+            });
+        },
 
         adminLogin: function (email) {
             connection.done(function () {
@@ -55,9 +55,9 @@ altairApp
         //    $hub.client.getAdminData = callback;
         //},
 
-        //recieveMessage: function (callback) {
-        //    $hub.client.recieveMessage = callback;
-        //},
+        recieveMessage: function (callback) {
+            $hub.client.recieveMessage = callback;
+        },
 
     }
     return signalR;

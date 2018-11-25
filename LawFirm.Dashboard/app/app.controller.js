@@ -12,7 +12,7 @@ angular
         function ($scope, $rootScope, signalR) {
 
             signalR.userAssigned(function (name, cID, email) {
-                $scope.newUser = { Name: name, CID: cID, Email: email, Messages: [] };
+                $scope.newUser = { Name: name, CID: cID, Email: email ,Messages: [] };
                 $scope.$apply();
 
                 $scope.$broadcast('addNewUser', $scope.newUser);
@@ -29,6 +29,24 @@ angular
             signalR.userTaken(function (cid) {
                 $scope.$broadcast('userTaken', cid);
             });
+
+            signalR.recieveMessage(function (msg, fromCID) {
+
+                $scope.package = { Msg: msg, User: fromCID };
+
+                console.log("new Message : ", $scope.package);
+
+                $scope.$broadcast('addNewMessage', $scope.package);
+
+            });
+
+            $scope.sendMessage = function (msg, toCID) {
+
+                signalR.sendMessage(msg, toCID);
+
+            };
+
+
 
         }
     ])

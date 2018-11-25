@@ -115,6 +115,7 @@
     <Content Include="app\fonts\Mercury-Regular.ttf" />
     <Content Include="app\fonts\Mercury-Regular.woff" />
     <Content Include="app\js\signalR\jquery.signalR-2.4.0.min.js" />
+    <Content Include="images\img\user1.png" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Properties\PublishProfiles\websiiite.pubxml" />

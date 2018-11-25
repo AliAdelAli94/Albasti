@@ -9,8 +9,6 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
     });
 
 
-    signalR.startHub();
-
     $scope.client = {};
     $scope.messages = [];
     $scope.startChat = function () {
@@ -20,6 +18,8 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
             {
                 if ($scope.client) {
                     if ($scope.client.username && $scope.client.email) {
+
+                        signalR.startHub();
                         signalR.startChat($scope.client.username, $scope.client.email);
                     }
                 }
@@ -28,28 +28,30 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
         }, function () { })
     };
 
-    //signalR.recieveMessage(function (msg, fromCID) {
+    signalR.recieveMessage(function (msg, fromCID) {
 
-    //    $scope.messages.push({ content: msg, dir: 0 });
-    //    $scope.$apply();
+        console.log("new Message : ", msg);
 
-    //});
+        $scope.messages.push({ content: msg, dir: 0 });
+        $scope.$apply();
+
+    });
 
 
     signalR.getAdminData(function (cid) {
 
         $scope.adminConnectionID = cid;
-        console.log($scope.adminConnectionID);
+        console.log("admin id : " + $scope.adminConnectionID);
 
     });
 
 
-    //$scope.sendMessage = function (e) {
-    //    $scope.messages.push({ content: $scope.msgContent, dir: 1 })
-    //    signalR.sendMessage($scope.msgContent, $scope.adminConnectionID);
-    //    $scope.msgContent = "";
-    //    $scope.$apply();
-    //};
+    $scope.sendMessage = function (e) {
+        $scope.messages.push({ content: $scope.msgContent, dir: 1 })
+        signalR.sendMessage($scope.msgContent, $scope.adminConnectionID);
+        $scope.msgContent = "";
+        $scope.$apply();
+    };
 
 
     //$scope.show = function () {

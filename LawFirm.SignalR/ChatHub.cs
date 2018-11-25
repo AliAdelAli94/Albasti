@@ -33,9 +33,8 @@ namespace LawFirm.SignalR
         {
             try
             {
-                Clients.Client(cid).getAdminData(Context.ConnectionId);
-
                 Clients.OthersInGroup("Admins").userTaken(cid);
+                Clients.Client(cid).getAdminData(Context.ConnectionId);
             }
             catch (Exception ex)
             {
@@ -62,32 +61,26 @@ namespace LawFirm.SignalR
         }
 
 
-        //public void sendMessage(string message, string toCID)
-        //{
-        //    Clients.Client(toCID).recieveMessage(message, Context.ConnectionId);
-        //}
+        public void sendMessage(string message, string toCID)
+        {
+            Clients.Client(toCID).recieveMessage(message, Context.ConnectionId);
+        }
 
 
-        //public override Task OnConnected()
-        //{
-        //    AllUsers.Add(Context.ConnectionId);
-        //    return base.OnConnected();
-        //}
+        public override Task OnConnected()
+        {
+            return base.OnConnected();
+        }
 
-        //public override Task OnDisconnected(bool stopCalled)
-        //{
-        //    AllUsers.Remove(Context.ConnectionId);
-        //    var temb = Admins.Where(x => x.ConnectionID == Context.ConnectionId).FirstOrDefault();
-        //    temb.Status = 0;
-        //    temb.ServeNumber = 0;
-        //    temb.ConnectionID = null;
-        //    return base.OnDisconnected(stopCalled);
-        //}
+        public override Task OnDisconnected(bool stopCalled)
+        {
+            return base.OnDisconnected(stopCalled);
+        }
 
-        //public override Task OnReconnected()
-        //{
-        //    return base.OnReconnected();
-        //}
+        public override Task OnReconnected()
+        {
+            return base.OnReconnected();
+        }
 
     }
 }
