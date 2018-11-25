@@ -67,6 +67,14 @@ namespace LawFirm.SignalR
         }
 
 
+        public void sendMessageBroadCast(string message)
+        {
+            Clients.Group("Admins").recieveMessage(message, Context.ConnectionId);
+        }
+
+        
+
+
         public override Task OnConnected()
         {
             return base.OnConnected();

@@ -47,10 +47,22 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
 
 
     $scope.sendMessage = function (e) {
-        $scope.messages.push({ content: $scope.msgContent, dir: 1 })
-        signalR.sendMessage($scope.msgContent, $scope.adminConnectionID);
-        $scope.msgContent = "";
-        $scope.$apply();
+        if ($scope.adminConnectionID)
+        {
+            $scope.messages.push({ content: $scope.msgContent, dir: 1 })
+            signalR.sendMessage($scope.msgContent, $scope.adminConnectionID);
+            $scope.msgContent = "";
+            $scope.$apply();
+        }
+        else
+        {
+            $scope.messages.push({ content: $scope.msgContent, dir: 1 })
+            signalR.startChat($scope.client.username, $scope.client.email);
+            signalR.sendMessageBroadCast($scope.msgContent);
+            $scope.msgContent = "";
+            $scope.$apply();
+        }
+        
     };
 
 

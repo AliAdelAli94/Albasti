@@ -27,6 +27,14 @@ app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
             });
         },
 
+        sendMessageBroadCast: function (message) {
+            connection.done(function () {
+                $hub.server.sendMessageBroadCast(message);
+            });
+        },
+
+        
+
         //adminLogin: function (email) {
         //    connection.done(function () {
         //        $hub.server.adminLogin(email);

@@ -30,7 +30,7 @@
                             <div class="chat_box_wrapper">
 
                                 <div class="chat_box touchscroll {{chat_colors}}" id="chat">
-                                    <div class="chat_message_wrapper" ng-repeat="message in recentUser.Messages" ng-class="{'chat_message_right': message.dir }">
+                                    <div class="chat_message_wrapper" ng-repeat="message in $parent.recentUser.Messages" ng-class="{'chat_message_right': message.dir }">
                                         <div class="chat_user_avatar">
                                             <img class="md-user-image" src="/images/user.jpg" alt="" />
                                         </div>
@@ -58,7 +58,7 @@
                 <div class="uk-width-large-3-10 uk-visible-large">
                     <div class="md-list-outside-wrapper" custom-scrollbar list-outside>
                         <ul class="md-list md-list-addon md-list-outside">
-                            <li ng-repeat="user in users track by $index">
+                            <li ng-repeat="user in $parent.users track by $index">
                                 <div class="md-card-dropdown md-list-action-dropdown" data-uk-dropdown="{pos:'bottom-right'}">
                                     <i class="md-icon material-icons">&#xE5D4;</i>
                                     <div class="uk-dropdown uk-dropdown-small">

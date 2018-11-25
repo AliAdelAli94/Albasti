@@ -6,49 +6,17 @@ angular
 
         function ($rootScope, $scope) {
 
-            $scope.users = [];
-
-            $scope.$on('addNewUser', function ($event, data) {
-
-                $scope.users.push(data);
-                $scope.$apply();
-            });
-
             $scope.TakeThisUser = function (cID) {
                 $scope.$parent.TakeThisUser(cID);
             };
-
-
-            $scope.$on('userTaken', function ($event, data) {
-                for (var i = 0 ; i < $scope.users.length ; i++) {
-                    if ($scope.users[i].CID == data) {
-                        $scope.users.splice(i, 1);
-                        break;
-                    }
-                }
-                $scope.$apply();
-            });
-
-
-            $scope.$on('addNewMessage', function ($event, data) {
-                for (var i = 0 ; i < $scope.users.length ; i++) {
-                    if ($scope.users[i].CID == data.User) {
-                        var x = new Date();
-                        $scope.users[i].Messages.push({ msg: data.Msg, dir: 0, date: x.getHours() + ":" + x.getMinutes() });
-                        break;
-                    }
-                }
-                $scope.$apply();
-            });
-
 
 
             $scope.sendMessage = function () {
 
                 if ($scope.msgContent != null || $scope.msgContent != "") {
                     var x = new Date();
-                    $scope.recentUser.Messages.push({ msg: $scope.msgContent, dir: 1, date: x.getHours() + ":" + x.getMinutes() });
-                    $scope.$parent.sendMessage($scope.msgContent, $scope.recentUser.CID);
+                    $scope.$parent.recentUser.Messages.push({ msg: $scope.msgContent, dir: 1, date: x.getHours() + ":" + x.getMinutes() });
+                    $scope.$parent.sendMessage($scope.msgContent, $scope.$parent.recentUser.CID);
                     $scope.msgContent = "";
                 }
             };
@@ -56,7 +24,7 @@ angular
 
             $scope.changeRecentUser = function (id) {
 
-                $scope.recentUser = $scope.users[id];
+                $scope.$parent.recentUser = $scope.users[id];
 
             };
 
