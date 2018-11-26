@@ -142,5 +142,17 @@
       <End Role="Experts" EntitySet="Experts" />
       <End Role="Experiences" EntitySet="Experiences" />
     </AssociationSet>
+    <EntitySet Name="users" EntityType="LawFirmModel.user" />
   </EntityContainer>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="isactive" Type="Boolean" Nullable="false" DefaultValue="False" />
+    <Property Name="isonline" Type="Boolean" Nullable="false" DefaultValue="False" />
+  </EntityType>
 </Schema>

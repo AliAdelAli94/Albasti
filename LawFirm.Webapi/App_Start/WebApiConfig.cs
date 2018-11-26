@@ -12,7 +12,7 @@ namespace LawFirm.Webapi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var cors = new EnableCorsAttribute("http://localhost:45886,http://localhost:3668,http://lawfirm.somee.com,http://lawfirmdash.somee.com", "*", "*");
+            var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
             // Web API routes
             config.MapHttpAttributeRoutes();
