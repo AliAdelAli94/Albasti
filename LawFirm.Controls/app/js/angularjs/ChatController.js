@@ -66,12 +66,6 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
     };
 
 
-    //$scope.show = function () {
-
-    //    console.log($scope.messages);
-    //};
-
-
 });
 
 
