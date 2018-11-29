@@ -4,3 +4,9 @@ F:\Current\LawFirm.Dashboard\bin\LawFirm.Dashboard.pdb
 F:\Current\LawFirm.Dashboard\obj\Release\LawFirm.Dashboard.csprojResolveAssemblyReference.cache
 F:\Current\LawFirm.Dashboard\obj\Release\LawFirm.Dashboard.dll
 F:\Current\LawFirm.Dashboard\obj\Release\LawFirm.Dashboard.pdb
+D:\Current\myrepo\LawFirm.Dashboard\bin\LawFirm.Dashboard.dll.config
+D:\Current\myrepo\LawFirm.Dashboard\bin\LawFirm.Dashboard.dll
+D:\Current\myrepo\LawFirm.Dashboard\bin\LawFirm.Dashboard.pdb
+D:\Current\myrepo\LawFirm.Dashboard\obj\Release\LawFirm.Dashboard.csprojResolveAssemblyReference.cache
+D:\Current\myrepo\LawFirm.Dashboard\obj\Release\LawFirm.Dashboard.dll
+D:\Current\myrepo\LawFirm.Dashboard\obj\Release\LawFirm.Dashboard.pdb

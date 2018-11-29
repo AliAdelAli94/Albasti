@@ -3,7 +3,7 @@
         <h1>FAQ Edit</h1>
     </div>
     <div id="page_content_inner">
-        <form action="" class="uk-form-stacked" id="product_edit_form">
+        <form action="" class="uk-form-stacked" id="faq_edit_form">
             <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
                 <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
                     <div class="md-card">
@@ -25,15 +25,16 @@
                         <div class="md-card-content large-padding">
                             <div class="uk-grid uk-grid-divider uk-grid-medium">
                                 <div class="uk-width-large-2-2">
-                                    <div class="uk-form-row">
+                                    <div class="parsley-row">
                                         <label for="faq_edit_question_control">FAQ Question</label>
-                                        <input type="text" class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="faq_edit_question_control" id="faq_edit_question_control" ng-model="currenFaq.question" md-input  />
+                                        <input type="text" class="md-input" required name="faq_edit_question_control" id="faq_edit_question_control" ng-model="currenFaq.question" md-input />
                                     </div>
-                                    <div class="uk-form-row">
+                                    <br />
+                                    <div class="parsley-row">
                                         <label for="faq_edit_answer_control">FAQ Answer</label>
-                                        <textarea class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="faq_edit_answer_control" id="faq_edit_answer_control"  cols="30" rows="4" ng-model="currenFaq.answer" md-input textarea-autosize></textarea>
+                                        <textarea class="md-input" required name="faq_edit_answer_control" id="faq_edit_answer_control" cols="30" rows="4" ng-model="currenFaq.answer" md-input textarea-autosize></textarea>
                                     </div>
-
+                                    <br />
                                 </div>
                             </div>
                         </div>

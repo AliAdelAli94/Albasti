@@ -4,6 +4,9 @@
 
         var WebApiUrl = "http://chatappp.somee.com/";
 
+   //     var WebApiUrl = "http://localhost:20833/";
+
+
         this.GetAllFaq = function (Success, Fail) {
             $http({
                 method: 'GET',
@@ -145,6 +148,47 @@
                 Fail(response);
             });
         };
+
+        /* -------------------- User Services ------------------------------ */
+
+        this.RegisterUser = function (dto, Success, Fail) {
+            $http({
+                method: 'POST',
+                url: WebApiUrl + 'User/RegisterUser/',
+                data: dto
+            }).then(function (response) {
+                Success(response);
+            }, function (response) {
+                Fail(response);
+            });
+        };
+
+
+        this.CheckUserExist = function (email, Success, Fail) {
+            $http({
+                method: 'GET',
+                url: WebApiUrl + 'User/CheckUserExist?email = ' + email,
+            }).then(function (response) {
+                Success(response);
+            }, function (response) {
+                Fail(response);
+            });
+        };
+
+
+        this.Login = function (dto, Success, Fail) {
+            $http({
+                method: 'POST',
+                url: WebApiUrl + 'User/Login/',
+                data : dto
+            }).then(function (response) {
+                Success(response);
+            }, function (response) {
+                Fail(response);
+            });
+        };
+
+        /* -------------------- End User Services ------------------------------ */
 
     }]);
 

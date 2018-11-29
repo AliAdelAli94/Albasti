@@ -6,908 +6,911 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Ali Abo Saada\Desktop\websiite</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\ali.hasan\Desktop\websiite</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="app/404-page.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/about-us.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/accordion.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/appointment.html">
-      <publishTime>11/17/2018 18:35:13</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/arbitration.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bankruptcy.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/phpmailer/class.phpmailer.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/phpmailer/class.pop3.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/phpmailer/class.smtp.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/phpmailer/PHPMailerAutoload.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/rd-mailform.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/rd-mailform.tpl">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/rd-search.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/twitter_api/config.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/twitter_api/tweet.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/twitter_api/twitteroauth/OAuth.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/bat/twitter_api/twitteroauth/twitteroauth.php">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/blog-classic.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/blog-grid.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/blog-line.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/blog-masonry.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/blog-post.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/buttons.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/careers.html">
-      <publishTime>11/17/2018 18:37:51</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/chat.html">
-      <publishTime>11/16/2018 18:14:52</publishTime>
+      <publishTime>11/27/2018 01:29:14</publishTime>
     </File>
     <File Include="app/civil-law.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/clients-testimonials.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/clients.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/coming-soon.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/commercial-corporate.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/contact-us.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/contract-drafting.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/criminal-law.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/css/503-page.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/css/bootstrap.css">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/css/bootstrap.min.css">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/css/chatstyle.css">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/css/fonts.css">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/css/mystyle.css">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/css/style.css">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/expert-opinion.html">
-      <publishTime>11/09/2018 00:40:22</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/extras.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/family-law.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/faq.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/firm-overview.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/36-slim-icons.eot">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/36-slim-icons.svg">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/36-slim-icons.ttf">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/36-slim-icons.woff">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-bigmug-line.eot">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-bigmug-line.svg">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-bigmug-line.ttf">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-bigmug-line.woff">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-flat-icons-set-2.eot">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-flat-icons-set-2.svg">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-flat-icons-set-2.ttf">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fl-flat-icons-set-2.woff">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fontawesome-webfont.eot">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fontawesome-webfont.svg">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fontawesome-webfont.ttf">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fontawesome-webfont.woff">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/fontawesome-webfont.woff2">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/FontAwesome.otf">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/materialdesignicons-webfont.eot">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/materialdesignicons-webfont.svg">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/materialdesignicons-webfont.ttf">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/materialdesignicons-webfont.woff">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/materialdesignicons-webfont.woff2">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/MaterialIcons-Regular.eot">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/MaterialIcons-Regular.ijmap">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/MaterialIcons-Regular.ttf">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/MaterialIcons-Regular.woff">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/MaterialIcons-Regular.woff2">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/Mercury-Regular.eot">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/Mercury-Regular.svg">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/Mercury-Regular.ttf">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/fonts/Mercury-Regular.woff">
-      <publishTime>10/21/2018 12:18:37</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/footer.html">
-      <publishTime>11/17/2018 19:40:20</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/forms.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/gallery-cobbles.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/gallery-grid.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/gallery-item.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/gallery-masonry.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/government-regulations.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/grid.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/header.html">
-      <publishTime>11/17/2018 19:41:03</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/home.html">
-      <publishTime>11/16/2018 22:50:25</publishTime>
+      <publishTime>11/21/2018 02:14:04</publishTime>
     </File>
     <File Include="app/icon-lists.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/icons.html">
-      <publishTime>10/21/2018 14:20:45</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/insurance-law.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/intellectual-property-law.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/angular-ui-router.min.js">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/angular.min.js">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/angularjs/app.js">
-      <publishTime>11/17/2018 22:26:08</publishTime>
+      <publishTime>11/25/2018 02:01:08</publishTime>
     </File>
     <File Include="app/js/angularjs/ChatController.js">
-      <publishTime>11/17/2018 22:22:09</publishTime>
+      <publishTime>11/27/2018 01:29:14</publishTime>
     </File>
     <File Include="app/js/angularjs/factories.js">
-      <publishTime>11/17/2018 20:29:06</publishTime>
+      <publishTime>11/28/2018 01:01:56</publishTime>
     </File>
     <File Include="app/js/angularjs/lawfirmService.js">
-      <publishTime>11/18/2018 00:29:26</publishTime>
+      <publishTime>11/28/2018 01:01:03</publishTime>
     </File>
     <File Include="app/js/boostrap.min.js">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/chatscript.js">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/core.min.js">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/html5shiv.min.js">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/jquery.min.js">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/pointer-events.min.js">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/script.js">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/signalR/jquery.signalR-2.4.0.min.js">
-      <publishTime>11/17/2018 21:20:25</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/labor-law.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/litigation.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/login.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/maintenance.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/maritime-law.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/medical-malpractice.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/our-team.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/practice-areas.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/pricing.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/privacy-policy.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/progress-bars.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/realestate-construction.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/register.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/search-results.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/services.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/sharia-law.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/table-styles.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/tabs.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/team-member-profile.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/testemonials.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/typography.html">
-      <publishTime>10/21/2018 14:20:46</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/why-retainer-services.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/wills-trust.html">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="bin/LawFirm.Controls.dll">
-      <publishTime>11/18/2018 00:46:26</publishTime>
+      <publishTime>11/28/2018 01:04:41</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Client.dll">
-      <publishTime>11/17/2018 21:11:11</publishTime>
+      <publishTime>11/19/2018 00:46:04</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 21:33:56</publishTime>
+      <publishTime>11/19/2018 00:46:04</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>11/09/2018 00:40:23</publishTime>
+      <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="images/about-1-670x578.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/ajax-loader.gif">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/amgad.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/amr.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/baverli.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/bg-image-1.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/bg-image-2.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/bg-image-3.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/bg-special.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-1-971x649.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-2-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-3-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-4-970x545.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-5-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-6-970x545.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-7-970x545.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-8-970x545.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-classic-9-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-grid-1-570x253.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-grid-2-570x253.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-grid-3-570x253.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-grid-4-570x253.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-grid-5-570x253.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-line-1-771x515.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-line-2-772x435.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-line-3-770x433.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-line-4-770x433.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-line-5-770x433.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-masonry-1-570x322.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-masonry-2-570x322.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/blog-masonry-3-570x322.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/business-person.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/careers-1-1171x519.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/careers-2-1171x519.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/careers-3-1171x519.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/careers-4-1171x519.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-1-126x68.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-10-95x101.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-11-126x68.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-12-132x83.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-2-126x100.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-3-132x83.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-4-169x68.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-5-141x88.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-6-138x55.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-7-104x84.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-8-144x68.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-9-105x94.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-light-1-162x76.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-light-2-153x69.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-light-3-132x69.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-light-4-146x58.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-parallax-1.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-1-68x68.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-10-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-11-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-12-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-2-68x68.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-3-150x150.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-4-150x150.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-5-150x150.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-6-150x150.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-7-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-8-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-9-113x113.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/clients-testimonials-parallax-1.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/favicon.ico">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/fe.jpg">
-      <publishTime>11/04/2018 23:40:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-1-1200x797_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-2-1200x795_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-3-1200x801_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-4-1200x801_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-5-1200x911_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-6-1200x798_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-7-1200x800_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-8-1200x607_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-9-1200x800_original.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-cobbles-1-390x601.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-cobbles-2-390x301.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-cobbles-3-390x301.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-cobbles-4-780x300.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-cobbles-5-780x600.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-cobbles-6-390x300.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-cobbles-7-390x300.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-1-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-2-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-3-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-4-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-5-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-6-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-7-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-8-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-grid-9-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-item-1-1170x883.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-item-2-220x224.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-item-3-220x224.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-item-4-220x224.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-item-5-220x224.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-masonry-1-770x586.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-masonry-2-370x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-masonry-3-371x586.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-masonry-4-373x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-masonry-5-373x278.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-masonry-6-769x384.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gallery-masonry-7-371x384.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gmap_marker.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/gmap_marker_active.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-1.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-2-342x338.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-3-569x472.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-4-472x753.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-5-268x182.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-6-268x182.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-7-268x182.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-8-268x182.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-aside-image-1-960x560.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-slider-slide-1.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-slider-slide-2.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/home-slider-slide-3.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/ie8-panel/warning_bar_0000_us.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
+    </File>
+    <File Include="images/img/user1.png">
+      <publishTime>11/27/2018 01:29:14</publishTime>
     </File>
     <File Include="images/khalid.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/logo-default-155x32.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/logo-inverse-155x32.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/marisa.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/mohamadosama.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/mrakbar.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/Mrayman.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/Mrtariq.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/najmi.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/photoswipe-controls.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/photoswipe-controls.svg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-1-870x412.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-2-70x71.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-3-70x71.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-4-70x71.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-preview-1-70x70.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-preview-2-70x70.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-preview-3-70x70.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-preview-4-70x70.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/post-preview-5-70x70.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/preloader.gif">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/preloader.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/profile-1-570x570.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/progress-bars-parallax-1.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/Salha1.jpg">
-      <publishTime>11/04/2018 22:39:17</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/services-1-570x537.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-1-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-10-246x300.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-11-246x300.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-12-246x300.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-2-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-3-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-4-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-5-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-6-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-7-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-8-189x189.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/team-9-246x300.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/textarea-pattern-light.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/tm-logo.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/twitter-blank.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/typography-1-1169x610.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/typography-2-570x386.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/typography-3-570x386.jpg">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="images/_blank.png">
-      <publishTime>10/21/2018 12:18:38</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>11/17/2018 21:22:36</publishTime>
+      <publishTime>11/28/2018 01:03:53</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/17/2018 21:11:23</publishTime>
+      <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/18/2018 00:46:27</publishTime>
+      <publishTime>11/28/2018 01:04:42</publishTime>
     </File>
   </ItemGroup>
 </Project>

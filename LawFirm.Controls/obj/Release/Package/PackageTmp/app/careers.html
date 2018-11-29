@@ -1,4 +1,5 @@
 ﻿<div ng-controller="careersController">
+    
     <section class="section-30 section-md-40 section-lg-66 section-xl-bottom-90 bg-gray-dark page-title-wrap" style="background-image: url(images/bg-image-1.jpg);">
         <div class="container">
             <div class="page-title">
@@ -92,91 +93,16 @@
             <h3>Your Career Starts Here</h3>
             <p style="max-width: 440px;">Can't find the job you want? Send your resume to info@demolink.org, and we'll contact you when a new position will be open.</p>
             <div class="row row-30">
-                <div class="col-md-6">
-                    <a class="block-vacation" href="#">
-                        <h5>Office Assistant</h5>
+                <div class="col-md-6" ng-repeat="career in careers">
+                    <a class="block-vacation">
+                        <h5>{{career.jobTitle}}</h5>
                         <div class="block-meta">
                             <ul class="list-objects-inline">
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-location_on"></span><span>London</span></li>
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-av_timer"></span><span>Full Time</span></li>
+                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-location_on"></span><span>{{career.location}}</span></li>
+                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-av_timer"></span><span>{{career.jobType}}</span></li>
                                 <li>
                                     <span class="novi-icon icon icon-xxs icon-primary material-icons-event_available"></span>
-                                    <time datetime="2017-01-01">6 hours ago</time>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a class="block-vacation" href="#">
-                        <h5>Office Manager</h5>
-                        <div class="block-meta">
-                            <ul class="list-objects-inline">
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-location_on"></span><span>Athlanta</span></li>
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-av_timer"></span><span>Freelance</span></li>
-                                <li>
-                                    <span class="novi-icon icon icon-xxs icon-primary material-icons-event_available"></span>
-                                    <time datetime="2017-01-01">3 day ago</time>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a class="block-vacation" href="#">
-                        <h5>Senior Paralegal</h5>
-                        <div class="block-meta">
-                            <ul class="list-objects-inline">
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-location_on"></span><span>Oakland</span></li>
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-av_timer"></span><span>Full Time</span></li>
-                                <li>
-                                    <span class="novi-icon icon icon-xxs icon-primary material-icons-event_available"></span>
-                                    <time datetime="2017-01-01">4 days ago</time>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a class="block-vacation" href="#">
-                        <h5>Client and Public Relations Coordinator</h5>
-                        <div class="block-meta">
-                            <ul class="list-objects-inline">
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-location_on"></span><span>New York</span></li>
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-av_timer"></span><span>Full Time</span></li>
-                                <li>
-                                    <span class="novi-icon icon icon-xxs icon-primary material-icons-event_available"></span>
-                                    <time datetime="2017-01-01">1 week ago</time>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a class="block-vacation" href="#">
-                        <h5>Legal Assistant</h5>
-                        <div class="block-meta">
-                            <ul class="list-objects-inline">
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-location_on"></span><span>Bristol</span></li>
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-av_timer"></span><span>Freelance</span></li>
-                                <li>
-                                    <span class="novi-icon icon icon-xxs icon-primary material-icons-event_available"></span>
-                                    <time datetime="2017-01-01">1 month ago</time>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a class="block-vacation" href="#">
-                        <h5>Paralegal</h5>
-                        <div class="block-meta">
-                            <ul class="list-objects-inline">
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-location_on"></span><span>Tampa</span></li>
-                                <li><span class="novi-icon icon icon-xxs icon-primary material-icons-av_timer"></span><span>Full Time</span></li>
-                                <li>
-                                    <span class="novi-icon icon icon-xxs icon-primary material-icons-event_available"></span>
-                                    <time datetime="2017-01-01">May 12, 2017</time>
+                                    <time datetime="2017-01-01">{{career.postDate}}</time>
                                 </li>
                             </ul>
                         </div>

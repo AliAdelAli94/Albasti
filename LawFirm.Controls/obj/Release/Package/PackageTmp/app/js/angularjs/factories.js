@@ -1,8 +1,10 @@
 ﻿'use strict';
 
-app.factory("signalR", ['backendServerUrl', '$rootScope', function ($rootScope, backendServerUrl) {
+app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
 
-    var connection = $.hubConnection(backendServerUrl);
+    // $.connection.hub.url = 'http://localhost:50131/signalr/';
+
+    $.connection.hub.url = 'http://lawfirm.somee.com/signalr/';
 
 
     var $hub = $.connection.chatHub;
@@ -16,7 +18,7 @@ app.factory("signalR", ['backendServerUrl', '$rootScope', function ($rootScope, 
 
         ////////////////////// SERVER METHODS/////////////////
 
-        StartChat: function (username, email) {
+        startChat: function (username, email) {
             connection.done(function () {
                 $hub.server.startChat(username, email);
             });
@@ -28,17 +30,25 @@ app.factory("signalR", ['backendServerUrl', '$rootScope', function ($rootScope, 
             });
         },
 
-        adminLogin: function (email) {
+        sendMessageBroadCast: function (message) {
             connection.done(function () {
-                $hub.server.adminLogin(email);
+                $hub.server.sendMessageBroadCast(message);
             });
         },
 
+        
+
+        //adminLogin: function (email) {
+        //    connection.done(function () {
+        //        $hub.server.adminLogin(email);
+        //    });
+        //},
+
         //////////////////////// CLIENT METHODS ////////////////////            
 
-        userAssigned: function (callback) {
-            $hub.client.userAssigned = callback;
-        },
+        //userAssigned: function (callback) {
+        //    $hub.client.userAssigned = callback;
+        //},
 
         getAdminData: function (callback) {
             $hub.client.getAdminData = callback;

@@ -1,8 +1,9 @@
 ﻿<div id="page_content">
     <div id="page_heading">
-        <h1>Career Edit</h1>
+        <h1>{{title}}</h1>
     </div>
     <div id="page_content_inner">
+   
         <form action="" class="uk-form-stacked" id="career_edit_form">
             <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
                 <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
@@ -22,34 +23,37 @@
                                 Details
                             </h3>
                         </div>
-                        <div class="md-card-content large-padding">
-                            <div class="uk-grid uk-grid-divider uk-grid-medium">
+                                <div class="md-card-content large-padding">
+                                    <div class="uk-grid uk-grid-divider uk-grid-medium">
 
-                                <div class="uk-width-large-2-3">
-                                    <div class="uk-form-row">
-                                        <label for="career_edit_title_control">Title</label>
-                                        <input type="text" class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="career_edit_title_control" id="career_edit_title_control" ng-model="currentCareer.jobTitle" md-input />
-                                    </div>
-                                    <div class="uk-form-row">
-                                        <label for="career_edit_location_control">Location</label>
-                                        <input type="text" class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="career_edit_location_control" id="career_edit_location_control" ng-model="currentCareer.location" md-input />
-                                    </div>
-                                    <div class="uk-form-row">
-                                        <label for="career_edit_type_control">Type</label>
-                                        <input type="text" class="md-input ng-pristine ng-valid ng-isolate-scope md-input-processed ng-touched" name="career_edit_type_control" id="career_edit_type_control" ng-model="currentCareer.jobType" md-input />
-                                    </div>
+                                        <div class="uk-width-large-2-3">
+                                              <div class="parsley-row">
+                                                <label for="career_edit_title_control">Title</label>
+                                                  <input type="text" required class="md-input" name="career_edit_title_control" id="career_edit_title_control" ng-model="currentCareer.jobTitle" md-input />
+                                            </div>
+                                            <br />
+                                            <div class="parsley-row">
+                                                <label for="career_edit_location_control">Location</label>
+                                                <input type="text" required class="md-input" name="career_edit_location_control" id="career_edit_location_control" ng-model="currentCareer.location" md-input />
+                                            </div>
+                                            <br />
+                                            <div class="parsley-row">
+                                                <label for="career_edit_type_control">Type</label>
+                                                <input type="text" class="md-input" required name="career_edit_type_control" id="career_edit_type_control" ng-model="currentCareer.jobType" md-input />
+                                            </div>
 
+                                        </div>
+
+                                    </div>
                                 </div>
-
                             </div>
-                        </div>
                     </div>
-                </div>
             </div>
         </form>
     </div>
 </div>
 <div class="md-fab-wrapper">
+
     <a class="md-fab md-fab-primary" ng-click="Submit(currentCareer)">
         <i class="material-icons">&#xE161;</i>
     </a>

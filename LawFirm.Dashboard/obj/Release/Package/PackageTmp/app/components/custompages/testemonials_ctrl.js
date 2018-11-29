@@ -6,7 +6,8 @@
         'dashService',
         '$stateParams',
         '$filter',
-function ($scope, $rootScope, dashService, $stateParams, $filter) {
+        '$state',
+function ($scope, $rootScope, dashService, $stateParams, $filter, $state) {
 
 
     $scope.pageSize = 10;
@@ -18,6 +19,8 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
     EditTestimonial = function () {
 
         dashService.EditTestimonial($scope.currenTestemonial, function (response) {
+            alert('Testimonial is Edited');
+            $state.go('restricted.custompages.testimoniallist');
         },
     function (response) { });
 
@@ -27,6 +30,8 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
     AddTestemonial = function () {
 
         dashService.AddTestemonial($scope.currenTestemonial, function (response) {
+            alert('Testimonial is Added');
+            $state.go('restricted.custompages.testimoniallist');
         },
     function (response) { });
 
@@ -34,6 +39,9 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
 
     $scope.DeleteTestimonial = function (id) {
         dashService.DeleteTestimonial(id, function (response) {
+
+            alert('Testimonial is Deleted');
+            $state.go('restricted.custompages.testimoniallist');
 
             GetAllTestemonialsData();
 
@@ -60,14 +68,16 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
         dashService.GetAllTestemonials(
             function (response) {
                 $scope.testimonials = response.data;
-                
+
                 if ($stateParams != null) {
                     if ($stateParams.id != null) {
                         $scope.action = "edit";
+                        $scope.title = "Testimonial Edit";
                         $scope.currenTestemonial = $filter('filter')($scope.testimonials, { id: parseInt($stateParams.id) }, true)[0];
                     }
                     else {
                         $scope.action = "insert";
+                        $scope.title = "Add Testimonial";
                     }
                 }
 
@@ -78,11 +88,20 @@ function ($scope, $rootScope, dashService, $stateParams, $filter) {
 
     $scope.Submit = function (item) {
 
+        var $form = $('#testimonial_edit_form');
+
         if ($scope.action == "edit") {
-            EditTestimonial(item);
+
+            if ($form.parsley().validate()) {
+
+                EditTestimonial(item);
+            }
         }
         else if ($scope.action == "insert") {
-            AddTestemonial(item);
+
+            if ($form.parsley().validate()) {
+                AddTestemonial(item);
+            }
         }
     };
 

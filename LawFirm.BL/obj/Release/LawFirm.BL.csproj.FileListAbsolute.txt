@@ -7,3 +7,12 @@ F:\Current\LawFirm.BL\bin\Release\EntityFramework.xml
 F:\Current\LawFirm.BL\obj\Release\LawFirm.BL.csprojResolveAssemblyReference.cache
 F:\Current\LawFirm.BL\obj\Release\LawFirm.BL.dll
 F:\Current\LawFirm.BL\obj\Release\LawFirm.BL.pdb
+D:\Current\myrepo\LawFirm.BL\bin\Release\LawFirm.BL.dll
+D:\Current\myrepo\LawFirm.BL\bin\Release\LawFirm.BL.pdb
+D:\Current\myrepo\LawFirm.BL\bin\Release\LawFirm.DAL.dll
+D:\Current\myrepo\LawFirm.BL\bin\Release\EntityFramework.dll
+D:\Current\myrepo\LawFirm.BL\bin\Release\LawFirm.DAL.pdb
+D:\Current\myrepo\LawFirm.BL\bin\Release\EntityFramework.xml
+D:\Current\myrepo\LawFirm.BL\obj\Release\LawFirm.BL.csprojResolveAssemblyReference.cache
+D:\Current\myrepo\LawFirm.BL\obj\Release\LawFirm.BL.dll
+D:\Current\myrepo\LawFirm.BL\obj\Release\LawFirm.BL.pdb

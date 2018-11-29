@@ -498,7 +498,8 @@
                     </div>
                 </div>
                 <div class="uk-width-large-1-2">
-                    <div class="md-card" ng-controller="userMapsCtrl">
+                    <div class="md-card" 
+                         ="userMapsCtrl">
                         <map class="gmap" zoom="{{map_zoom}}" center="{{map_center}}" styles="{{map_style}}">
                             <marker position="{{marker.lat}}, {{marker.lon}}" title="{{marker.name}}" icon="{{marker_icon}}" on-click="showInfo(event, $index)" ng-repeat="marker in gmap_users"></marker>
                             <info-window id="infoWindow" max-width="200">

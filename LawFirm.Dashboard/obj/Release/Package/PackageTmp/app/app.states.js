@@ -26,13 +26,14 @@ altairApp
             // -- LOGIN PAGE --
                 .state("login", {
                     url: "/login",
-                    templateUrl: 'app/components/pages/loginView.html',
+                    templateUrl: 'app/components/custompages/loginView.html',
                     controller: 'loginCtrl',
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
                                 'lazy_iCheck',
-                                'app/components/pages/loginController.js'
+                                'lazy_parsleyjs',
+                                'app/components/custompages/loginController.js'
                             ]);
                         }]
                     }
@@ -67,44 +68,7 @@ altairApp
                         }]
                     }
                 })
-            // -- DASHBOARD --
-                .state("restricted.dashboard", {
-                    url: "/",
-                    templateUrl: 'app/components/dashboard/dashboardView.html',
-                    controller: 'dashboardCtrl',
-                    resolve: {
-                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load([
-                                // ocLazyLoad config (app/app.js)
-                                'lazy_countUp',
-                                'lazy_charts_peity',
-                                'lazy_charts_easypiechart',
-                                'lazy_charts_metricsgraphics',
-                                'lazy_charts_chartist',
-                                'lazy_weathericons',
-                                'lazy_google_maps',
-                                'lazy_clndr',
-                                'app/components/dashboard/dashboardController.js'
-                            ], { serie: true });
-                        }],
-                        sale_chart_data: function ($http) {
-                            return $http({ method: 'GET', url: 'data/mg_dashboard_chart.min.json' })
-                                .then(function (data) {
-                                    return data.data;
-                                });
-                        },
-                        user_data: function ($http) {
-                            return $http({ method: 'GET', url: 'data/user_data.json' })
-                                .then(function (data) {
-                                    return data.data;
-                                });
-                        }
-                    },
-                    data: {
-                        pageTitle: 'Dashboard'
-                    }
-
-                })
+       
                 // -- FORMS --
                 .state("restricted.forms", {
                     url: "/forms",
@@ -663,6 +627,7 @@ altairApp
                      resolve: {
                          deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                              return $ocLazyLoad.load([
+                                 'lazy_parsleyjs',
                                  'app/components/custompages/faqs_ctrl.js'
                              ]);
                          }]
@@ -679,6 +644,7 @@ altairApp
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
                                 'app/components/custompages/faqs_ctrl.js'
                             ]);
                         }]
@@ -731,7 +697,7 @@ altairApp
                         }]
                     },
                     data: {
-                        pageTitle: 'FAQ Details'
+                        pageTitle: 'Testimonials Details'
                     }
                 })
                  .state("restricted.custompages.testemonial_add", {
@@ -741,6 +707,7 @@ altairApp
                      resolve: {
                          deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                              return $ocLazyLoad.load([
+                                 'lazy_parsleyjs',
                                  'app/components/custompages/testemonials_ctrl.js'
                              ]);
                          }]
@@ -757,12 +724,30 @@ altairApp
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
                                 'app/components/custompages/testemonials_ctrl.js'
                             ]);
                         }]
                     },
                     data: {
                         pageTitle: 'Testimonial Edit'
+                    }
+                })
+
+                .state("restricted.custompages.chat", {
+                    url: "/chat",
+                    templateUrl: 'app/components/custompages/chatView.html',
+                    controller: 'chatCtrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+
+                                'app/components/custompages/chatController.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Chat'
                     }
                 })
 
@@ -806,6 +791,7 @@ altairApp
                      resolve: {
                          deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                              return $ocLazyLoad.load([
+                                 'lazy_parsleyjs',
                                  'app/components/custompages/careers_ctrl.js'
                              ]);
                          }]
@@ -822,12 +808,13 @@ altairApp
                     resolve: {
                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
                                 'app/components/custompages/careers_ctrl.js'
                             ]);
                         }]
                     },
                     data: {
-                        pageTitle: 'Testimonial Edit'
+                        pageTitle: 'Craeer Edit'
                     }
                 })
                 //------------------------------ End Careers ------------------------
@@ -1108,21 +1095,7 @@ altairApp
                         pageTitle: 'Blank Page'
                     }
                 })
-                .state("restricted.pages.chat", {
-                    url: "/chat",
-                    templateUrl: 'app/components/pages/chatView.html',
-                    controller: 'chatCtrl',
-                    resolve: {
-                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load([
-                                'app/components/pages/chatController.js'
-                            ]);
-                        }]
-                    },
-                    data: {
-                        pageTitle: 'Chat'
-                    }
-                })
+                
                 .state("restricted.pages.contact_list", {
                     url: "/contact_list",
                     templateUrl: 'app/components/pages/contact_listView.html',
