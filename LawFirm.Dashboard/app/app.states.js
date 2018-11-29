@@ -734,7 +734,7 @@ altairApp
                     }
                 })
 
-                .state("restricted.custompages.chat", {
+                .state("restricted.pages.chat", {
                     url: "/chat",
                     templateUrl: 'app/components/custompages/chatView.html',
                     controller: 'chatCtrl',
