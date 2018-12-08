@@ -68,7 +68,7 @@ altairApp
                         }]
                     }
                 })
-       
+
                 // -- FORMS --
                 .state("restricted.forms", {
                     url: "/forms",
@@ -602,7 +602,7 @@ altairApp
                 // ------------------------------------- My Pages --------------------------
                 .state("restricted.custompages", {
                     url: "/custompages",
-                    template: '<div ui-view autoscroll="false"/>',
+                    template: '<div ui-view autoscroll="false" ng-class="{ \'uk-height-1-1\': page_full_height }" />',
                     abstract: true
                 })
                 .state("restricted.custompages.faq_details", {
@@ -818,6 +818,134 @@ altairApp
                     }
                 })
                 //------------------------------ End Careers ------------------------
+
+                //------------------------------ Start Experts ---------------------------
+                 .state("restricted.custompages.experts_list", {
+                     url: "/experts_list",
+                     templateUrl: 'app/components/custompages/experts_list_view.html',
+                     controller: 'experts_ctrl',
+                     resolve: {
+                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                             return $ocLazyLoad.load([
+                                 'app/components/custompages/experts_ctrl.js'
+                             ], { serie: true });
+                         }]
+                     },
+                     data: {
+                         pageTitle: 'Experts List'
+                     }
+                 })
+
+                 .state("restricted.custompages.experts_insert_view", {
+                     url: "/experts_insert_view",
+                   templateUrl: 'app/components/custompages/experts_edit_view.html',
+                   controller: 'experts_ctrl',
+                   resolve: {
+                       deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                           return $ocLazyLoad.load([
+                               'lazy_parsleyjs',
+                               'app/components/custompages/experts_ctrl.js'
+                           ]);
+                       }]
+                   },
+                   data: {
+                       pageTitle: 'Add Expert'
+                   }
+
+                 })
+                 
+                 .state("restricted.custompages.experts_edit_view", {
+                     url: "/experts_edit_view/:id",
+                     templateUrl: 'app/components/custompages/experts_edit_view.html',
+                     controller: 'experts_ctrl',
+                     resolve: {
+                         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                             return $ocLazyLoad.load([
+                                 'lazy_parsleyjs',
+                                 'app/components/custompages/experts_ctrl.js'
+                             ]);
+                         }]
+                     },
+                     data: {
+                         pageTitle: 'Edit Expert'
+                     }
+
+                 })
+                //------------------------------ End Experts ------------------------------
+
+
+                //------------------------------- Start Blogs --------------------------------
+                .state("restricted.custompages.blogs_list", {
+                    url: "/blogs_list",
+                    controller: 'blogs_ctrl',
+                    templateUrl: 'app/components/custompages/blogs_list_view.html',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
+                                'app/components/custompages/blogs_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Blogs List'
+                    }
+                })
+
+                .state("restricted.custompages.blog_details_view", {
+                    url: "/blog_details_view/:id",
+                    controller: 'blogs_ctrl',
+                    templateUrl: 'app/components/custompages/blog_details_view.html',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
+                                'app/components/custompages/blogs_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Blog Details'
+                    }
+                })
+
+                .state("restricted.custompages.blog_insert_view", {
+                    url: "/blog_insert_view",
+                    templateUrl: 'app/components/custompages/blog_edit_view.html',
+                    controller: 'blogs_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
+                                'app/components/custompages/blogs_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Add Blog'
+                    }
+
+                })
+                .state("restricted.custompages.blog_edit_view", {
+                    url: "/blog_edit_view/:id",
+                    templateUrl: 'app/components/custompages/blog_edit_view.html',
+                    controller: 'blogs_ctrl',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load([
+                                'lazy_parsleyjs',
+                                'app/components/custompages/blogs_ctrl.js'
+                            ]);
+                        }]
+                    },
+                    data: {
+                        pageTitle: 'Edit Blog'
+                    }
+
+                })
+
+                //------------------------------- End Blogs ----------------------------------
+
 
 
                 // ------------------------------------- End My Pages ----------------------
@@ -1095,7 +1223,7 @@ altairApp
                         pageTitle: 'Blank Page'
                     }
                 })
-                
+
                 .state("restricted.pages.contact_list", {
                     url: "/contact_list",
                     templateUrl: 'app/components/pages/contact_listView.html',

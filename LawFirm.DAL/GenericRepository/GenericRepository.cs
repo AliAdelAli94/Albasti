@@ -77,6 +77,11 @@ namespace LawFirm.DAL
             dbSet.Attach(entityToUpdate);
             context.Entry(entityToUpdate).State = EntityState.Modified;
         }
+
+        public virtual void DetachEntity (TEntity entityToDetach)
+        {
+            context.Entry(entityToDetach).State = EntityState.Detached;
+        }
     }
 
 }

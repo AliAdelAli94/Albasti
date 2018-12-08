@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="images\Blogs\0001e306-c2f3-44c8-af6f-498ddbfb88c1.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -150,12 +151,16 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CareerController.cs" />
+    <Compile Include="Controllers\ExpertController.cs" />
     <Compile Include="Controllers\FaqController.cs" />
     <Compile Include="Controllers\TestemonialController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UtilsController.cs" />
     <Compile Include="DTO\LoginDto.cs" />
     <Compile Include="DTO\RegisterDto.cs" />
+    <Compile Include="DTO\UploadImageDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,7 +182,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
+    <Folder Include="images\Experts\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,7 @@
           <Property Name="blogDate" Type="datetime" Nullable="false" />
           <Property Name="postedby" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="category" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="image" Type="text" Nullable="false" />
         </EntityType>
         <EntityType Name="Careers">
           <Key>
@@ -96,7 +97,9 @@
           <Property Name="isonline" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK_Comments_Blogs">
-          <End Role="Blogs" Type="Self.Blogs" Multiplicity="1" />
+          <End Role="Blogs" Type="Self.Blogs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Blogs">
@@ -108,7 +111,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Experiences_Experts">
-          <End Role="Experts" Type="Self.Experts" Multiplicity="1" />
+          <End Role="Experts" Type="Self.Experts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Experiences" Type="Self.Experiences" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Experts">
@@ -120,7 +125,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Paragraphs_Blogs">
-          <End Role="Blogs" Type="Self.Blogs" Multiplicity="1" />
+          <End Role="Blogs" Type="Self.Blogs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Paragraphs" Type="Self.Paragraphs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Blogs">
@@ -169,6 +176,7 @@
           <Property Name="category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Comments" Relationship="Self.FK_Comments_Blogs" FromRole="Blogs" ToRole="Comments" />
           <NavigationProperty Name="Paragraphs" Relationship="Self.FK_Paragraphs_Blogs" FromRole="Blogs" ToRole="Paragraphs" />
+          <Property Name="image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Career">
           <Key>
@@ -244,8 +252,11 @@
           <Property Name="personTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Comments_Blogs">
-          <End Role="Blogs" Type="Self.Blog" Multiplicity="1" />
-          <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+          <End Role="Blogs" Type="Self.Blog" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Comments" Type="Self.Comment" Multiplicity="*" >
+          </End>
           <ReferentialConstraint>
             <Principal Role="Blogs">
               <PropertyRef Name="id" />
@@ -256,8 +267,11 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Paragraphs_Blogs">
-          <End Role="Blogs" Type="Self.Blog" Multiplicity="1" />
-          <End Role="Paragraphs" Type="Self.Paragraph" Multiplicity="*" />
+          <End Role="Blogs" Type="Self.Blog" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Paragraphs" Type="Self.Paragraph" Multiplicity="*" >
+          </End>
           <ReferentialConstraint>
             <Principal Role="Blogs">
               <PropertyRef Name="id" />
@@ -268,7 +282,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Experiences_Experts">
-          <End Role="Experts" Type="Self.Expert" Multiplicity="1" />
+          <End Role="Experts" Type="Self.Expert" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Experiences" Type="Self.Experience" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Experts">
@@ -322,6 +338,7 @@
           <EntitySetMapping Name="Blogs">
             <EntityTypeMapping TypeName="LawFirmModel.Blog">
               <MappingFragment StoreEntitySet="Blogs">
+                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="blogDate" ColumnName="blogDate" />

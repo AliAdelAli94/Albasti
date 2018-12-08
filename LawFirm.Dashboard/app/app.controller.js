@@ -245,6 +245,18 @@ angular
                     icon: '&#xE8C0;',
                     link: 'restricted.custompages.careerslist'
                 }
+                ,
+                {
+                    title: 'Experts',
+                    icon: '&#xE8C0;',
+                    link: 'restricted.custompages.experts_list'
+                }
+                ,
+                {
+                    title: 'Blogs',
+                    icon: '&#xE8C0;',
+                    link: 'restricted.custompages.blogs_list'
+                }
             ]
 
         }

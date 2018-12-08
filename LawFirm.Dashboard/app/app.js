@@ -1,9 +1,10 @@
 /*
 *  Altair Admin AngularJS
 */
-;"use strict";
+; "use strict";
 
 var altairApp = angular.module('altairApp', [
+    'ngFileUpload',
     'ui.router',
     'oc.lazyLoad',
     'ngSanitize',
@@ -14,11 +15,11 @@ var altairApp = angular.module('altairApp', [
 
 altairApp.constant('variables', {
     header__main_height: 48,
-    easing_swiftOut: [ 0.4,0,0.2,1 ],
-    bez_easing_swiftOut: $.bez([ 0.4,0,0.2,1 ])
+    easing_swiftOut: [0.4, 0, 0.2, 1],
+    bez_easing_swiftOut: $.bez([0.4, 0, 0.2, 1])
 });
 
-altairApp.config(function($sceDelegateProvider) {
+altairApp.config(function ($sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
         'self',
         'https://www.youtube.com/**',
@@ -37,7 +38,7 @@ altairApp
         '$timeout',
         'preloaders',
         'variables',
-        function ($rootScope, $state, $stateParams,$http,$window, $timeout,variables) {
+        function ($rootScope, $state, $stateParams, $http, $window, $timeout, variables) {
 
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
@@ -48,15 +49,15 @@ altairApp
                     scrollTop: 0
                 }, 200);
 
-                $timeout(function() {
+                $timeout(function () {
                     $rootScope.pageLoading = false;
                     $($window).resize();
-                },300);
+                }, 300);
 
-                $timeout(function() {
+                $timeout(function () {
                     $rootScope.pageLoaded = true;
                     $rootScope.appInitialized = true;
-                },600);
+                }, 600);
 
             });
 
@@ -79,12 +80,12 @@ altairApp
                 $rootScope.sidebar_secondary = false;
                 $rootScope.secondarySidebarHiddenLarge = false;
 
-                if($($window).width() < 1220 ) {
+                if ($($window).width() < 1220) {
                     // hide primary sidebar
                     $rootScope.primarySidebarActive = false;
                     $rootScope.hide_content_sidebar = false;
                 }
-                if(!toParams.hasOwnProperty('hidePreloader')) {
+                if (!toParams.hasOwnProperty('hidePreloader')) {
                     $rootScope.pageLoading = true;
                     $rootScope.pageLoaded = false;
                 }
@@ -95,7 +96,7 @@ altairApp
             FastClick.attach(document.body);
 
             // get version from package.json
-            $http.get('./package.json').success(function(response) {
+            $http.get('./package.json').success(function (response) {
                 $rootScope.appVer = response.version;
             });
 
@@ -106,7 +107,7 @@ altairApp
             var w = angular.element($window);
             $rootScope.largeScreen = w.width() >= 1220;
 
-            w.on('resize', function() {
+            w.on('resize', function () {
                 return $rootScope.largeScreen = w.width() >= 1220;
             });
 
@@ -119,7 +120,7 @@ altairApp
     ])
     .run([
         'PrintToConsole',
-        function(PrintToConsole) {
+        function (PrintToConsole) {
             // app debug
             PrintToConsole.active = false;
         }

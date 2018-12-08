@@ -13,7 +13,8 @@ namespace LawFirm.SignalR
         public Client()
         {
             this.client = new HttpClient();
-            this.client.BaseAddress = new Uri("http://chatappp.somee.com/");
+            //this.client.BaseAddress = new Uri("http://chatappp.somee.com/");
+            this.client.BaseAddress = new Uri("http://localhost:20833/");
         }
 
         public object MakeAdminOnline(string email)

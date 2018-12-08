@@ -123,6 +123,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
              url: "/ourteam",
              templateUrl: "/app/our-team.html"
          })
+         .state("teammemberprofile", {
+             url: "/teammemberprofile/:id",
+             templateUrl: "/app/team-member-profile.html"
+         })
         .state("careers", {
             url: "/careers",
             templateUrl: "/app/careers.html"
@@ -131,7 +135,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/appointment",
             templateUrl: "/app/appointment.html"
         })
-    
+        .state("blogs", {
+            url: "/blogs",
+            templateUrl: "/app/blogs.html"
+        })
+        .state("blog_details", {
+            url: "/blog_details/:id",
+            templateUrl: "/app/blog_details.html"
+        })
+
+
 });
 
 
@@ -192,11 +205,64 @@ app.controller("contactusCtrl", function ($scope) {
 
 });
 
-app.controller("ourteamCtrl", function ($scope) {
+app.controller("ourteamCtrl", ['$scope', 'lawfirmService','$filter', function ($scope, lawfirmService,$filter) {
 
-    load_js();
+    lawfirmService.GetAllExperts(function (response) {
 
-});
+        $scope.experts = response.data;
+        var urlParts = window.location.href.split('/');
+        var id = urlParts[urlParts.length - 1];
+        if (id) {
+
+            $scope.currentExpert = $filter('filter')($scope.experts, { id: parseInt(id) }, true)[0];
+        }
+        load_js();
+
+    },
+    function (response) { });
+
+}]);
+
+app.controller("blogsCtrl", ['$scope', 'lawfirmService', '$filter', '$stateParams', '$state', function ($scope, lawfirmService, $filter, $stateParams, $state) {
+
+    lawfirmService.GetAllBlogs(
+            function (response) {
+
+                $scope.blogs = response.data;
+                for (var i = 0; i < $scope.blogs.length; i++) {
+                    $scope.blogs[i].postDateShow = $scope.blogs[i].blogDate.split('T')[0].split('-').reverse().join('.');
+                }
+                if ($stateParams != null) {
+                    if ($stateParams.id != null) {
+                        $scope.currentBlog = $filter('filter')($scope.blogs, { id: parseInt($stateParams.id) }, true)[0];
+                        $scope.temp = angular.copy($scope.currentBlog);
+                    }
+                }
+
+                load_js();
+            },
+            function (response) { });
+    
+    $scope.currentComment = {};
+    $scope.formSaved = false;
+
+    $scope.AddComment = function (item) {
+      
+        $scope.formSaved = true;
+        item.blogId = $scope.currentBlog.id;
+
+        lawfirmService.AddComment(item,
+            function (response) {
+                $state.transitionTo($state.current, $stateParams, {
+                    reload: true,
+                    inherit: false,
+                    notify: true
+                });
+            },
+            function (response) { });
+    };
+
+}]);
 
 app.controller("firmOverviewCtrl", function ($scope) {
 
@@ -379,4 +445,3 @@ function load_chat_js() {
     script.src = '/app/js/chatscript.js';
     head.appendChild(script);
 }
-

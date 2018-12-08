@@ -38,6 +38,8 @@ public partial class Blog
 
     public string category { get; set; }
 
+    public string image { get; set; }
+
 
 
     public virtual ICollection<Comment> Comments { get; set; }

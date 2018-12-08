@@ -133,10 +133,10 @@
     <Content Include="app\accordion.html" />
     <Content Include="app\appointment.html" />
     <Content Include="app\blog-classic.html" />
-    <Content Include="app\blog-grid.html" />
+    <Content Include="app\blogs.html" />
     <Content Include="app\blog-line.html" />
     <Content Include="app\blog-masonry.html" />
-    <Content Include="app\blog-post.html" />
+    <Content Include="app\blog_details.html" />
     <Content Include="app\buttons.html" />
     <Content Include="app\careers.html" />
     <Content Include="app\chat.html" />

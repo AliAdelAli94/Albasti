@@ -57,12 +57,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\custompages\blogs_ctrl.js" />
+    <Content Include="app\components\custompages\blogs_list_view.html" />
+    <Content Include="app\components\custompages\blog_details_view.html" />
+    <Content Include="app\components\custompages\blog_edit_view.html" />
     <Content Include="app\components\custompages\careers_ctrl.js" />
     <Content Include="app\components\custompages\careers_list_view.html" />
     <Content Include="app\components\custompages\career_details_view.html" />
     <Content Include="app\components\custompages\career_editView.html" />
     <Content Include="app\components\custompages\chatController.js" />
     <Content Include="app\components\custompages\chatView.html" />
+    <Content Include="app\components\custompages\experts_ctrl.js" />
+    <Content Include="app\components\custompages\experts_edit_view.html" />
+    <Content Include="app\components\custompages\experts_list_view.html" />
     <Content Include="app\components\custompages\faqs_details_view.html" />
     <Content Include="app\components\custompages\faqs_ctrl.js" />
     <Content Include="app\components\custompages\faqs_list_view.html" />
@@ -211,6 +218,8 @@
     <Content Include="bower_components\angular-ui-router\CONTRIBUTING.md" />
     <Content Include="bower_components\angular-ui-router\LICENSE" />
     <Content Include="bower_components\angular-ui-router\README.md" />
+    <Content Include="bower_components\angular-uploader\ng-file-upload-shim.min.js" />
+    <Content Include="bower_components\angular-uploader\ng-file-upload.min.js" />
     <Content Include="bower_components\angular-wizard\bower.json" />
     <Content Include="bower_components\angular-wizard\CHANGELOG.md" />
     <Content Include="bower_components\angular-wizard\CONTRIBUTE.md" />

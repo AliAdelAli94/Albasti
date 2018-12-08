@@ -23,6 +23,6 @@ F:\Current\LawFirm.SignalR\bin\Microsoft.Owin.Security.xml
 F:\Current\LawFirm.SignalR\bin\Newtonsoft.Json.pdb
 F:\Current\LawFirm.SignalR\bin\Newtonsoft.Json.xml
 F:\Current\LawFirm.SignalR\bin\Simple.Owin.Cors.xml
+F:\Current\LawFirm.SignalR\obj\Debug\LawFirm.SignalR.csprojResolveAssemblyReference.cache
 F:\Current\LawFirm.SignalR\obj\Debug\LawFirm.SignalR.dll
 F:\Current\LawFirm.SignalR\obj\Debug\LawFirm.SignalR.pdb
-F:\Current\LawFirm.SignalR\obj\Debug\LawFirm.SignalR.csprojResolveAssemblyReference.cache
