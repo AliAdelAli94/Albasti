@@ -28,14 +28,3 @@ F:\Git\proj\df\LawFirm.Controls\bin\LawFirm.Controls.pdb
 F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
 F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
 F:\Git\proj\df\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb
-F:\Current\LawFirm.Controls\bin\LawFirm.Controls.dll.config
-F:\Current\LawFirm.Controls\bin\LawFirm.Controls.dll
-F:\Current\LawFirm.Controls\bin\LawFirm.Controls.pdb
-F:\Current\LawFirm.Controls\bin\Microsoft.AspNet.SignalR.Client.dll
-F:\Current\LawFirm.Controls\bin\Newtonsoft.Json.dll
-F:\Current\LawFirm.Controls\bin\Microsoft.AspNet.SignalR.Client.pdb
-F:\Current\LawFirm.Controls\bin\Microsoft.AspNet.SignalR.Client.xml
-F:\Current\LawFirm.Controls\bin\Newtonsoft.Json.xml
-F:\Current\LawFirm.Controls\obj\Debug\LawFirm.Controls.csprojResolveAssemblyReference.cache
-F:\Current\LawFirm.Controls\obj\Debug\LawFirm.Controls.dll
-F:\Current\LawFirm.Controls\obj\Debug\LawFirm.Controls.pdb
