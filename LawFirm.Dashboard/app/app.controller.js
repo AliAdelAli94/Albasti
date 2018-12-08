@@ -227,7 +227,7 @@ angular
                 {
                     title: 'Chat',
                     icon: '&#xE0B9;',
-                    link: 'restricted.pages.chat'
+                    link: 'restricted.custompages.chat'
                 },
                 {
                     title: 'FAQ',
