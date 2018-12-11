@@ -9,13 +9,14 @@ angular
         '$scope',
         '$rootScope',
         'signalR',
-        function ($scope, $rootScope, signalR) {
+        '$filter',
+        function ($scope, $rootScope, signalR, $filter ) {
 
             $scope.users = [];
             $scope.recentUser = {};
 
             signalR.userAssigned(function (name, cID, email) {
-                $scope.newUser = { Name: name, CID: cID, Email: email, Messages: [] };
+                $scope.newUser = { Name: name, CID: cID, Email: email, Messages: [], EnableChat : false };
 
                 $scope.found = true;
                 for (var x = 0; x < $scope.users.length; x++)
@@ -38,6 +39,9 @@ angular
 
 
             $scope.TakeThisUser = function (CID) {
+
+                $filter('filter')($scope.users, { CID: CID }, true)[0].EnableChat = true;
+
                 signalR.takeThisUser(CID);
             }
 

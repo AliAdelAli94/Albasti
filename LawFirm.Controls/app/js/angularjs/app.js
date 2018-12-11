@@ -205,7 +205,7 @@ app.controller("contactusCtrl", function ($scope) {
 
 });
 
-app.controller("ourteamCtrl", ['$scope', 'lawfirmService','$filter', function ($scope, lawfirmService,$filter) {
+app.controller("ourteamCtrl", ['$scope', 'lawfirmService', '$filter', function ($scope, lawfirmService, $filter) {
 
     lawfirmService.GetAllExperts(function (response) {
 
@@ -242,24 +242,27 @@ app.controller("blogsCtrl", ['$scope', 'lawfirmService', '$filter', '$stateParam
                 load_js();
             },
             function (response) { });
-    
+
     $scope.currentComment = {};
     $scope.formSaved = false;
 
     $scope.AddComment = function (item) {
-      
-        $scope.formSaved = true;
-        item.blogId = $scope.currentBlog.id;
 
-        lawfirmService.AddComment(item,
-            function (response) {
-                $state.transitionTo($state.current, $stateParams, {
-                    reload: true,
-                    inherit: false,
-                    notify: true
-                });
-            },
-            function (response) { });
+        $scope.formSaved = true;
+
+        if ($scope.addCommentForm.$valid) {
+            item.blogId = $scope.currentBlog.id;
+
+            lawfirmService.AddComment(item,
+                function (response) {
+                    $state.transitionTo($state.current, $stateParams, {
+                        reload: true,
+                        inherit: false,
+                        notify: true
+                    });
+                },
+                function (response) { });
+        }
     };
 
 }]);
