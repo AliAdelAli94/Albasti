@@ -160,6 +160,7 @@
     <Compile Include="Controllers\UtilsController.cs" />
     <Compile Include="DTO\LoginDto.cs" />
     <Compile Include="DTO\RegisterDto.cs" />
+    <Compile Include="DTO\SendEmailDto.cs" />
     <Compile Include="DTO\UploadImageDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

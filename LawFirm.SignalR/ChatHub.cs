@@ -43,6 +43,19 @@ namespace LawFirm.SignalR
 
         }
 
+        public void removeUser(string cid)
+        {
+            try
+            {
+                Clients.Client(cid).chatEnded(Context.ConnectionId);
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+
         public void adminLogin(string email)
         {
             try

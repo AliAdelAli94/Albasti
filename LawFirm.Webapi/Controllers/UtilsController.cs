@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using LawFirm.Webapi.DTO;
+using System.Net.Mail;
 
 namespace LawFirm.Webapi.Controllers
 {
@@ -60,6 +61,36 @@ namespace LawFirm.Webapi.Controllers
             {
                 return new HttpResponseMessage(HttpStatusCode.InternalServerError) { Content = new ObjectContent(ex.GetType(), ex, new JsonMediaTypeFormatter()) };
             }
+        }
+
+
+        [HttpPost]
+        [Route("Utils/SendEmail/")]
+        public bool SendEmail(SendEmailDto item)
+        {
+            try
+            {
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                var mail = new MailMessage();
+                mail.To.Add(item.ToEmail);
+                mail.From = new MailAddress(item.Email);
+                mail.Subject = item.Subject + " - " + item.UserName + " - " + item.Phone;
+                mail.IsBodyHtml = true;
+                string htmlBody;
+                htmlBody = item.Message;
+                mail.Body = htmlBody;
+                SmtpServer.Port = 587;
+                SmtpServer.UseDefaultCredentials = false;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("albastiadvocates19@gmail.com", "albastiadvocates@123");
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(mail);
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+           
         }
 
         private MultipartFormDataStreamProvider GetMultipartProvider(string foldername)

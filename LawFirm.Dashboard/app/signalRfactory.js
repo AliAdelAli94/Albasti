@@ -17,11 +17,6 @@ altairApp
 
         ////////////////////// SERVER METHODS /////////////////
 
-        //StartChat: function (username, email) {
-        //    connection.done(function () {
-        //        $hub.server.startChat(username, email);
-        //    });
-        //},
 
         sendMessage: function (message, toCID) {
             connection.done(function () {
@@ -41,6 +36,13 @@ altairApp
             });
         },
 
+        removeUser: function (cid) {
+            connection.done(function () {
+                $hub.server.removeUser(cid);
+            });
+        },
+
+
         
         //////////////////////// CLIENT METHODS ////////////////////    
 
@@ -52,10 +54,6 @@ altairApp
         userTaken: function (callback) {
             $hub.client.userTaken = callback;
         },
-
-        //getAdminData: function (callback) {
-        //    $hub.client.getAdminData = callback;
-        //},
 
         recieveMessage: function (callback) {
             $hub.client.recieveMessage = callback;
