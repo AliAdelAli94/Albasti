@@ -227,7 +227,7 @@ angular
                 {
                     title: 'Chat',
                     icon: '&#xE0B9;',
-                    link: 'restricted.pages.chat'
+                    link: 'restricted.custompages.chat'
                 },
                 {
                     title: 'FAQ',
@@ -244,6 +244,18 @@ angular
                     title: 'Careers',
                     icon: '&#xE8C0;',
                     link: 'restricted.custompages.careerslist'
+                }
+                ,
+                {
+                    title: 'Experts',
+                    icon: '&#xE8C0;',
+                    link: 'restricted.custompages.experts_list'
+                }
+                ,
+                {
+                    title: 'Blogs',
+                    icon: '&#xE8C0;',
+                    link: 'restricted.custompages.blogs_list'
                 }
             ]
 

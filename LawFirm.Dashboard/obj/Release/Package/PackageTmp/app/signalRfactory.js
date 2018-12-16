@@ -2,9 +2,9 @@
 altairApp
     .factory('signalR', ['$rootScope', function ($rootScope) {
 
-    // $.connection.hub.url = 'http://localhost:50131/signalr/';
+   //  $.connection.hub.url = 'http://localhost:50131/signalr/';
 
-        $.connection.hub.url = 'http://lawfirm.somee.com/signalr/';
+       $.connection.hub.url = 'http://lawfirm.somee.com/signalr/';
 
     var $hub = $.connection.chatHub;
     var connection = null;

@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Blogs">
       <EntityTypeMapping TypeName="LawFirmModel.Blog">
         <MappingFragment StoreEntitySet="Blogs">
+          <ScalarProperty Name="image" ColumnName="image" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="title" ColumnName="title" />
           <ScalarProperty Name="blogDate" ColumnName="blogDate" />

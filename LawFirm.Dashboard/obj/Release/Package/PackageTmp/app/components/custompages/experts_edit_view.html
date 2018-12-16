@@ -1,0 +1,170 @@
+﻿<div id="page_content">
+    <div id="page_heading">
+        <h1>{{title}}</h1>
+    </div>
+    <div id="page_content_inner">
+
+        <form action="" class="uk-form-stacked" id="expert_insert_form" name="expert_insert_form">
+            <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <div class="uk-float-right">
+                                <input type="checkbox" ui-switch ng-model="product.active" name="product_edit_active_control" id="product_edit_active_control" />
+                            </div>
+                            <label class="uk-display-block uk-margin-small-top" for="product_edit_active_control">Active</label>
+                        </div>
+                    </div>
+                    <div class="md-card" ng-if="currentExpert.image">
+                        <div class="md-card-toolbar">
+                            <h3 class="md-card-toolbar-heading-text">
+                                Photos
+                            </h3>
+                        </div>
+                        <div class="md-card-content">
+                            <div class="uk-margin-bottom uk-text-center">
+                                <button type="button" class="uk-modal-close uk-close uk-close-alt uk-position-absolute"></button>
+                                <img ngf-src="currentExpert.image" alt="" class="img_medium" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h3 class="heading_a">
+                                Expert Photo
+                                <span class="sub-heading" ng-if="expert_insert_form.expert_photo.$invalid && saveForm == true">
+                                    <span class="parsley-errors-list filled">
+                                        <span class="parsley-required">This value is required.</span>
+                                    </span>
+                                </span>
+                            </h3>
+                            <div class="uk-grid">
+                                <div class="uk-width-1-1">
+                                    <div id="file_upload-drop" class="uk-file-upload">
+                                        <p class="uk-text">Drop file to upload</p>
+                                        <p class="uk-text-muted uk-text-small uk-margin-small-bottom">or</p>
+
+                                        <span class="uk-form-file md-btn" ngf-select ng-model="currentExpert.image" name="expert_photo" ngf-pattern="'image/*'"
+                                              ngf-accept="'image/*'" ngf-max-size="5MB" ng-required="true">choose file</span>
+                                    </div>
+                                    <div id="file_upload-progressbar" class="uk-progress" ng-if="progressPercentage">
+                                        <div class="uk-progress-bar" ng-style="progressStyle">{{progressPercentage}} %</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md-card">
+                        <div class="md-card-toolbar">
+                            <h3 class="md-card-toolbar-heading-text">
+                                Details
+                            </h3>
+                        </div>
+
+                        <div class="md-card-content large-padding">
+                            <div class="uk-grid uk-grid-divider uk-grid-medium">
+
+                                <div class="uk-width-large-2-3">
+                                    <div class="parsley-row">
+                                        <label for="expert_edit_name_control">Name</label>
+                                        <input type="text" required class="md-input" name="expert_edit_name_control" id="expert_edit_name_control" ng-model="currentExpert.name" md-input />
+                                    </div>
+                                    <br />
+                                    <div class="parsley-row">
+                                        <label for="expert_edit_email_control">Email</label>
+                                        <input type="email" required class="md-input" name="expert_edit_email_control" id="expert_edit_email_control" ng-model="currentExpert.email" md-input />
+                                    </div>
+                                    <br />
+                                    <div class="parsley-row">
+                                        <label for="expert_edit_title_control">Title</label>
+                                        <input type="text" class="md-input" required name="expert_edit_title_control" id="expert_edit_title_control" ng-model="currentExpert.title" md-input />
+                                    </div>
+                                    <br />
+                                    <div class="parsley-row">
+                                        <label for="expert_edit_phone_control">Phone</label>
+                                        <input type="text" class="md-input" required name="expert_edit_phone_control" id="expert_edit_phone_control" ng-model="currentExpert.phone" md-input />
+                                    </div>
+                                    <br />
+                                    <div class="parsley-row">
+                                        <label for="expert_edit_content1_control">Content 1</label>
+                                        <textarea class="md-input" required name="expert_edit_content1_control" id="expert_edit_content1_control" cols="30" rows="4" ng-model="currentExpert.content1" md-input textarea-autosize></textarea>
+                                    </div>
+                                    <br />
+                                    <div class="parsley-row">
+                                        <label for="expert_edit_quote_control">Quote</label>
+                                        <textarea class="md-input" required name="expert_edit_quote_control" id="expert_edit_quote_control" cols="30" rows="4" ng-model="currentExpert.quote" md-input textarea-autosize></textarea>
+                                    </div>
+                                    <br />
+                                    <div class="parsley-row">
+                                        <label for="expert_edit_content2_control">Content 2</label>
+                                        <textarea class="md-input" required name="expert_edit_content2_control" id="expert_edit_content2_control" cols="30" rows="4" ng-model="currentExpert.content2" md-input textarea-autosize></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md-card">
+                        <div class="md-card-toolbar">
+                            <h3 class="md-card-toolbar-heading-text">
+                                Experiences
+                            </h3>
+                        </div>
+                        <div class="md-card-content">
+                            <div class="uk-grid" data-uk-grid-margin ng-if="currentExpert.Experiences.length != 0">
+                                <div class="uk-width-medium-8-10">
+                                    <table class="uk-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="uk-width-4-10 uk-text-nowrap">ID</th>
+                                                <th class="uk-width-2-10 uk-text-center uk-text-nowrap">Name</th>
+                                                <th class="uk-width-2-10 uk-text-center uk-text-nowrap">Value</th>
+                                                <th class="uk-width-2-10 uk-text-center uk-text-nowrap">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="experience in currentExpert.Experiences track by $index">
+                                                <td><span class="uk-text-muted uk-text-small">{{$index + 1}}</span></td>
+
+                                                <td>
+                                                    <div class="parsley-row">
+                                                        <input type="text" class="md-input md-input-width-medium" ng-model="experience.name" md-input required />
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="parsley-row">
+                                                        <input type="text" class="md-input md-input-width-medium" ng-model="experience.val" md-input required />
+                                                    </div>
+                                                </td>
+
+                                                <td class="uk-text-right uk-text-middle"><a ng-click="removeExperience($index)"><i class="md-icon material-icons md-24">&#xE872;</i></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="uk-grid" data-uk-grid-margin>
+                                <div class="uk-width-medium-2-10">
+                                    <a class="md-btn" ng-click="addExperience()">Add option</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="md-fab-wrapper">
+
+    <a class="md-fab md-fab-primary" ng-click="Submit()">
+        <i class="material-icons">&#xE161;</i>
+    </a>
+</div>

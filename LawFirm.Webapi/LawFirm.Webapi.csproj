@@ -142,7 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="images\Blogs\0001e306-c2f3-44c8-af6f-498ddbfb88c1.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -182,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\Blogs\" />
     <Folder Include="images\Experts\" />
     <Folder Include="Models\" />
   </ItemGroup>

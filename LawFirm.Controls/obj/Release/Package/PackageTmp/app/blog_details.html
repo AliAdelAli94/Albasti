@@ -1,0 +1,126 @@
+﻿
+<main class="page-content" ng-controller="blogsCtrl">
+    <section class="section-30 section-md-40 section-lg-66 section-xl-bottom-90 bg-gray-dark page-title-wrap" style="background-image: url(images/bg-image-1.jpg);">
+        <div class="container">
+            <div class="page-title">
+                <h2>Blog</h2>
+            </div>
+        </div>
+    </section>
+    <section class="section-60 section-md-75 section-xl-90">
+        <div class="container">
+            <div class="row row-50">
+                <div class="col-lg-8 col-xl-9">
+                    <article class="post post-single">
+                        <div class="post-image">
+                            <figure>
+                                <img src="{{currentBlog.image}}" alt="" style="max-width:870px;max-height:412px;" />
+                            </figure>
+                        </div>
+                        <div class="post-header">
+                            <h4>{{currentBlog.title}}</h4>
+                        </div>
+                        <div class="post-meta">
+                            <ul class="list-bordered-horizontal">
+                                <li>
+                                    <dl class="list-terms-inline">
+                                        <dt>Date</dt>
+                                        <dd>
+                                            <time datetime="2017-01-22">{{currentBlog.postDateShow}}</time>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl class="list-terms-inline">
+                                        <dt>Posted by</dt>
+                                        <dd>{{currentBlog.postedby}}</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl class="list-terms-inline">
+                                        <dt>Comments</dt>
+                                        <dd>{{currentBlog.Comments.length}}</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl class="list-terms-inline">
+                                        <dt>Category</dt>
+                                        <dd>{{currentBlog.category}}</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="divider-fullwidth bg-gray-light"></div>
+                        <div class="post-body">
+                            <p ng-repeat="pa in currentBlog.Paragraphs track by $index">{{pa.paragraph1}}</p>
+                        </div>
+
+                    </article>
+                    <div class="divider-fullwidth bg-gray-lighter"></div>
+                    <div class="comment-list-wrap">
+                        <h4>{{currentBlog.Comments.length}} Comments</h4>
+                        <div class="comment-list inset-md-right-60 inset-lg-right-30 inset-xl-right-100">
+                           
+                             <div class="comment-group" ng-repeat="comment in currentBlog.Comments track by $index">
+                                <article class="comment">
+                                    <div class="unit unit-spacing-md unit-xs-horizontal">
+                                        <div class="unit-left">
+                                            <figure>
+                                                <img src="/images/img/user1.png" alt="" width="70" height="71" />
+                                            </figure>
+                                        </div>
+                                        <div class="unit-body">
+                                            <div class="comment-body">
+                                                <div class="comment-body-header">
+                                                    <div class="comment-meta">
+                                                        <p class="user">{{comment.commenterName}}</p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="comment-body-text">
+                                                    <p>{{comment.commentBody}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="comments-wrap">
+                        <h4>Leave a comment</h4>
+                        <div class="form-classic-wrap">
+                            <form class="rd-mailform form-classic form-classic-bordered label-outside" name="add_comment_form">
+                                <div class="form-wrap">
+                                    <label class="form-label-outside text-bold" for="commenter_name">Name :</label>
+                                                                                                                                
+                                    <input type="text" class="form-input" id="commenter_name" name="commenter_name" ng-model="currentComment.commenterName" ng-required="true" />
+                                    <span class="form-validation" ng-if="add_comment_form.commenter_name.validity.valid == false && formSaved == true">The text field is required.</span>
+                                </div>
+                                <div class="form-wrap">
+                                    <label class="form-label-outside text-bold" for="commenter_email">Email :</label>
+                                    <input type="text" class="form-input" id="commenter_email" name="commenter_email" ng-model="currentComment.commenterEmail" ng-required="true"/>
+                                    <span class="form-validation" ng-if="add_comment_form.commenter_email.validity.valid == false && formSaved == true">The text field is required.</span>
+
+                                </div>
+                                <div class="form-wrap">
+                                    <label class="form-label-outside text-bold" for="comment_message">Message :</label>
+                                    <textarea class="form-input" id="comment_message" name="message" ng-model="currentComment.commentBody" ng-required="true"></textarea>
+                                    <span class="form-validation" ng-if="add_comment_form.comment_message.validity.valid == false && formSaved == true">The text field is required.</span>
+
+                                </div>
+                                <div class="form-wrap">
+                                    <button class="button button-primary" type="submit" style="min-width: 200px;" ng-click="AddComment(currentComment)">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
