@@ -25,10 +25,13 @@
                     function (response) {
 
                         $scope.blogs = response.data;
-                        for (var i = 0; i < $scope.blogs.length; i++)
+                        if ($scope.blogs)
                         {
-                            $scope.blogs[i].postDateShow = $scope.blogs[i].blogDate.split('T')[0].split('-').reverse().join('.');
+                            for (var i = 0; i < $scope.blogs.length; i++) {
+                                $scope.blogs[i].postDateShow = $scope.blogs[i].blogDate.split('T')[0].split('-').reverse().join('.');
+                            }
                         }
+
                         if ($stateParams != null) {
                             if ($stateParams.id != null) {
                                 $scope.action = 1;
@@ -41,6 +44,7 @@
                                 $scope.action = 0;
                             }
                         }
+                        
                     },
                     function (response) { });
             };

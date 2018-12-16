@@ -36,19 +36,8 @@ app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
             });
         },
 
-        
-
-        //adminLogin: function (email) {
-        //    connection.done(function () {
-        //        $hub.server.adminLogin(email);
-        //    });
-        //},
-
+       
         //////////////////////// CLIENT METHODS ////////////////////            
-
-        //userAssigned: function (callback) {
-        //    $hub.client.userAssigned = callback;
-        //},
 
         getAdminData: function (callback) {
             $hub.client.getAdminData = callback;
@@ -58,6 +47,11 @@ app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
             $hub.client.recieveMessage = callback;
         },
 
+        chatEnded: function (callback) {
+            $hub.client.chatEnded = callback;
+        },
+
+        
     }
     return signalR;
 }]);

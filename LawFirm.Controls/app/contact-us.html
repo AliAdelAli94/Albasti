@@ -42,46 +42,50 @@
                 </div>
                 <div class="col-lg-7 col-xl-6">
                     <h3>Get in Touch</h3>
-                    <form class="rd-mailform form-modern" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                    <div ng-form="sendDataForm" class="rd-mailform form-modern">
                         <div class="row row-30">
                             <div class="col-md-6">
                                 <div class="form-wrap">
-                                    <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
-                                    <label class="form-label" for="contact-name">Name</label>
+                                    <input class="form-input" id="contact_name" type="text" name="contact_name" ng-model="Message.UserName" required>
+                                    <label class="form-label" for="contact_name">Name</label>
+                                    <span class="form-validation" ng-if="sendDataForm.contact_name.$invalid == true && formSaved == true">The text field is required.</span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-wrap">
-                                    <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
-                                    <label class="form-label" for="contact-email">Email</label>
+                                    <input class="form-input" id="contact_email" type="email" name="contact_email" ng-model="Message.Email" required>
+                                    <label class="form-label" for="contact_email">Email</label>
+                                    <span class="form-validation" ng-if="sendDataForm.contact_email.$error.required  && formSaved ">The text field is required.</span>
+                                    <span class="form-validation" ng-if="sendDataForm.contact_email.$error.email && formSaved">The email is not valid.</span>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-wrap">
                                     <div class="textarea-lined-wrap">
-                                        <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                                        <label class="form-label" for="contact-message">Message</label>
+                                        <textarea class="form-input" id="contact_message" name="contact_message" ng-model="Message.Message" required></textarea>
+                                        <label class="form-label" for="contact_message">Message</label>
+                                        <span class="form-validation" ng-if="sendDataForm.contact_message.$invalid == true && formSaved == true">The text field is required.</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="row row-30 row-sm-0">
                                     <div class="col-sm-8">
-                                        <button class="button button-primary button-block" type="submit">Send</button>
+                                        <button class="button button-primary button-block" type="submit" ng-click="SendMessage(Message)">Send</button>
                                     </div>
                                     <div class="col-sm-4">
-                                        <button class="button button-silver-outline button-block" type="reset">Reset</button>
+                                        <button class="button button-silver-outline button-block" type="reset" ng-click="Reset()" >Reset</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="rd-google-map rd-google-map__model" data-zoom="15" data-x="55.309763" data-y="25.241846" data-styles="[{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:33}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2e5d4&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#c5dac6&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#c5c6c6&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e4d7c6&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fbfaf7&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#acbcc9&quot;}]}]">
+    <!--<section class="rd-google-map rd-google-map__model" data-zoom="15" data-x="55.309763" data-y="25.241846" data-styles="[{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:33}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2e5d4&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#c5dac6&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#c5c6c6&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e4d7c6&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fbfaf7&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#acbcc9&quot;}]}]">
         <ul class="map_locations">
             <li data-y="55.309763" data-x="25.241846">
                 <p>
@@ -89,5 +93,5 @@
                 </p>
             </li>
         </ul>
-    </section>
+    </section>-->
 </div>

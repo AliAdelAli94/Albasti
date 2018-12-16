@@ -1,4 +1,4 @@
-﻿var app = angular.module("LawFirmApp", ['ui.router']);
+﻿var app = angular.module("LawFirmApp", ['ui.router', 'ngSanitize']);
 
 app.run(function ($rootScope) {
     $rootScope.$on("$includeContentLoaded", function (event, templateName) {
@@ -9,6 +9,11 @@ app.run(function ($rootScope) {
 });
 
 app.value('$', $);
+
+var consultationEmail = "albastiadvocates19@gmail.com";
+
+var contactUsEmail = "albastiadvocates19@gmail.com";
+
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -199,13 +204,44 @@ app.controller("laborLawController", function () {
 
 });
 
-app.controller("contactusCtrl", function ($scope) {
+app.controller("contactusCtrl", ['$scope', 'lawfirmService',function ($scope,lawfirmService) {
 
     load_js();
 
-});
+    $scope.Message = {};
+    
+    $scope.SendMessage = function (data) {
 
-app.controller("ourteamCtrl", ['$scope', 'lawfirmService','$filter', function ($scope, lawfirmService,$filter) {
+            $scope.formSaved = true;
+
+            if ($scope.sendDataForm.$valid) {
+                var dto = {};
+                dto.UserName = data.UserName;
+                dto.Email = data.Email;
+                dto.Message = data.Message;
+                dto.ToEmail = contactUsEmail;
+                dto.Subject = "Contact Us";
+
+                lawfirmService.SendConsultation(dto, function (response) {
+
+                    if(response.data == true)
+                    {
+                        alert("You Email has been sent .");
+                    }
+                },
+                function (response) { });
+            }
+    };
+
+    $scope.Reset = function () {
+
+        $scope.Message = {};
+
+    };
+
+}]);
+
+app.controller("ourteamCtrl", ['$scope', 'lawfirmService', '$filter', function ($scope, lawfirmService, $filter) {
 
     lawfirmService.GetAllExperts(function (response) {
 
@@ -242,24 +278,27 @@ app.controller("blogsCtrl", ['$scope', 'lawfirmService', '$filter', '$stateParam
                 load_js();
             },
             function (response) { });
-    
+
     $scope.currentComment = {};
     $scope.formSaved = false;
 
     $scope.AddComment = function (item) {
-      
-        $scope.formSaved = true;
-        item.blogId = $scope.currentBlog.id;
 
-        lawfirmService.AddComment(item,
-            function (response) {
-                $state.transitionTo($state.current, $stateParams, {
-                    reload: true,
-                    inherit: false,
-                    notify: true
-                });
-            },
-            function (response) { });
+        $scope.formSaved = true;
+
+        if ($scope.addCommentForm.$valid) {
+            item.blogId = $scope.currentBlog.id;
+
+            lawfirmService.AddComment(item,
+                function (response) {
+                    $state.transitionTo($state.current, $stateParams, {
+                        reload: true,
+                        inherit: false,
+                        notify: true
+                    });
+                },
+                function (response) { });
+        }
     };
 
 }]);
@@ -340,10 +379,17 @@ app.controller("willTrustController", function () {
     load_js();
 });
 
-app.controller("about-us", function () {
+app.controller("about-us", ['$scope', 'lawfirmService', function ($scope, lawfirmService){
 
-    load_js();
-});
+
+    lawfirmService.GetAllTestimonial(function (response) {
+        $scope.testimonials = response.data;
+
+        load_js();
+    },
+        function (response) { });
+
+}]);
 
 app.controller("IntellectualPropertyController", function () {
 
@@ -411,23 +457,48 @@ app.controller("appointmentController", function () {
 
 app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
 
-
+    $scope.formSaved = false;
     lawfirmService.GetAllFaq(function (response) {
-        debugger;
+
+        $scope.Consultation = {};
+
         $scope.faqs = angular.copy(response.data, $scope.faqs);
         $scope.firstFaq = response.data[0];
         $scope.restFaqs = response.data.slice(1, response.data.length)
 
-    },
+        lawfirmService.GetAllTestimonial(function (response) {
+            $scope.testemonials = response.data;
+            load_js();
+        },
         function (response) { });
 
-
-    lawfirmService.GetAllTestimonial(function (response) {
-        $scope.testemonials = response.data;
-        load_js();
-
     },
-        function (response) { });
+        function (response) { });  
+
+    $scope.SendConsultation = function (data) {
+
+        $scope.formSaved = true;
+
+        if ($scope.freeConsultationForm.$valid)
+        {
+            var dto = {};
+            dto.UserName = data.UserName;
+            dto.Email = data.Email;
+            dto.Phone = data.Phone;
+            dto.Message = data.Message;
+            dto.ToEmail = consultationEmail;
+            dto.ExtraData = data.PracticeAreaType;
+            dto.Subject = "Free Consultation";
+
+            lawfirmService.SendConsultation(dto, function (response) {
+                if(response.data == true)
+                {
+                    alert("Your request has been sent .");
+                }
+            },
+            function (response) { });
+        }
+    };
 
 }]);
 

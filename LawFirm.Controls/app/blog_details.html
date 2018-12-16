@@ -92,29 +92,30 @@
                     <div class="comments-wrap">
                         <h4>Leave a comment</h4>
                         <div class="form-classic-wrap">
-                            <form class="rd-mailform form-classic form-classic-bordered label-outside" name="add_comment_form">
+                            <div class="rd-mailform form-classic form-classic-bordered label-outside" ng-form="addCommentForm">
                                 <div class="form-wrap">
                                     <label class="form-label-outside text-bold" for="commenter_name">Name :</label>
-                                                                                                                                
+
                                     <input type="text" class="form-input" id="commenter_name" name="commenter_name" ng-model="currentComment.commenterName" ng-required="true" />
-                                    <span class="form-validation" ng-if="add_comment_form.commenter_name.validity.valid == false && formSaved == true">The text field is required.</span>
+                                    <span class="form-validation" ng-if="addCommentForm.commenter_name.$invalid == true && formSaved == true">The text field is required.</span>
                                 </div>
                                 <div class="form-wrap">
                                     <label class="form-label-outside text-bold" for="commenter_email">Email :</label>
-                                    <input type="text" class="form-input" id="commenter_email" name="commenter_email" ng-model="currentComment.commenterEmail" ng-required="true"/>
-                                    <span class="form-validation" ng-if="add_comment_form.commenter_email.validity.valid == false && formSaved == true">The text field is required.</span>
+                                    <input type="email" class="form-input" id="commenter_email" name="commenter_email" ng-model="currentComment.commenterEmail" ng-required="true" />
+                                    <span class="form-validation" ng-if="addCommentForm.commenter_email.$error.required  && formSaved ">The text field is required.</span>
+                                    <span class="form-validation" ng-if="addCommentForm.commenter_email.$error.email && formSaved">The email is not valid.</span>
 
                                 </div>
                                 <div class="form-wrap">
                                     <label class="form-label-outside text-bold" for="comment_message">Message :</label>
-                                    <textarea class="form-input" id="comment_message" name="message" ng-model="currentComment.commentBody" ng-required="true"></textarea>
-                                    <span class="form-validation" ng-if="add_comment_form.comment_message.validity.valid == false && formSaved == true">The text field is required.</span>
+                                    <textarea class="form-input" id="comment_message" name="comment_message" ng-model="currentComment.commentBody" ng-required="true"></textarea>
+                                    <span class="form-validation" ng-if="addCommentForm.comment_message.$invalid == true && formSaved == true">The text field is required.</span>
 
                                 </div>
                                 <div class="form-wrap">
                                     <button class="button button-primary" type="submit" style="min-width: 200px;" ng-click="AddComment(currentComment)">Submit</button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
 

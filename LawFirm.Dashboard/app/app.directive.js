@@ -1330,4 +1330,22 @@ altairApp
             }
         }
     ])
-;
+
+.directive('numbersRange', function () {
+    return {
+        require: 'ngModel',
+        link: function (scope, element, attrs, modelCtrl) {
+            modelCtrl.$parsers.push(function (inputValue) {
+
+                if (parseInt(inputValue) <= 200 && parseInt(inputValue) >= 5) {
+                    modelCtrl.$setValidity('numbersRange', true);
+                    return inputValue;
+                } else {
+                    modelCtrl.$setValidity('numbersRange', false);
+                    return modelCtrl.$modelValue;
+                }
+
+            });
+        }
+    };
+});

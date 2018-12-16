@@ -114,6 +114,7 @@
     <Content Include="app\fonts\Mercury-Regular.eot" />
     <Content Include="app\fonts\Mercury-Regular.ttf" />
     <Content Include="app\fonts\Mercury-Regular.woff" />
+    <Content Include="app\js\angular-sanitize.js" />
     <Content Include="app\js\signalR\jquery.signalR-2.4.0.min.js" />
     <Content Include="images\img\user1.png" />
     <Content Include="packages.config" />
