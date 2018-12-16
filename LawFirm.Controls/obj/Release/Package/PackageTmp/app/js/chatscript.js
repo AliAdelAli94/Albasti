@@ -15,8 +15,12 @@
             if ($chatbox.hasClass('chatbox--closed')) $chatbox.remove();
         });
         $chatboxCredentials.on('submit', function(e) {
+                e.preventDefault();
+                $chatbox.removeClass('chatbox--empty');
+        });
+        $('#login_btn_chat').on('click', function () {
             e.preventDefault();
-            $chatbox.removeClass('chatbox--empty');
+            $chatbox.addClass('chatbox--empty');
         });
     });
 })(jQuery);

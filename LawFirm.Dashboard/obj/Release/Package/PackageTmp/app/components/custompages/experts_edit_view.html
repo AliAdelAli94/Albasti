@@ -133,13 +133,13 @@
 
                                                 <td>
                                                     <div class="parsley-row">
-                                                        <input type="text" class="md-input md-input-width-medium" ng-model="experience.name" md-input required />
+                                                        <input type="text" class="md-input md-input-width-medium" ng-model="experience.name" name="{{'experienceName' + $index}}" id="{{'experienceName' + $index}}" md-input required />
                                                     </div>
                                                 </td>
 
                                                 <td>
                                                     <div class="parsley-row">
-                                                        <input type="text" class="md-input md-input-width-medium" ng-model="experience.val" md-input required />
+                                                        <input type="number" class="md-input md-input-width-medium" name="{{'experienceVal' + $index}}" id="{{'experienceVal' + $index}}" ng-model="experience.val" max='100' min='1' md-input required />
                                                     </div>
                                                 </td>
 

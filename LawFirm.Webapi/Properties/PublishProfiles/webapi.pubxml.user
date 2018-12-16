@@ -25,7 +25,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2018 18:54:59</publishTime>
     </File>
     <File Include="bin/LawFirm.Webapi.dll">
-      <publishTime>12/10/2018 19:05:17</publishTime>
+      <publishTime>12/16/2018 15:45:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/19/2018 00:46:04</publishTime>

@@ -90,6 +90,20 @@
      };
 
 
+     this.SendConsultation = function (data, Success, Fail) {
+         $http({
+             method: 'POST',
+             url: WebApiUrl + 'Utils/SendEmail/',
+             data: data
+         }).then(function (response) {
+             Success(response);
+         }, function (response) {
+             Fail(response);
+         });
+     };
+
+
+
  }]);
 
 

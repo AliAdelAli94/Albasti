@@ -30,10 +30,20 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
 
     signalR.recieveMessage(function (msg, fromCID) {
 
-        console.log("new Message : ", msg);
-
         $scope.messages.push({ content: msg, dir: 0 });
         $scope.$apply();
+
+    });
+
+
+    signalR.chatEnded(function () {
+        $scope.adminConnectionID = "000";
+        $scope.messages.push({ content: "Chat is ended from admin side click to <a class='log'> login </a> again", dir: 0 });
+        $scope.$apply();
+
+        $('.log').on('click', function () {
+            $('.chatbox').addClass('chatbox--empty')
+        });
 
     });
 
@@ -61,11 +71,14 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
             signalR.sendMessageBroadCast($scope.msgContent);
             $scope.msgContent = "";
             $scope.$apply();
-        }
-        
+        }       
     };
 
+    $scope.returnToLogin = function () {
 
+        $('.chatbox').addClass('chatbox--empty')
+
+    };
 });
 
 

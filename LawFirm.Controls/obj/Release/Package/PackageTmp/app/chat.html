@@ -19,11 +19,11 @@
         <div ng-repeat="message in messages">
             <div class="chatbox__body__message chatbox__body__message--left" ng-if="message.dir == 0">
                 <img src="/images/img/user1.png" alt="Picture">
-                <p>{{message.content}}</p>
+                <p ng-bind-html="message.content"></p>
             </div>
             <div class="chatbox__body__message chatbox__body__message--right" ng-if="message.dir == 1">
                 <img src="/images/img/user1.png" alt=" picture">
-                <p>{{message.content}}</p>
+                <p ng-bind-html="message.content"></p>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
         </div>
         <button type="submit" class="btn btn-success btn-block chatButton" ng-click="startChat()">Enter Chat</button>
     </form>
-    <textarea class="chatbox__message" placeholder="Write something interesting" ng-model="msgContent" id="msgContent"></textarea>
+    <textarea class="chatbox__message" placeholder="Write something interesting" ng-model="msgContent" id="msgContent" ng-disabled="adminConnectionID == '000' "></textarea>
 
 </div>
 

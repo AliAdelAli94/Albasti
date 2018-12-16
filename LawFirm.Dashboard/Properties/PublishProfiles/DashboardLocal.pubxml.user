@@ -10,10 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="app/app.controller.js">
-      <publishTime>12/10/2018 18:49:45</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/app.directive.js">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/app.factory.js">
       <publishTime>11/25/2018 02:01:08</publishTime>
@@ -115,7 +115,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/components/custompages/blogs_ctrl.js">
-      <publishTime>12/10/2018 18:49:45</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/components/custompages/blogs_list_view.html">
       <publishTime>12/10/2018 18:49:45</publishTime>
@@ -139,16 +139,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/21/2018 02:14:04</publishTime>
     </File>
     <File Include="app/components/custompages/chatController.js">
-      <publishTime>11/29/2018 14:13:30</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/components/custompages/chatView.html">
-      <publishTime>11/29/2018 14:13:30</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/components/custompages/experts_ctrl.js">
       <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/components/custompages/experts_edit_view.html">
-      <publishTime>12/10/2018 18:49:45</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/components/custompages/experts_list_view.html">
       <publishTime>12/10/2018 18:49:45</publishTime>
@@ -586,7 +586,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/signalRfactory.js">
-      <publishTime>12/10/2018 19:20:39</publishTime>
+      <publishTime>12/16/2018 15:39:05</publishTime>
     </File>
     <File Include="app/templates/dirPagination.tpl.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
