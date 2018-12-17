@@ -9,6 +9,7 @@
     <Property Name="blogDate" Type="datetime" Nullable="false" />
     <Property Name="postedby" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="category" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="image" Type="text" Nullable="false" />
   </EntityType>
   <EntityType Name="Careers">
     <Key>
@@ -91,7 +92,9 @@
     <Property Name="isonline" Type="bit" Nullable="false" />
   </EntityType>
   <Association Name="FK_Comments_Blogs">
-    <End Role="Blogs" Type="Self.Blogs" Multiplicity="1" />
+    <End Role="Blogs" Type="Self.Blogs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Blogs">
@@ -103,7 +106,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Experiences_Experts">
-    <End Role="Experts" Type="Self.Experts" Multiplicity="1" />
+    <End Role="Experts" Type="Self.Experts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Experiences" Type="Self.Experiences" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Experts">
@@ -115,7 +120,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Paragraphs_Blogs">
-    <End Role="Blogs" Type="Self.Blogs" Multiplicity="1" />
+    <End Role="Blogs" Type="Self.Blogs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Paragraphs" Type="Self.Paragraphs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Blogs">

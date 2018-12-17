@@ -6,3 +6,11 @@ F:\Current\LawFirm.DAL\bin\Release\EntityFramework.xml
 F:\Current\LawFirm.DAL\obj\Release\LawFirm.DAL.csprojResolveAssemblyReference.cache
 F:\Current\LawFirm.DAL\obj\Release\LawFirm.DAL.dll
 F:\Current\LawFirm.DAL\obj\Release\LawFirm.DAL.pdb
+D:\Current\myrepo\LawFirm.DAL\bin\Release\LawFirm.DAL.dll.config
+D:\Current\myrepo\LawFirm.DAL\bin\Release\LawFirm.DAL.dll
+D:\Current\myrepo\LawFirm.DAL\bin\Release\LawFirm.DAL.pdb
+D:\Current\myrepo\LawFirm.DAL\bin\Release\EntityFramework.dll
+D:\Current\myrepo\LawFirm.DAL\bin\Release\EntityFramework.xml
+D:\Current\myrepo\LawFirm.DAL\obj\Release\LawFirm.DAL.csprojResolveAssemblyReference.cache
+D:\Current\myrepo\LawFirm.DAL\obj\Release\LawFirm.DAL.dll
+D:\Current\myrepo\LawFirm.DAL\obj\Release\LawFirm.DAL.pdb

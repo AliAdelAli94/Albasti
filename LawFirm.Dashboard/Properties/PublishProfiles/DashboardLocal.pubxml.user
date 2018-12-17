@@ -10,10 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="app/app.controller.js">
-      <publishTime>11/27/2018 01:29:14</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/app.directive.js">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/app.factory.js">
       <publishTime>11/25/2018 02:01:08</publishTime>
@@ -22,7 +22,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/app.js">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/app.oc_lazy_load.js">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -31,7 +31,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/app.states.js">
-      <publishTime>11/25/2018 02:01:08</publishTime>
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/components/components/accordionView.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -114,6 +114,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="app/components/components/typographyView.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
+    <File Include="app/components/custompages/blogs_ctrl.js">
+      <publishTime>12/16/2018 15:39:04</publishTime>
+    </File>
+    <File Include="app/components/custompages/blogs_list_view.html">
+      <publishTime>12/10/2018 18:49:45</publishTime>
+    </File>
+    <File Include="app/components/custompages/blog_details_view.html">
+      <publishTime>12/10/2018 18:49:45</publishTime>
+    </File>
+    <File Include="app/components/custompages/blog_edit_view.html">
+      <publishTime>12/10/2018 18:49:45</publishTime>
+    </File>
     <File Include="app/components/custompages/careers_ctrl.js">
       <publishTime>11/21/2018 02:14:04</publishTime>
     </File>
@@ -127,10 +139,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/21/2018 02:14:04</publishTime>
     </File>
     <File Include="app/components/custompages/chatController.js">
-      <publishTime>11/27/2018 01:29:14</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/components/custompages/chatView.html">
-      <publishTime>11/27/2018 01:29:14</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
+    </File>
+    <File Include="app/components/custompages/experts_ctrl.js">
+      <publishTime>12/10/2018 18:49:45</publishTime>
+    </File>
+    <File Include="app/components/custompages/experts_edit_view.html">
+      <publishTime>12/16/2018 15:39:04</publishTime>
+    </File>
+    <File Include="app/components/custompages/experts_list_view.html">
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/components/custompages/faqs_ctrl.js">
       <publishTime>11/21/2018 02:14:04</publishTime>
@@ -145,7 +166,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/21/2018 02:14:04</publishTime>
     </File>
     <File Include="app/components/custompages/loginController.js">
-      <publishTime>11/25/2018 02:01:08</publishTime>
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/components/custompages/loginView.html">
       <publishTime>11/25/2018 02:01:08</publishTime>
@@ -547,10 +568,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/services/dashservice.js">
-      <publishTime>11/28/2018 00:52:55</publishTime>
+      <publishTime>12/10/2018 19:20:17</publishTime>
     </File>
     <File Include="app/shared/header/headerView.html">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/shared/main_sidebar/main_sidebarView.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -565,7 +586,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/signalRfactory.js">
-      <publishTime>11/28/2018 00:54:39</publishTime>
+      <publishTime>12/16/2018 15:39:05</publishTime>
     </File>
     <File Include="app/templates/dirPagination.tpl.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -1780,7 +1801,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:34</publishTime>
     </File>
     <File Include="bin/LawFirm.Dashboard.dll">
-      <publishTime>11/28/2018 00:56:48</publishTime>
+      <publishTime>12/10/2018 19:21:24</publishTime>
     </File>
     <File Include="bower.json">
       <publishTime>11/19/2018 00:45:34</publishTime>
@@ -2150,6 +2171,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bower_components/angular-ui-router/src/viewScroll.js">
       <publishTime>11/19/2018 00:45:34</publishTime>
+    </File>
+    <File Include="bower_components/angular-uploader/ng-file-upload-shim.min.js">
+      <publishTime>12/10/2018 18:49:45</publishTime>
+    </File>
+    <File Include="bower_components/angular-uploader/ng-file-upload.min.js">
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="bower_components/angular-wizard/bower.json">
       <publishTime>11/19/2018 00:45:34</publishTime>
@@ -30055,10 +30082,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/25/2018 02:01:08</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>11/28/2018 00:55:40</publishTime>
+      <publishTime>12/10/2018 19:20:00</publishTime>
     </File>
     <File Include="package.json">
-      <publishTime>11/27/2018 01:28:14</publishTime>
+      <publishTime>12/10/2018 18:52:31</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>11/28/2018 00:57:37</publishTime>

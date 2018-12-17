@@ -10,21 +10,26 @@ angular
                 $scope.$parent.TakeThisUser(cID);
             };
 
+            $scope.RemoveUser = function (index,cID) {
+
+                $scope.$parent.RemoveUser(index,cID);
+            };
+
+            $scope.model = {};
 
             $scope.sendMessage = function () {
-
-                if ($scope.msgContent != null || $scope.msgContent != "") {
+                if ($scope.model.msgNow != null && $scope.model.msgNow != "") {
                     var x = new Date();
-                    $scope.$parent.recentUser.Messages.push({ msg: $scope.msgContent, dir: 1, date: x.getHours() + ":" + x.getMinutes() });
-                    $scope.$parent.sendMessage($scope.msgContent, $scope.$parent.recentUser.CID);
-                    $scope.msgContent = "";
+                    $scope.$parent.recentUser.Messages.push({ msg: $scope.model.msgNow, dir: 1, date: x.getHours() + ":" + x.getMinutes() });
+                    $scope.$parent.sendMessage($scope.model.msgNow, $scope.$parent.recentUser.CID);
+                    $scope.model.msgNow = "";
                 }
             };
 
 
             $scope.changeRecentUser = function (id) {
 
-                $scope.$parent.recentUser = $scope.users[id];
+                $scope.$parent.recentUser = $scope.$parent.users[id];
 
             };
 

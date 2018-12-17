@@ -1,0 +1,34 @@
+﻿<div ng-controller="blogsCtrl">
+
+    <section class="section-30 section-md-40 section-lg-66 section-xl-bottom-90 bg-gray-dark page-title-wrap" style="background-image: url(images/bg-image-1.jpg);">
+        <div class="container">
+            <div class="page-title">
+                <h2>Blogs</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-50 section-md-75 section-xl-100">
+        <div class="container">
+            <div class="row row-30 justify-content-md-center justify-content-lg-start">
+                <div class="col-md-9 col-lg-6 height-fill" ng-repeat="blog in blogs">
+                    <article class="post-block">
+                        <div class="post-image">
+                            <img ng-src="{{blog.image}}" alt="" width="570" height="253" />
+                        </div>
+                        <div class="post-body">
+                            <h4 class="post-header"><a ui-sref="blog_details({ id: blog.id })">{{blog.title}}</a></h4>
+                            <ul class="post-meta">
+                                <li class="object-inline"><span class="text-style-2 text-white">by</span><span>{{blog.postedby}}</span></li>
+                                <li class="object-inline">
+                                    <span class="novi-icon icon icon-xxs icon-white material-icons-query_builder"></span>
+                                    <time datetime="2017-01-01">{{blog.postDateShow}}</time>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

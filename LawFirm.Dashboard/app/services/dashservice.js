@@ -2,9 +2,9 @@
 
     function ($http, Upload) {
 
-        //  var WebApiUrl = "http://chatappp.somee.com/";
+        var WebApiUrl = "http://chatappp.somee.com/";
 
-        var WebApiUrl = "http://localhost:20833/";
+       // var WebApiUrl = "http://localhost:20833/";
 
 
         this.GetAllFaq = function (Success, Fail) {

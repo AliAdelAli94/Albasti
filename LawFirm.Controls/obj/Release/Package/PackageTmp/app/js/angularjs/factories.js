@@ -2,7 +2,7 @@
 
 app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
 
-    // $.connection.hub.url = 'http://localhost:50131/signalr/';
+    //$.connection.hub.url = 'http://localhost:50131/signalr/';
 
     $.connection.hub.url = 'http://lawfirm.somee.com/signalr/';
 
@@ -36,19 +36,8 @@ app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
             });
         },
 
-        
-
-        //adminLogin: function (email) {
-        //    connection.done(function () {
-        //        $hub.server.adminLogin(email);
-        //    });
-        //},
-
+       
         //////////////////////// CLIENT METHODS ////////////////////            
-
-        //userAssigned: function (callback) {
-        //    $hub.client.userAssigned = callback;
-        //},
 
         getAdminData: function (callback) {
             $hub.client.getAdminData = callback;
@@ -58,6 +47,11 @@ app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
             $hub.client.recieveMessage = callback;
         },
 
+        chatEnded: function (callback) {
+            $hub.client.chatEnded = callback;
+        },
+
+        
     }
     return signalR;
 }]);

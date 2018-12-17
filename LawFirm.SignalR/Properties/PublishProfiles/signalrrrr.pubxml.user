@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/LawFirm.SignalR.dll">
-      <publishTime>11/27/2018 01:43:32</publishTime>
+      <publishTime>12/16/2018 15:45:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
       <publishTime>11/19/2018 00:46:04</publishTime>

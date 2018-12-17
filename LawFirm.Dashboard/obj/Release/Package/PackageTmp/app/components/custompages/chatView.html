@@ -1,6 +1,5 @@
 <div id="page_content">
     <div id="page_content_inner">
-
         <div class="uk-width-medium-8-10 uk-container-center">
             <div class="uk-grid uk-grid-collapse" data-uk-grid-margin>
                 <div class="uk-width-large-7-10" ng-if="!isEmpty($parent.recentUser)">
@@ -40,14 +39,16 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="chat_submit_box" id="chat_submit_box">
-                                    <div class="uk-input-group">
-                                        <input type="text" class="md-input" name="submit_message" id="submit_message" placeholder="Send message" md-input ng-model="msgContent">
-                                        <span class="uk-input-group-addon">
-                                            <a ng-click="sendMessage()"><i class="material-icons md-24">&#xE163;</i></a>
-                                        </span>
+                                <form id="chat_form_form" name="chat_form_form">
+                                    <div class="chat_submit_box" id="chat_submit_box">
+                                        <div class="uk-input-group">
+                                            <input type="text" class="md-input" name="submit_message" id="submit_message" ng-model="model.msgNow" placeholder="Send message" md-input ng-disabled="$parent.recentUser.EnableChat" />
+                                            <span class="uk-input-group-addon">
+                                                <a ng-click="sendMessage()"><i class="material-icons md-24">&#xE163;</i></a>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -61,13 +62,13 @@
                                     <div class="uk-dropdown uk-dropdown-small">
                                         <ul class="uk-nav">
                                             <li><a ng-click="TakeThisUser(user.CID)" class="uk-text-success">Get this</a></li>
-                                            <li><a href="#" class="uk-text-danger">Remove</a></li>
+                                            <li><a class="uk-text-danger" ng-click="RemoveUser($index,user.CID)">Remove</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="md-list-addon-element">
                                     <!--<span class="element-status element-status-danger" ng-if="user.status == 'offline'"></span>-->
-                                    <span class="element-status element-status-success" ></span>
+                                    <span class="element-status element-status-success"></span>
                                     <!--<span class="element-status element-status-warning" ng-if="user.status == 'afk'"></span>-->
                                     <img class="md-user-image md-list-addon-avatar" style="margin-top:0px;" src="/images/user1.png" alt="" ng-click="changeRecentUser($index)" style="cursor:pointer" />
                                 </div>
@@ -82,10 +83,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 <div id="sidebar_secondary" sidebar-secondary toggle-hidden="large" custom-scrollbar>
     <div class="sidebar_secondary_wrapper uk-margin-remove">
         <ul class="md-list md-list-addon md-list-outside">

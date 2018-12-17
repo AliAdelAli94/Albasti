@@ -193,15 +193,15 @@
                     <div class="thumbnail-variant-2-wrap">
                         <div class="thumbnail thumbnail-variant-2">
                             <figure class="thumbnail-image">
-                                <img src="/images/khalid.jpg" alt="" width="246" height="300" />
+                                <img src="/images/Mrtariq.jpg" alt="" width="246" height="300" />
                             </figure>
                             <div class="thumbnail-inner">
-                                <div class="link-group"><span class="novi-icon icon icon-xxs icon-primary material-icons-local_phone"></span><a class="link-white" href="tel:#">+971 – 52 1234567</a></div>
-                                <div class="link-group"><span class="novi-icon icon icon-xxs icon-primary fa-envelope-o"></span><a class="link-white" href="mailto:#">khalid@albastiadvocates.com</a></div>
+                                <div class="link-group"><span class="novi-icon icon icon-xxs icon-primary material-icons-local_phone"></span><a class="link-white" href="tel:#">+971 – +971-4 397-0701</a></div>
+                                <div class="link-group"><span class="novi-icon icon icon-xxs icon-primary fa-envelope-o"></span><a class="link-white" href="mailto:#">info@albastiadvocates.com</a></div>
                             </div>
                             <div class="thumbnail-caption">
-                                <p class="text-header"><a href="team-member-profile.html">Khalid Abdul Lateef</a></p>
-                                <p class="text-caption">Legal Consultant</p>
+                                <p class="text-header"><a href="team-member-profile.html">MR.Tarik</a></p>
+                                <p class="text-caption">Partner</p>
                             </div>
                         </div>
                     </div>
@@ -305,30 +305,36 @@
                 <div class="col-md-10 col-lg-9 col-xl-7">
                     <div class="section-50 section-md-75 section-xl-100">
                         <h3>Free Consultation</h3>
-                        <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                        <div class="rd-mailform" ng-form="freeConsultationForm">
                             <div class="row row-30">
                                 <div class="col-md-6">
                                     <div class="form-wrap">
-                                        <input class="form-input" id="request-form-name" type="text" name="name" data-constraints="@Required">
-                                        <label class="form-label" for="request-form-name">Name</label>
+                                        <input class="form-input" id="request_form_name" type="text" name="request_form_name" ng-model="Consultation.UserName" required>
+                                        <label class="form-label" for="request_form_name">Name</label>
+                                        <span class="form-validation" ng-if="freeConsultationForm.request_form_name.$invalid == true && formSaved == true">The text field is required.</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-wrap">
-                                        <input class="form-input" id="request-form-phone" type="text" name="phone" data-constraints="@Numeric @Required">
-                                        <label class="form-label" for="request-form-phone">Phone</label>
+                                        <input class="form-input" id="request_form_phone" type="text" name="request_form_phone" ng-model="Consultation.Phone" required>
+                                        <label class="form-label" for="request_form_phone">Phone</label>
+                                        <span class="form-validation" ng-if="freeConsultationForm.request_form_phone.$invalid == true && formSaved == true">The text field is required.</span>
+
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-wrap">
-                                        <input class="form-input" id="request-form-email" type="email" name="email" data-constraints="@Email @Required">
-                                        <label class="form-label" for="request-form-email">Email</label>
+                                        <input class="form-input" id="request_form_email" type="email" name="request_form_email" ng-model="Consultation.Email" required>
+                                        <label class="form-label" for="request_form_email">Email</label>
+                                        <span class="form-validation" ng-if="freeConsultationForm.request_form_email.$error.required  && formSaved ">The text field is required.</span>
+                                        <span class="form-validation" ng-if="freeConsultationForm.request_form_email.$error.email && formSaved">The email is not valid.</span>
+
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-wrap form-wrap-outside">
                                         <!--Select 2-->
-                                        <select class="form-input select-filter" id="request-form-select" data-minimum-results-for-search="Infinity">
+                                        <select class="form-input select-filter" id="request-form-select" data-minimum-results-for-search="Infinity" ng-model="Consultation.PracticeAreaType">
                                             <option>Family Law</option>
                                             <option value="Family Law">Family Law</option>
                                             <option value="Business Law">Business Law</option>
@@ -338,19 +344,21 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-wrap">
-                                        <textarea class="form-input" id="feedback-2-message" name="message" data-constraints="@Required"></textarea>
-                                        <label class="form-label" for="feedback-2-message">Message</label>
+                                        <textarea class="form-input" id="feedback_message" name="feedback_message" ng-model="Consultation.Message" required></textarea>
+                                        <label class="form-label" for="feedback_message">Message</label>
+                                        <span class="form-validation" ng-if="freeConsultationForm.feedback_message.$invalid == true && formSaved == true">The text field is required.</span>
+
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <button class="button button-block button-primary" type="submit">Request a Free Consultation</button>
+                                            <button class="button button-block button-primary" type="submit" ng-click="SendConsultation(Consultation)">Request a Free Consultation</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-5 d-none d-xl-block col-image"><img src="images/business-person.png" alt=""></div>

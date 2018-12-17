@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:32</publishTime>
     </File>
     <File Include="app/about-us.html">
-      <publishTime>11/19/2018 00:45:32</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/accordion.html">
       <publishTime>11/19/2018 00:45:32</publishTime>
@@ -75,6 +75,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="app/blog-post.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
+    <File Include="app/blogs.html">
+      <publishTime>12/10/2018 18:49:45</publishTime>
+    </File>
+    <File Include="app/blog_details.html">
+      <publishTime>12/16/2018 15:39:04</publishTime>
+    </File>
     <File Include="app/buttons.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
@@ -82,7 +88,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/chat.html">
-      <publishTime>11/27/2018 01:29:14</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/civil-law.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -100,7 +106,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/contact-us.html">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/contract-drafting.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -265,10 +271,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/header.html">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/home.html">
-      <publishTime>11/21/2018 02:14:04</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/icon-lists.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -282,6 +288,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="app/intellectual-property-law.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
+    <File Include="app/js/angular-sanitize.js">
+      <publishTime>12/16/2018 15:39:04</publishTime>
+    </File>
     <File Include="app/js/angular-ui-router.min.js">
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
@@ -289,22 +298,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/angularjs/app.js">
-      <publishTime>11/25/2018 02:01:08</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/js/angularjs/ChatController.js">
-      <publishTime>11/27/2018 01:29:14</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/js/angularjs/factories.js">
-      <publishTime>11/28/2018 01:01:56</publishTime>
+      <publishTime>12/16/2018 15:39:05</publishTime>
     </File>
     <File Include="app/js/angularjs/lawfirmService.js">
-      <publishTime>11/28/2018 01:01:03</publishTime>
+      <publishTime>12/16/2018 15:39:05</publishTime>
     </File>
     <File Include="app/js/boostrap.min.js">
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/js/chatscript.js">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/16/2018 15:39:04</publishTime>
     </File>
     <File Include="app/js/core.min.js">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -343,7 +352,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/our-team.html">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/practice-areas.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -379,7 +388,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="app/team-member-profile.html">
-      <publishTime>11/19/2018 00:45:33</publishTime>
+      <publishTime>12/10/2018 18:49:45</publishTime>
     </File>
     <File Include="app/testemonials.html">
       <publishTime>11/19/2018 00:45:33</publishTime>
@@ -394,7 +403,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="bin/LawFirm.Controls.dll">
-      <publishTime>11/28/2018 01:04:41</publishTime>
+      <publishTime>12/16/2018 15:46:49</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Client.dll">
       <publishTime>11/19/2018 00:46:04</publishTime>
@@ -904,7 +913,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:33</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>11/28/2018 01:03:53</publishTime>
+      <publishTime>12/16/2018 15:39:05</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>11/19/2018 00:45:33</publishTime>

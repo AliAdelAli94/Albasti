@@ -19,13 +19,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:46:04</publishTime>
     </File>
     <File Include="bin/LawFirm.BL.dll">
-      <publishTime>11/27/2018 01:33:15</publishTime>
+      <publishTime>12/10/2018 19:05:14</publishTime>
     </File>
     <File Include="bin/LawFirm.DAL.dll">
-      <publishTime>11/27/2018 01:29:14</publishTime>
+      <publishTime>12/10/2018 18:54:59</publishTime>
     </File>
     <File Include="bin/LawFirm.Webapi.dll">
-      <publishTime>11/27/2018 01:33:22</publishTime>
+      <publishTime>12/16/2018 15:45:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/19/2018 00:46:04</publishTime>
@@ -133,7 +133,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2018 00:45:55</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/27/2018 01:33:22</publishTime>
+      <publishTime>12/10/2018 18:55:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

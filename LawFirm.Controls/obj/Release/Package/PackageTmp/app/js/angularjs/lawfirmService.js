@@ -3,7 +3,7 @@
     function ($http) {
 
        var WebApiUrl = "http://chatappp.somee.com/";
-    // var WebApiUrl = "http://localhost:20833/";
+     //var WebApiUrl = "http://localhost:20833/";
 
      this.GetAllFaq = function (Success, Fail) {
          $http({
@@ -41,6 +41,30 @@
      };
 
 
+     this.GetAllExperts = function (Success, Fail) {
+         $http({
+             method: 'GET',
+             url: WebApiUrl + 'Expert/GetAllExperts',
+         }).then(function (response) {
+             Success(response);
+         }, function (response) {
+             Fail(response);
+         });
+     };
+
+     this.GetAllBlogs = function (Success, Fail) {
+         $http({
+             method: 'GET',
+             url: WebApiUrl + 'Blog/GetAllBlogs',
+         }).then(function (response) {
+             Success(response);
+         }, function (response) {
+             Fail(response);
+         });
+     };
+
+     
+
      this.GetNumberOfOnlineUsers = function (Success, Fail) {
          $http({
              method: 'GET',
@@ -53,6 +77,32 @@
      };
 
      
+     this.AddComment = function (item, Success, Fail) {
+         $http({
+             method: 'POST',
+             url: WebApiUrl + 'Blog/AddComment/',
+             data: item
+         }).then(function (response) {
+             Success(response);
+         }, function (response) {
+             Fail(response);
+         });
+     };
+
+
+     this.SendConsultation = function (data, Success, Fail) {
+         $http({
+             method: 'POST',
+             url: WebApiUrl + 'Utils/SendEmail/',
+             data: data
+         }).then(function (response) {
+             Success(response);
+         }, function (response) {
+             Fail(response);
+         });
+     };
+
+
 
  }]);
 
