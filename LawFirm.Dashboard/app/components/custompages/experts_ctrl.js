@@ -29,6 +29,10 @@
                                 $scope.action = "edit";
                                 $scope.title = "Edit Expert";
                                 $scope.currentExpert = $filter('filter')($scope.experts, { id: parseInt($stateParams.id) }, true)[0];
+                                for (var i = 0; i < $scope.currentExpert.Experiences.length; i++) {
+                                    $scope.currentExpert.Experiences[i].val = parseInt($scope.currentExpert.Experiences[i].val);
+                                }
+
                                 $scope.temp = angular.copy($scope.currentExpert);
                             }
                             else {
