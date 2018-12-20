@@ -38,7 +38,7 @@ app.controller("chatController", function ($scope, $rootScope, signalR, lawfirmS
 
     signalR.chatEnded(function () {
         $scope.adminConnectionID = "000";
-        $scope.messages.push({ content: "Chat is ended from admin side click to <a class='log'> login </a> again", dir: 0 });
+        $scope.messages.push({ content: "Chat is ended from admin side click to <a class='log'> <span class='htag'>login</span> </a> again", dir: 0 });
         $scope.$apply();
 
         $('.log').on('click', function () {

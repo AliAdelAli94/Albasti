@@ -61,15 +61,13 @@
                                     <i class="md-icon material-icons">&#xE5D4;</i>
                                     <div class="uk-dropdown uk-dropdown-small">
                                         <ul class="uk-nav">
-                                            <li><a ng-click="TakeThisUser(user.CID)" class="uk-text-success">Get this</a></li>
-                                            <li><a class="uk-text-danger" ng-click="RemoveUser($index,user.CID)">Remove</a></li>
+                                            <li ng-if="user.EnableChat"><a ng-click="TakeThisUser(user.CID)" class="uk-text-success">Get this</a><span></span></li>
+                                            <li ng-if="!user.EnableChat"><a class="uk-text-danger" ng-click="RemoveUser($index,user.CID)">Remove</a><span></span></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="md-list-addon-element">
-                                    <!--<span class="element-status element-status-danger" ng-if="user.status == 'offline'"></span>-->
                                     <span class="element-status element-status-success"></span>
-                                    <!--<span class="element-status element-status-warning" ng-if="user.status == 'afk'"></span>-->
                                     <img class="md-user-image md-list-addon-avatar" style="margin-top:0px;" src="/images/user1.png" alt="" ng-click="changeRecentUser($index)" style="cursor:pointer" />
                                 </div>
                                 <div class="md-list-content">
@@ -98,9 +96,7 @@
                     </div>
                 </div>
                 <div class="md-list-addon-element">
-                    <!--<span class="element-status element-status-danger" ng-if="user.status == 'offline'"></span>-->
                     <span class="element-status element-status-success"></span>
-                    <!--<span class="element-status element-status-warning" ng-if="user.status == 'afk'"></span>-->
                     <img class="md-user-image md-list-addon-avatar" style="margin-top:0px;" src="/images/user1.png" alt="" ng-click="changeRecentUser($index)" />
                 </div>
                 <div class="md-list-content">

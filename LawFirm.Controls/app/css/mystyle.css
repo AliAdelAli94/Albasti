@@ -9,6 +9,14 @@
     margin-top: 0px;
 }
 
+
+.htag{
+
+    color:blue;
+    cursor:pointer;
+    font-weight:bold;
+}
+
 .blockquote-complex cite:after{
     content: "";
 }
