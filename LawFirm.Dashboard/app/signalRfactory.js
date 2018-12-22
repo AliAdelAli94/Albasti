@@ -2,16 +2,15 @@
 altairApp
     .factory('signalR', ['$rootScope', function ($rootScope) {
 
-   //  $.connection.hub.url = 'http://localhost:50131/signalr/';
+     $.connection.hub.url = 'http://localhost:50131/signalr/';
 
-       $.connection.hub.url = 'http://lawfirm.somee.com/signalr/';
+       //$.connection.hub.url = 'http://lawfirm.somee.com/signalr/';
 
     var $hub = $.connection.chatHub;
     var connection = null;
     var signalR = {
 
         startHub: function () {
-            console.log("Connection Estabished");
             connection = $.connection.hub.start();
         },
 
@@ -53,6 +52,10 @@ altairApp
 
         userTaken: function (callback) {
             $hub.client.userTaken = callback;
+        },
+
+        removeThisUser: function (callback) {
+            $hub.client.removeThisUser = callback;
         },
 
         recieveMessage: function (callback) {

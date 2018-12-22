@@ -10,30 +10,24 @@ angular
         '$rootScope',
         'signalR',
         '$filter',
-        function ($scope, $rootScope, signalR, $filter ) {
+        function ($scope, $rootScope, signalR, $filter) {
 
             $scope.users = [];
-            $scope.recentUser = {};
 
             signalR.userAssigned(function (name, cID, email) {
-                $scope.newUser = { Name: name, CID: cID, Email: email, Messages: [], EnableChat : true };
+                $scope.newUser = { Name: name, CID: cID, Email: email, Messages: [], EnableChat: true };
 
                 $scope.found = true;
-                for (var x = 0; x < $scope.users.length; x++)
-                {
-                    if($scope.users[x].CID == cID )
-                    {
+                for (var x = 0; x < $scope.users.length; x++) {
+                    if ($scope.users[x].CID == cID) {
                         $scope.found = false;
                     }
                 }
 
-                if ($scope.found == true)
-                {
+                if ($scope.found == true) {
                     $scope.users.push($scope.newUser);
                     $scope.$apply();
                 }
-
-                console.log(name + "          " + cID + "                 " + email);
 
             });
 
@@ -45,9 +39,17 @@ angular
                 signalR.takeThisUser(CID);
             }
 
-            $scope.RemoveUser = function (index,cID) {
+            $scope.RemoveUser = function (index, cID) {
 
-                $scope.users.splice(index, 1);
+                for (var i = 0 ; i < $scope.users.length ; i++) {
+                    if ($scope.users[i].CID == cID) {
+                        if ($scope.users[i].CID == $scope.recentUser.CID) {
+                            $scope.recentUser = {};
+                        }
+                        $scope.users.splice(i, 1);
+                        break;
+                    }
+                }
                 signalR.removeUser(cID);
             };
 
@@ -56,6 +58,9 @@ angular
 
                 for (var i = 0 ; i < $scope.users.length ; i++) {
                     if ($scope.users[i].CID == cid) {
+                        if ($scope.users[i].CID == $scope.recentUser.CID) {
+                            $scope.recentUser = {};
+                        }
                         $scope.users.splice(i, 1);
                         break;
                     }
@@ -64,11 +69,26 @@ angular
 
             });
 
+
+            signalR.removeThisUser(function (cid) {
+
+                for (var i = 0 ; i < $scope.users.length ; i++) {
+                    if ($scope.users[i].CID == cid) {
+                        if ($scope.users[i].CID == $scope.recentUser.CID) {
+                            $scope.recentUser = {};
+                            $scope.$apply();
+                        }
+                        $scope.users.splice(i, 1);
+                        break;
+                    }
+                }
+                $scope.$apply();
+            });
+
+
             signalR.recieveMessage(function (msg, fromCID) {
 
                 $scope.package = { Msg: msg, User: fromCID };
-
-                console.log("new Message : ", $scope.package);
 
                 for (var i = 0 ; i < $scope.users.length ; i++) {
                     if ($scope.users[i].CID == $scope.package.User) {

@@ -29,6 +29,18 @@ namespace LawFirm.SignalR
             }
         }
 
+        public void clientEndChat()
+        {
+            try
+            {
+                Clients.Group("Admins").removeThisUser(Context.ConnectionId);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         public void takeThisUser(string cid)
         {
             try
@@ -85,7 +97,6 @@ namespace LawFirm.SignalR
             Clients.Group("Admins").recieveMessage(message, Context.ConnectionId);
         }
 
-        
 
 
         public override Task OnConnected()

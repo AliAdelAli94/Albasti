@@ -2,8 +2,8 @@
 
     function ($http) {
 
-       var WebApiUrl = "http://chatappp.somee.com/";
-     //var WebApiUrl = "http://localhost:20833/";
+     //  var WebApiUrl = "http://chatappp.somee.com/";
+     var WebApiUrl = "http://localhost:20833/";
 
      this.GetAllFaq = function (Success, Fail) {
          $http({
@@ -90,7 +90,7 @@
      };
 
 
-     this.SendConsultation = function (data, Success, Fail) {
+     this.SendEmail = function (data, Success, Fail) {
          $http({
              method: 'POST',
              url: WebApiUrl + 'Utils/SendEmail/',

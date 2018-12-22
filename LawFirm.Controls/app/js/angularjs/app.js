@@ -281,7 +281,7 @@ app.controller("contactusCtrl", ['$scope', 'lawfirmService', function ($scope, l
             dto.ToEmail = contactUsEmail;
             dto.Subject = "Contact Us";
 
-            lawfirmService.SendConsultation(dto, function (response) {
+            lawfirmService.SendEmail(dto, function (response) {
 
                 if (response.data == true) {
                     alert("You Email has been sent .");
@@ -547,7 +547,7 @@ app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmSer
             dto.ExtraData = data.PracticeAreaType;
             dto.Subject = "Free Consultation";
 
-            lawfirmService.SendConsultation(dto, function (response) {
+            lawfirmService.SendEmail(dto, function (response) {
                 if (response.data == true) {
                     alert("Your request has been sent .");
                 }
