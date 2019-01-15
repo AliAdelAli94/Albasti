@@ -62,6 +62,10 @@
     <Compile Include="Utils\PasswordEncruption.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LawFirm.CommonUtilitis\LawFirm.CommonUtilitis.csproj">
+      <Project>{e9b24090-6e7a-4840-9229-1c096f42eb86}</Project>
+      <Name>LawFirm.CommonUtilitis</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LawFirm.DAL\LawFirm.DAL.csproj">
       <Project>{4b1d119f-44d5-4dec-badf-49562534b162}</Project>
       <Name>LawFirm.DAL</Name>

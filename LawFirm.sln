@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawFirm.Dashboard", "LawFir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawFirm.SignalR", "LawFirm.SignalR\LawFirm.SignalR.csproj", "{8AA56C97-F301-4097-AEEF-BAF9C0003AD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawFirm.CommonUtilitis", "LawFirm.CommonUtilitis\LawFirm.CommonUtilitis.csproj", "{E9B24090-6E7A-4840-9229-1C096F42EB86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8AA56C97-F301-4097-AEEF-BAF9C0003AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AA56C97-F301-4097-AEEF-BAF9C0003AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AA56C97-F301-4097-AEEF-BAF9C0003AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9B24090-6E7A-4840-9229-1C096F42EB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B24090-6E7A-4840-9229-1C096F42EB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B24090-6E7A-4840-9229-1C096F42EB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B24090-6E7A-4840-9229-1C096F42EB86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -23,6 +23,8 @@ namespace LawFirm.Webapi
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            log4net.Config.XmlConfigurator.Configure();
+
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
         }
     }

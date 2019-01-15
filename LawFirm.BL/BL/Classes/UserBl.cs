@@ -1,4 +1,5 @@
-﻿using LawFirm.DAL;
+﻿using LawFirm.CommonUtilitis.Logging;
+using LawFirm.DAL;
 using LawFirm.DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -78,6 +79,7 @@ namespace LawFirm.BL
             }
             catch (Exception ex)
             {
+                ErrorLogger.LogError(ex.Message, ex, false);
                 return null;
             }
         }

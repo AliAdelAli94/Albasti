@@ -1,0 +1,25 @@
+﻿2018-12-29 15:17:26,656 - No connection string named 'LawFirmEntities' could be found in the application config file.
+System.InvalidOperationException: No connection string named 'LawFirmEntities' could be found in the application config file.
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at LawFirm.DAL.GenericRepository`1.Get(Expression`1 filter, Func`2 orderBy, String includeProperties) in f:\Current\LawFirm.DAL\GenericRepository\GenericRepository.cs:line 46
+   at LawFirm.BL.FaqBL.GetAllFaq() in f:\Current\LawFirm.BL\BL\Classes\FaqBL.cs:line 23
+2018-12-29 15:18:12,856 - No connection string named 'LawFirmEntities' could be found in the application config file.
+System.InvalidOperationException: No connection string named 'LawFirmEntities' could be found in the application config file.
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at LawFirm.DAL.GenericRepository`1.Get(Expression`1 filter, Func`2 orderBy, String includeProperties) in f:\Current\LawFirm.DAL\GenericRepository\GenericRepository.cs:line 31
+   at LawFirm.BL.UserBl.Login(String email, String password) in f:\Current\LawFirm.BL\BL\Classes\UserBl.cs:line 69

@@ -124,6 +124,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LawFirm.CommonUtilitis\LawFirm.CommonUtilitis.csproj">
+      <Project>{e9b24090-6e7a-4840-9229-1c096f42eb86}</Project>
+      <Name>LawFirm.CommonUtilitis</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

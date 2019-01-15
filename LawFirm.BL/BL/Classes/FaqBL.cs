@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using LawFirm.DAL.Models;
 using System;
+using LawFirm.CommonUtilitis.Logging;
 
 namespace LawFirm.BL
 {
@@ -23,6 +24,7 @@ namespace LawFirm.BL
             }
             catch (Exception ex)
             {
+                ErrorLogger.LogError(ex.Message, ex, false);
                 return null;
             }
         }
