@@ -22,7 +22,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         .state("home", {
-            url: '/home',
+            url: '/home/:sectionId',
             templateUrl: '/app/home.html'
         })
         .state("about-us", {
@@ -209,7 +209,6 @@ app.controller("mainController", ['$scope', '$rootScope','$filter','$state',func
             $("#" + toState.name).addClass("active");
         }
 
-        
 
     })
 
@@ -513,7 +512,7 @@ app.controller("appointmentController", function () {
 });
 
 
-app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
+app.controller("home", ['$scope', '$anchorScroll', '$location',  'lawfirmService', function ($scope,$anchorScroll, $location,lawfirmService) {
 
     $scope.formSaved = false;
     lawfirmService.GetAllFaq(function (response) {
@@ -555,6 +554,16 @@ app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmSer
             function (response) { });
         }
     };
+
+    $scope.gotoAnchor = function (id) {
+        var newHash = id;
+        if ($location.hash() !== newHash) {
+            $location.hash(newHash);
+        } else {
+            $anchorScroll();
+        }
+    };
+
 
 }]);
 

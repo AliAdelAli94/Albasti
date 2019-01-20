@@ -16,3 +16,16 @@ F:\Git\proj\df\LawFirm.BL\bin\Debug\EntityFramework.xml
 F:\Git\proj\df\LawFirm.BL\obj\Debug\LawFirm.BL.csprojResolveAssemblyReference.cache
 F:\Git\proj\df\LawFirm.BL\obj\Debug\LawFirm.BL.dll
 F:\Git\proj\df\LawFirm.BL\obj\Debug\LawFirm.BL.pdb
+D:\Current\myrepo\LawFirm.BL\bin\Debug\LawFirm.BL.dll
+D:\Current\myrepo\LawFirm.BL\bin\Debug\LawFirm.BL.pdb
+D:\Current\myrepo\LawFirm.BL\bin\Debug\LawFirm.CommonUtilitis.dll
+D:\Current\myrepo\LawFirm.BL\bin\Debug\LawFirm.DAL.dll
+D:\Current\myrepo\LawFirm.BL\bin\Debug\log4net.dll
+D:\Current\myrepo\LawFirm.BL\bin\Debug\EntityFramework.dll
+D:\Current\myrepo\LawFirm.BL\bin\Debug\LawFirm.CommonUtilitis.pdb
+D:\Current\myrepo\LawFirm.BL\bin\Debug\LawFirm.DAL.pdb
+D:\Current\myrepo\LawFirm.BL\bin\Debug\log4net.xml
+D:\Current\myrepo\LawFirm.BL\bin\Debug\EntityFramework.xml
+D:\Current\myrepo\LawFirm.BL\obj\Debug\LawFirm.BL.csprojResolveAssemblyReference.cache
+D:\Current\myrepo\LawFirm.BL\obj\Debug\LawFirm.BL.dll
+D:\Current\myrepo\LawFirm.BL\obj\Debug\LawFirm.BL.pdb

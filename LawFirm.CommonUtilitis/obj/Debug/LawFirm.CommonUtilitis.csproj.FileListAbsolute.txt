@@ -1,0 +1,7 @@
+D:\Current\myrepo\LawFirm.CommonUtilitis\bin\Debug\LawFirm.CommonUtilitis.dll
+D:\Current\myrepo\LawFirm.CommonUtilitis\bin\Debug\LawFirm.CommonUtilitis.pdb
+D:\Current\myrepo\LawFirm.CommonUtilitis\bin\Debug\log4net.dll
+D:\Current\myrepo\LawFirm.CommonUtilitis\bin\Debug\log4net.xml
+D:\Current\myrepo\LawFirm.CommonUtilitis\obj\Debug\LawFirm.CommonUtilitis.csprojResolveAssemblyReference.cache
+D:\Current\myrepo\LawFirm.CommonUtilitis\obj\Debug\LawFirm.CommonUtilitis.dll
+D:\Current\myrepo\LawFirm.CommonUtilitis\obj\Debug\LawFirm.CommonUtilitis.pdb
