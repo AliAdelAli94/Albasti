@@ -8,7 +8,7 @@
                         <div class="container">
                             <h2 class="slider-header" data-caption-animate="fadeInDownSmall">Affordable and Effective Legal Help</h2>
                             <p class="big slider-text" data-caption-animate="fadeInDownSmall" data-caption-delay="100">Strategies of our attorneys will help you solve very complex legal issues.</p>
-                            <div class="group-xl-responsive"><a class="button button-lg button-default-outline" data-caption-animate="fadeInDownSmall" data-caption-delay="200" href="appointment.html">Request a Free Consultation</a></div>
+                            <div class="group-xl-responsive"><a class="button button-lg button-default-outline" data-caption-animate="fadeInDownSmall" data-caption-delay="200" ng-click="gotoAnchor('FreeConsultation')">Request a Free Consultation</a></div>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                         <div class="container">
                             <h2 class="slider-header" data-caption-animate="fadeInDownSmall" style="max-width: 700px;">Your consultant in social and criminal legal issues</h2>
                             <p class="big slider-text" data-caption-animate="fadeInDownSmall" data-caption-delay="100">Our experience and qualification provide the opportunity to solve the problems of any complexity.</p>
-                            <div class="group-xl-responsive"><a class="button button-lg button-default-outline" data-caption-animate="fadeInDownSmall" data-caption-delay="200" href="appointment.html">Request a Free Consultation</a></div>
+                            <div class="group-xl-responsive"><a class="button button-lg button-default-outline" data-caption-animate="fadeInDownSmall" data-caption-delay="200" ng-click="gotoAnchor('FreeConsultation')">Request a Free Consultation</a></div>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="row row-40">
                 <div class="col-sm-6 col-lg-3">
-                    <a class="icon-box icon-box-vertical" href="#">
+                    <a class="icon-box icon-box-vertical" ui-sref="civil-law">
                         <div class="box-top">
                             <div class="box-icon"><span class="novi-icon icon icon-primary icon-lg mercury-icon-lib"></span></div>
                             <div class="box-header">
@@ -60,7 +60,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a class="icon-box icon-box-vertical" href="#">
+                    <a class="icon-box icon-box-vertical" ui-sref="commercial-corporate">
                         <div class="box-top">
                             <div class="box-icon"><span class="novi-icon icon icon-primary icon-lg mercury-icon-briefcase"></span></div>
                             <div class="box-header">
@@ -74,7 +74,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a class="icon-box icon-box-vertical" href="#">
+                    <a class="icon-box icon-box-vertical" ui-sref="family-law">
                         <div class="box-top">
                             <div class="box-icon"><span class="novi-icon icon icon-primary icon-lg mercury-icon-users"></span></div>
                             <div class="box-header">
@@ -88,7 +88,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a class="icon-box icon-box-vertical" href="#">
+                    <a class="icon-box icon-box-vertical" ui-sref="realestate-construction">
                         <div class="box-top">
                             <div class="box-icon"><span class="novi-icon icon icon-primary icon-lg mercury-icon-house"></span></div>
                             <div class="box-header">
@@ -107,7 +107,7 @@
         <div class="row">
             <div class="col-sm-12" style="text-align: center">
                 <div class="group-lg group-middle" style="margin-left: 0px">
-                    <div class="button button-primary-outline button-shadow">View more</div>
+                    <a class="button button-primary-outline button-shadow" ui-sref="practice-areas">View more</a>
                 </div>
             </div>
         </div>
@@ -140,7 +140,7 @@
                         </div>
                     </blockquote>
                 </div>
-                <div class="col-12 text-center"><a class="button button-medium button-secondary-outline" href="appointment.html">Request a Free Consultation</a></div>
+                <div class="col-12 text-center"><a class="button button-medium button-secondary-outline" ng-click="gotoAnchor('FreeConsultation')">Request a Free Consultation</a></div>
             </div>
         </div>
     </section>
@@ -152,7 +152,7 @@
                     <div class="block-wrap-1">
                         <h3 class="text-normal">Experts </h3>
                         <p class="h5 h5-smaller text-style-4">in Their Fields</p>
-                        <p>If you or your business is facing a legal challenge, contact us today to arrange a free initial consultation with an attorney.</p><a class="link link-group link-group-animated link-bold" href="our-team.html"><span>Read more</span><span class="novi-icon icon icon-xxs icon-primary fa fa-angle-right"></span></a>
+                        <p>If you or your business is facing a legal challenge, contact us today to arrange a free initial consultation with an attorney.</p><a class="link link-group link-group-animated link-bold" ui-sref="ourteam"><span>Read more</span><span class="novi-icon icon icon-xxs icon-primary fa fa-angle-right"></span></a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
@@ -299,7 +299,7 @@
         </div>
     </section>
 
-    <section class="bg-whisper">
+    <section class="bg-whisper" id="FreeConsultation">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-9 col-xl-7">

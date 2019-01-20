@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LawFirmModelStoreContainer" CdmEntityContainer="LawFirmEntities">
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="LawFirmModel.Blog">
+        <MappingFragment StoreEntitySet="Blogs">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="blogDate" ColumnName="blogDate" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Careers">
+      <EntityTypeMapping TypeName="LawFirmModel.Career">
+        <MappingFragment StoreEntitySet="Careers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="jobTitle" ColumnName="jobTitle" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="postDate" ColumnName="postDate" />
+          <ScalarProperty Name="jobType" ColumnName="jobType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="LawFirmModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="commentBody" ColumnName="commentBody" />
+          <ScalarProperty Name="commenterName" ColumnName="commenterName" />
+          <ScalarProperty Name="commenterEmail" ColumnName="commenterEmail" />
+          <ScalarProperty Name="blogId" ColumnName="blogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Experiences">
+      <EntityTypeMapping TypeName="LawFirmModel.Experience">
+        <MappingFragment StoreEntitySet="Experiences">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="val" ColumnName="val" />
+          <ScalarProperty Name="expertId" ColumnName="expertId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Experts">
+      <EntityTypeMapping TypeName="LawFirmModel.Expert">
+        <MappingFragment StoreEntitySet="Experts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="content1" ColumnName="content1" />
+          <ScalarProperty Name="quote" ColumnName="quote" />
+          <ScalarProperty Name="content2" ColumnName="content2" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQs">
+      <EntityTypeMapping TypeName="LawFirmModel.FAQ">
+        <MappingFragment StoreEntitySet="FAQs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paragraphs">
+      <EntityTypeMapping TypeName="LawFirmModel.Paragraph">
+        <MappingFragment StoreEntitySet="Paragraphs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="paragraph1" ColumnName="paragraph" />
+          <ScalarProperty Name="blogId" ColumnName="blogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Testimonials">
+      <EntityTypeMapping TypeName="LawFirmModel.Testimonial">
+        <MappingFragment StoreEntitySet="Testimonials">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="tcontent" ColumnName="tcontent" />
+          <ScalarProperty Name="person" ColumnName="person" />
+          <ScalarProperty Name="personTitle" ColumnName="personTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="LawFirmModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="isonline" ColumnName="isonline" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

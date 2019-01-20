@@ -110,3 +110,15 @@ System.Data.EntityException: The underlying provider failed on Open. ---> System
    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
    at LawFirm.DAL.GenericRepository`1.Get(Expression`1 filter, Func`2 orderBy, String includeProperties) in f:\Current\LawFirm.DAL\GenericRepository\GenericRepository.cs:line 46
    at LawFirm.BL.FaqBL.GetAllFaq() in f:\Current\LawFirm.BL\BL\Classes\FaqBL.cs:line 23
+2019-01-20 20:54:17,192 - No connection string named 'LawFirmEntities' could be found in the application config file.
+System.InvalidOperationException: No connection string named 'LawFirmEntities' could be found in the application config file.
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at LawFirm.DAL.GenericRepository`1.Get(Expression`1 filter, Func`2 orderBy, String includeProperties) in D:\Current\myrepo\LawFirm.DAL\GenericRepository\GenericRepository.cs:line 46
+   at LawFirm.BL.FaqBL.GetAllFaq() in D:\Current\myrepo\LawFirm.BL\BL\Classes\FaqBL.cs:line 23
