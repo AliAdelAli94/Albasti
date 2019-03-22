@@ -16,3 +16,8 @@ D:\Current\myrepo\LawFirm.BL\bin\Release\EntityFramework.xml
 D:\Current\myrepo\LawFirm.BL\obj\Release\LawFirm.BL.csprojResolveAssemblyReference.cache
 D:\Current\myrepo\LawFirm.BL\obj\Release\LawFirm.BL.dll
 D:\Current\myrepo\LawFirm.BL\obj\Release\LawFirm.BL.pdb
+F:\Current\LawFirm.BL\bin\Release\LawFirm.CommonUtilitis.dll
+F:\Current\LawFirm.BL\bin\Release\log4net.dll
+F:\Current\LawFirm.BL\bin\Release\LawFirm.CommonUtilitis.pdb
+F:\Current\LawFirm.BL\bin\Release\LawFirm.DAL.dll.config
+F:\Current\LawFirm.BL\bin\Release\log4net.xml

@@ -20,6 +20,7 @@ namespace LawFirm.BL
         {
             try
             {
+
                 return this.iUnitOfWork.FaqRepository.Get().ToList();
             }
             catch (Exception ex)

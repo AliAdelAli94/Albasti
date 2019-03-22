@@ -1,0 +1,7 @@
+F:\Current\LawFirm.CommonUtilitis\bin\Release\LawFirm.CommonUtilitis.dll
+F:\Current\LawFirm.CommonUtilitis\bin\Release\LawFirm.CommonUtilitis.pdb
+F:\Current\LawFirm.CommonUtilitis\bin\Release\log4net.dll
+F:\Current\LawFirm.CommonUtilitis\bin\Release\log4net.xml
+F:\Current\LawFirm.CommonUtilitis\obj\Release\LawFirm.CommonUtilitis.dll
+F:\Current\LawFirm.CommonUtilitis\obj\Release\LawFirm.CommonUtilitis.pdb
+F:\Current\LawFirm.CommonUtilitis\obj\Release\LawFirm.CommonUtilitis.csprojResolveAssemblyReference.cache

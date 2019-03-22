@@ -17,7 +17,7 @@ var contactUsEmail = "albastiadvocates19@gmail.com";
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/home/');
 
     $stateProvider
 

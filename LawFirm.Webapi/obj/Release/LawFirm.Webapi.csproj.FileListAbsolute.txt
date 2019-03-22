@@ -110,3 +110,8 @@ D:\Current\myrepo\LawFirm.Webapi\bin\EntityFramework.xml
 D:\Current\myrepo\LawFirm.Webapi\obj\Release\LawFirm.Webapi.csprojResolveAssemblyReference.cache
 D:\Current\myrepo\LawFirm.Webapi\obj\Release\LawFirm.Webapi.dll
 D:\Current\myrepo\LawFirm.Webapi\obj\Release\LawFirm.Webapi.pdb
+F:\Current\LawFirm.Webapi\bin\log4net.dll
+F:\Current\LawFirm.Webapi\bin\LawFirm.CommonUtilitis.dll
+F:\Current\LawFirm.Webapi\bin\LawFirm.DAL.dll.config
+F:\Current\LawFirm.Webapi\bin\log4net.xml
+F:\Current\LawFirm.Webapi\bin\LawFirm.CommonUtilitis.pdb
