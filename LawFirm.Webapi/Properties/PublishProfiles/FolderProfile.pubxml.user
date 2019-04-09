@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/03/2015 17:43:34</publishTime>
     </File>
     <File Include="bin/LawFirm.BL.dll">
-      <publishTime>03/22/2019 17:01:28</publishTime>
+      <publishTime>04/09/2019 22:55:24</publishTime>
     </File>
     <File Include="bin/LawFirm.CommonUtilitis.dll">
       <publishTime>03/22/2019 17:01:25</publishTime>
@@ -32,7 +32,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/22/2019 16:27:07</publishTime>
     </File>
     <File Include="bin/LawFirm.Webapi.dll">
-      <publishTime>03/22/2019 17:01:40</publishTime>
+      <publishTime>04/09/2019 22:55:29</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>12/29/2018 02:13:15</publishTime>
@@ -146,7 +146,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/24/2018 22:56:40</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/22/2019 17:01:45</publishTime>
+      <publishTime>04/09/2019 22:55:32</publishTime>
     </File>
   </ItemGroup>
 </Project>

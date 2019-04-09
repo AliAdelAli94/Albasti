@@ -29,7 +29,7 @@ namespace LawFirm.BL
                     blogDate = ex.blogDate,
                     category = ex.category,
                     image = "http://devv.gearhostpreview.com/" + ex.image,
-                    // image = "http://localhost:20833" + ex.image,
+                    //image = "http://localhost:20833" + ex.image,
                     postedby = ex.postedby,
                     title = ex.title,
                     Paragraphs = ex.Paragraphs.Select(p => new ParagraphDto(){

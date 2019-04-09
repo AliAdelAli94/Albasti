@@ -2,9 +2,9 @@
 
 app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
 
-    //$.connection.hub.url = 'http://localhost:50131/signalr/';
+     //$.connection.hub.url = 'http://localhost:50131/signalr/';
 
-    $.connection.hub.url = 'http://lawfirm.somee.com/signalr/';
+      $.connection.hub.url = 'http://signalrbasti.gearhostpreview.com/signalr/';
 
 
     var $hub = $.connection.chatHub;
@@ -12,8 +12,11 @@ app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
     var signalR = {
 
         startHub: function () {
-            console.log("started");
             connection = $.connection.hub.start();
+        },
+
+        CloseConnection : function () {
+            connection = $.connection.hub.stop();
         },
 
         ////////////////////// SERVER METHODS/////////////////
@@ -23,6 +26,14 @@ app.factory("signalR", ['$rootScope', '$', function ($rootScope, $) {
                 $hub.server.startChat(username, email);
             });
         },
+
+        clientEndChat: function () {
+            connection.done(function () {
+                $hub.server.clientEndChat();
+            });
+        },
+
+        
 
         sendMessage: function (message, toCID) {
             connection.done(function () {

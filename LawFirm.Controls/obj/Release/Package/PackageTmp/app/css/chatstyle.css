@@ -155,6 +155,7 @@
     background-color: #fff;
     -webkit-box-shadow: 1px 1px rgba(100, 100, 100, 0.1);
     box-shadow: 1px 1px rgba(100, 100, 100, 0.1);
+    word-wrap:break-word;
 }
 
 .chatbox__body__message img {

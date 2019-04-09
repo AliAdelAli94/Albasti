@@ -113,6 +113,22 @@ namespace LawFirm.BL
             }
         }
 
+        public int Logout(string userID)
+        {
+            try
+            {
+                user item = this.iUnitOfWork.UserRepository.GetByID(Guid.Parse(userID));
+                item.isonline = false;
+                this.iUnitOfWork.UserRepository.Update(item);
+                this.iUnitOfWork.Save();
+                return 0;
+            }
+            catch(Exception ex)
+            {
+                return -1;
+            }
+        }
+
 
     }
 }

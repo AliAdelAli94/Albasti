@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/LawFirm.SignalR.dll">
-      <publishTime>03/16/2019 19:39:24</publishTime>
+      <publishTime>04/09/2019 22:55:54</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
       <publishTime>11/17/2018 21:18:30</publishTime>

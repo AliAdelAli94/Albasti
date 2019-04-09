@@ -13,7 +13,7 @@ namespace LawFirm.SignalR
         public Client()
         {
             this.client = new HttpClient();
-            this.client.BaseAddress = new Uri("http://devv.gearhostpreview.com/");
+             this.client.BaseAddress = new Uri("http://devv.gearhostpreview.com/");
             // this.client.BaseAddress = new Uri("http://localhost:20833/");
         }
 

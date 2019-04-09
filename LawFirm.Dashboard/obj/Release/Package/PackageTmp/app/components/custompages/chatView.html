@@ -2,7 +2,7 @@
     <div id="page_content_inner">
         <div class="uk-width-medium-8-10 uk-container-center">
             <div class="uk-grid uk-grid-collapse" data-uk-grid-margin>
-                <div class="uk-width-large-7-10" ng-if="!isEmpty($parent.recentUser)">
+                <div class="uk-width-large-7-10" ng-show="!isEmpty($parent.$parent.$parent.recentUser)">
                     <div class="md-card md-card-single" single-card>
 
                         <div class="md-card-toolbar">
@@ -28,13 +28,13 @@
                         <div class="md-card-content padding-reset">
                             <div class="chat_box_wrapper">
                                 <div class="chat_box touchscroll {{chat_colors}}" id="chat">
-                                    <div class="chat_message_wrapper" ng-repeat="message in $parent.recentUser.Messages" ng-class="{'chat_message_right': message.dir }">
+                                    <div class="chat_message_wrapper" ng-repeat="message in $parent.$parent.$parent.recentUser.Messages" ng-class="{'chat_message_right': message.dir }">
                                         <div class="chat_user_avatar">
                                             <img class="md-user-image" src="/images/user.jpg" alt="" />
                                         </div>
                                         <ul class="chat_message">
-                                            <li>
-                                                <p>{{message.msg}} <span class="chat_message_time" ng-show="$last">{{message.date}}</span></p>
+                                            <li style="width:100%;">
+                                                <p style="word-wrap:break-word;">{{message.msg}} <span class="chat_message_time" ng-show="$last">{{message.date}}</span></p>
                                             </li>
                                         </ul>
                                     </div>
@@ -42,7 +42,7 @@
                                 <form id="chat_form_form" name="chat_form_form">
                                     <div class="chat_submit_box" id="chat_submit_box">
                                         <div class="uk-input-group">
-                                            <input type="text" class="md-input" name="submit_message" id="submit_message" ng-model="model.msgNow" placeholder="Send message" md-input ng-disabled="$parent.recentUser.EnableChat" />
+                                            <input type="text" class="md-input" name="submit_message" id="submit_message" ng-model="model.msgNow" placeholder="Send message" md-input ng-disabled="$parent.$parent.$parent.recentUser.EnableChat" />
                                             <span class="uk-input-group-addon">
                                                 <a ng-click="sendMessage()"><i class="material-icons md-24">&#xE163;</i></a>
                                             </span>
@@ -56,20 +56,18 @@
                 <div class="uk-width-large-3-10 uk-visible-large">
                     <div class="md-list-outside-wrapper" custom-scrollbar list-outside>
                         <ul class="md-list md-list-addon md-list-outside">
-                            <li ng-repeat="user in $parent.users track by $index">
+                            <li ng-repeat="user in $parent.$parent.$parent.users track by $index">
                                 <div class="md-card-dropdown md-list-action-dropdown" data-uk-dropdown="{pos:'bottom-right'}">
                                     <i class="md-icon material-icons">&#xE5D4;</i>
                                     <div class="uk-dropdown uk-dropdown-small">
                                         <ul class="uk-nav">
-                                            <li><a ng-click="TakeThisUser(user.CID)" class="uk-text-success">Get this</a></li>
-                                            <li><a class="uk-text-danger" ng-click="RemoveUser($index,user.CID)">Remove</a></li>
+                                            <li ng-if="user.EnableChat"><a ng-click="TakeThisUser(user.CID)" class="uk-text-success">Start Chat</a><span></span></li>
+                                            <li ng-if="!user.EnableChat"><a class="uk-text-danger" ng-click="RemoveUser($index,user.CID)">End Chat</a><span></span></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="md-list-addon-element">
-                                    <!--<span class="element-status element-status-danger" ng-if="user.status == 'offline'"></span>-->
                                     <span class="element-status element-status-success"></span>
-                                    <!--<span class="element-status element-status-warning" ng-if="user.status == 'afk'"></span>-->
                                     <img class="md-user-image md-list-addon-avatar" style="margin-top:0px;" src="/images/user1.png" alt="" ng-click="changeRecentUser($index)" style="cursor:pointer" />
                                 </div>
                                 <div class="md-list-content">
@@ -98,9 +96,7 @@
                     </div>
                 </div>
                 <div class="md-list-addon-element">
-                    <!--<span class="element-status element-status-danger" ng-if="user.status == 'offline'"></span>-->
                     <span class="element-status element-status-success"></span>
-                    <!--<span class="element-status element-status-warning" ng-if="user.status == 'afk'"></span>-->
                     <img class="md-user-image md-list-addon-avatar" style="margin-top:0px;" src="/images/user1.png" alt="" ng-click="changeRecentUser($index)" />
                 </div>
                 <div class="md-list-content">

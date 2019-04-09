@@ -2,8 +2,8 @@
 
     function ($http) {
 
-     var WebApiUrl = "http://devv.gearhostpreview.com/";
-      // var WebApiUrl = "http://localhost:20833/";
+      var WebApiUrl = "http://devv.gearhostpreview.com/";
+       //var WebApiUrl = "http://localhost:20833/";
 
      this.GetAllFaq = function (Success, Fail) {
          $http({

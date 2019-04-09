@@ -6,7 +6,7 @@
         <button class="chatbox__title__tray">
             <span></span>
         </button>
-        <button class="chatbox__title__close">
+        <button class="chatbox__title__close" ng-click="CloseConnection()">
             <span>
                 <svg viewBox="0 0 12 12" width="12px" height="12px">
                     <line stroke="#FFFFFF" x1="11.75" y1="0.25" x2="0.25" y2="11.75"></line>
@@ -15,30 +15,31 @@
             </span>
         </button>
     </div>
-    <div class="chatbox__body">
-        <div ng-repeat="message in messages">
+    <div class="chatbox__body" id="chatBoxBody" >
+        <div ng-repeat="message in messages" style="font-size:11px;color:#000;">
             <div class="chatbox__body__message chatbox__body__message--left" ng-if="message.dir == 0">
-                <img src="/images/img/user1.png" alt="Picture">
+                <img src="/images/img/user2.png" alt="Picture">
                 <p ng-bind-html="message.content"></p>
             </div>
             <div class="chatbox__body__message chatbox__body__message--right" ng-if="message.dir == 1">
                 <img src="/images/img/user1.png" alt=" picture">
-                <p ng-bind-html="message.content"></p>
+                <p ng-bind-html="message.content" style="background-color: #666c84;color:#fff;"></p>
             </div>
+            <a id="chatFocus"></a>
         </div>
     </div>
     <form class="chatbox__credentials">
         <div class="form-group">
-            <label for="inputName">Name:</label>
+            <label for="inputName">Name</label>
             <input type="text" class="form-control" id="inputName" required ng-model="client.username">
         </div>
         <div class="form-group">
-            <label for="inputEmail">Email:</label>
+            <label for="inputEmail">Email</label>
             <input type="email" class="form-control" id="inputEmail" required ng-model="client.email">
         </div>
         <button type="submit" class="btn btn-success btn-block chatButton" ng-click="startChat()">Enter Chat</button>
     </form>
-    <textarea class="chatbox__message" placeholder="Write something interesting" ng-model="msgContent" id="msgContent" ng-disabled="adminConnectionID == '000' "></textarea>
+    <textarea class="chatbox__message" placeholder="Write something interesting" ng-model="msgContent" id="msgContent" ng-disabled="adminConnectionID == '000' || ( numberOfOnlineAdmins == 0 && messages.length == 3 )" style="font-size: 13px;color:#000;height:25px;"></textarea>
 
 </div>
 

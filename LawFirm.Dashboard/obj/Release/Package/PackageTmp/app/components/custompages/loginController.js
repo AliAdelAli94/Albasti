@@ -108,7 +108,7 @@ angular
                             }
                             else
                             {
-                                sessionStorage.setItem("userID", response.data);
+                                sessionStorage.setItem("userID", response.data );
                                 signalR.startHub();
                                 signalR.adminLogin($scope.loginUserNow.Email);
                                 $state.go('restricted.custompages.chat')

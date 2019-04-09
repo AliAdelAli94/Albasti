@@ -117,7 +117,9 @@ angular
         '$timeout',
         '$scope',
         '$window',
-        function ($timeout, $scope, $window) {
+        '$state',
+        'dashService',
+        function ($timeout, $scope, $window, $state, dashService) {
 
             $scope.user_data = {
                 name: "Lue Feest",
@@ -159,6 +161,15 @@ angular
                 }, 280)
             });
 
+
+            $scope.logout = function () {
+                var userID = sessionStorage.getItem("userID");
+                dashService.Logout(userID, function (response) {
+                    console.log(response);
+                    $state.go('login');
+                }, function () { })
+
+            };
 
         }
     ])

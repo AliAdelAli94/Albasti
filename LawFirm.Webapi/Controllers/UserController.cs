@@ -89,7 +89,19 @@ namespace LawFirm.Webapi.Controllers
             }
         }
 
-        
+        [HttpPost]
+        [Route("User/Logout/")]
+        public IHttpActionResult Logout(string userID)
+        {
+            try
+            {
+                return Ok(this.iUserBL.Logout(userID));
+            }
+            catch (Exception exp)
+            {
+                return null;
+            }
+        }
 
     }
 }

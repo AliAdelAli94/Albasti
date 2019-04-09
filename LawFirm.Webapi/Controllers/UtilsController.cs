@@ -81,7 +81,7 @@ namespace LawFirm.Webapi.Controllers
                 mail.Body = htmlBody;
                 SmtpServer.Port = 587;
                 SmtpServer.UseDefaultCredentials = false;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("albastiadvocates19@gmail.com", "albastiadvocates@123");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("albastiadvocates19@gmail.com", "Albasti@123");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 return true;

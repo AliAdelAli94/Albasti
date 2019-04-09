@@ -17,12 +17,12 @@ var contactUsEmail = "albastiadvocates19@gmail.com";
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/home/');
 
     $stateProvider
 
         .state("home", {
-            url: '/home',
+            url: '/home/:sectionId',
             templateUrl: '/app/home.html'
         })
         .state("about-us", {
@@ -153,7 +153,65 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-app.controller("mainController", function ($scope) {
+app.controller("mainController", ['$scope', '$rootScope','$filter','$state',function ($scope, $rootScope,$filter,$state) {
+
+    $scope.practiceAreas = [{ stateName: "litigation", Name: "Litigation" },
+                            { stateName: "arbitration", Name: "Arbitration" },
+                            { stateName: "civil-law", Name: "Civil Law" },
+                            { stateName: "commercial-corporate", Name: "Commercial & Corporate" },
+                            { stateName: "intellectual-property-law", Name: "Intellectual Property" },
+                            { stateName: "realestate-construction", Name: "Real EState & Construction" },
+                            { stateName: "family-law", Name: "Family Law" },
+                            { stateName: "criminal-law", Name: "Criminal Law" },
+                            { stateName: "labor-law", Name: "Labor Law" },
+                            { stateName: "wills-trust", Name: "Wills & Trust" },
+                            { stateName: "maritime-law", Name: "Maritime Law" },
+                            { stateName: "sharia-law", Name: "Sharia Law" },
+                            { stateName: "medical-malpractice", Name: "Medical & Malpractice" },
+                            { stateName: "insurance-law", Name: "Insurance Law" },
+                            { stateName: "government-regulations", Name: "Government Regulations" },
+                            { stateName: "expert-opinion", Name: "Expert Opinion" },
+                            { stateName: "contract-drafting", Name: "Contract Drafting" },
+                            { stateName: "bankruptcy", Name: "Bankruptcy" }
+    ];
+
+    $scope.$on('$viewContentLoaded', function () {
+
+        console.log($state);
+        if ($filter('filter')($scope.practiceAreas, { stateName: $state.current.name }, true).length > 0) {
+            $("#practice-areas").addClass("active");
+        }
+        else {
+            $("#" + $state.current.name).addClass("active");
+        }
+       
+    });
+
+    $rootScope.$on('$stateChangeStart',
+    function (event, toState, toParams, fromState, fromParams) {
+
+       
+        if ($filter('filter')($scope.practiceAreas, { stateName: fromState.name }, true).length > 0) {
+
+            $("#practice-areas").removeClass("active");
+        }
+        else {
+
+            $("#" + fromState.name).removeClass("active");
+        }
+
+        if ($filter('filter')($scope.practiceAreas, { stateName: toState.name }, true).length > 0)
+        {
+            $("#practice-areas").addClass("active");
+        }
+        else
+        {
+            $("#" + toState.name).addClass("active");
+        }
+
+
+    })
+
 
     $scope.ShowTab = function (tabName) {
 
@@ -196,7 +254,7 @@ app.controller("mainController", function ($scope) {
     };
 
 
-});
+}]);
 
 app.controller("laborLawController", function () {
 
@@ -204,33 +262,32 @@ app.controller("laborLawController", function () {
 
 });
 
-app.controller("contactusCtrl", ['$scope', 'lawfirmService',function ($scope,lawfirmService) {
+app.controller("contactusCtrl", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
 
     load_js();
 
     $scope.Message = {};
-    
+
     $scope.SendMessage = function (data) {
 
-            $scope.formSaved = true;
+        $scope.formSaved = true;
 
-            if ($scope.sendDataForm.$valid) {
-                var dto = {};
-                dto.UserName = data.UserName;
-                dto.Email = data.Email;
-                dto.Message = data.Message;
-                dto.ToEmail = contactUsEmail;
-                dto.Subject = "Contact Us";
+        if ($scope.sendDataForm.$valid) {
+            var dto = {};
+            dto.UserName = data.UserName;
+            dto.Email = data.Email;
+            dto.Message = data.Message;
+            dto.ToEmail = contactUsEmail;
+            dto.Subject = "Contact Us";
 
-                lawfirmService.SendConsultation(dto, function (response) {
+            lawfirmService.SendEmail(dto, function (response) {
 
-                    if(response.data == true)
-                    {
-                        alert("You Email has been sent .");
-                    }
-                },
-                function (response) { });
-            }
+                if (response.data == true) {
+                    alert("You Email has been sent .");
+                }
+            },
+            function (response) { });
+        }
     };
 
     $scope.Reset = function () {
@@ -379,7 +436,7 @@ app.controller("willTrustController", function () {
     load_js();
 });
 
-app.controller("about-us", ['$scope', 'lawfirmService', function ($scope, lawfirmService){
+app.controller("about-us", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
 
 
     lawfirmService.GetAllTestimonial(function (response) {
@@ -455,7 +512,7 @@ app.controller("appointmentController", function () {
 });
 
 
-app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmService) {
+app.controller("home", ['$scope', '$anchorScroll', '$location',  'lawfirmService', function ($scope,$anchorScroll, $location,lawfirmService) {
 
     $scope.formSaved = false;
     lawfirmService.GetAllFaq(function (response) {
@@ -473,14 +530,13 @@ app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmSer
         function (response) { });
 
     },
-        function (response) { });  
+        function (response) { });
 
     $scope.SendConsultation = function (data) {
 
         $scope.formSaved = true;
 
-        if ($scope.freeConsultationForm.$valid)
-        {
+        if ($scope.freeConsultationForm.$valid) {
             var dto = {};
             dto.UserName = data.UserName;
             dto.Email = data.Email;
@@ -490,15 +546,24 @@ app.controller("home", ['$scope', 'lawfirmService', function ($scope, lawfirmSer
             dto.ExtraData = data.PracticeAreaType;
             dto.Subject = "Free Consultation";
 
-            lawfirmService.SendConsultation(dto, function (response) {
-                if(response.data == true)
-                {
+            lawfirmService.SendEmail(dto, function (response) {
+                if (response.data == true) {
                     alert("Your request has been sent .");
                 }
             },
             function (response) { });
         }
     };
+
+    $scope.gotoAnchor = function (id) {
+        var newHash = id;
+        if ($location.hash() !== newHash) {
+            $location.hash(newHash);
+        } else {
+            $anchorScroll();
+        }
+    };
+
 
 }]);
 

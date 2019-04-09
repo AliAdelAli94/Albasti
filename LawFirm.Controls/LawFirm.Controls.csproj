@@ -120,6 +120,7 @@
     <Content Include="images\img\user1.png" />
     <Content Include="images\user2.png" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Properties\PublishProfiles\websiiite.pubxml" />
     <None Include="Web.Debug.config">

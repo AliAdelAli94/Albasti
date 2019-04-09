@@ -6,13 +6,21 @@ angular
 
         function ($rootScope, $scope) {
 
+
+            var msgContent = document.getElementById("submit_message");
+            msgContent.addEventListener("keydown", function (e) {
+                if (e.keyCode === 13) {
+                    $scope.sendMessage();
+                }
+            });
+
             $scope.TakeThisUser = function (cID) {
-                $scope.$parent.TakeThisUser(cID);
+                $scope.$parent.$parent.$parent.TakeThisUser(cID);
             };
 
             $scope.RemoveUser = function (index,cID) {
 
-                $scope.$parent.RemoveUser(index,cID);
+                $scope.$parent.$parent.$parent.RemoveUser(index,cID);
             };
 
             $scope.model = {};
@@ -20,8 +28,8 @@ angular
             $scope.sendMessage = function () {
                 if ($scope.model.msgNow != null && $scope.model.msgNow != "") {
                     var x = new Date();
-                    $scope.$parent.recentUser.Messages.push({ msg: $scope.model.msgNow, dir: 1, date: x.getHours() + ":" + x.getMinutes() });
-                    $scope.$parent.sendMessage($scope.model.msgNow, $scope.$parent.recentUser.CID);
+                    $scope.$parent.$parent.$parent.recentUser.Messages.push({ msg: $scope.model.msgNow, dir: 1, date: x.getHours() + ":" + x.getMinutes() });
+                    $scope.$parent.$parent.$parent.sendMessage($scope.model.msgNow, $scope.$parent.$parent.$parent.recentUser.CID);
                     $scope.model.msgNow = "";
                 }
             };
@@ -29,7 +37,7 @@ angular
 
             $scope.changeRecentUser = function (id) {
 
-                $scope.$parent.recentUser = $scope.$parent.users[id];
+                $scope.$parent.$parent.$parent.recentUser = $scope.$parent.$parent.$parent.users[id];
 
             };
 

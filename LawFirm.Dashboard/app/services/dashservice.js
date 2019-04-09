@@ -4,7 +4,7 @@
 
         var WebApiUrl = "http://devv.gearhostpreview.com/";
 
-        // var WebApiUrl = "http://localhost:20833/";
+        //var WebApiUrl = "http://localhost:20833/";
 
 
         this.GetAllFaq = function (Success, Fail) {
@@ -181,6 +181,17 @@
                 method: 'POST',
                 url: WebApiUrl + 'User/Login/',
                 data: dto
+            }).then(function (response) {
+                Success(response);
+            }, function (response) {
+                Fail(response);
+            });
+        };
+
+        this.Logout = function (userID, Success, Fail) {
+            $http({
+                method: 'POST',
+                url: WebApiUrl + 'User/Logout?userID=' + userID
             }).then(function (response) {
                 Success(response);
             }, function (response) {

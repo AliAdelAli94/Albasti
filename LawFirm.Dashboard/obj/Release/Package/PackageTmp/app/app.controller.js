@@ -10,30 +10,24 @@ angular
         '$rootScope',
         'signalR',
         '$filter',
-        function ($scope, $rootScope, signalR, $filter ) {
+        function ($scope, $rootScope, signalR, $filter) {
 
             $scope.users = [];
-            $scope.recentUser = {};
 
             signalR.userAssigned(function (name, cID, email) {
-                $scope.newUser = { Name: name, CID: cID, Email: email, Messages: [], EnableChat : true };
+                $scope.newUser = { Name: name, CID: cID, Email: email, Messages: [], EnableChat: true };
 
                 $scope.found = true;
-                for (var x = 0; x < $scope.users.length; x++)
-                {
-                    if($scope.users[x].CID == cID )
-                    {
+                for (var x = 0; x < $scope.users.length; x++) {
+                    if ($scope.users[x].CID == cID) {
                         $scope.found = false;
                     }
                 }
 
-                if ($scope.found == true)
-                {
+                if ($scope.found == true) {
                     $scope.users.push($scope.newUser);
                     $scope.$apply();
                 }
-
-                console.log(name + "          " + cID + "                 " + email);
 
             });
 
@@ -45,9 +39,17 @@ angular
                 signalR.takeThisUser(CID);
             }
 
-            $scope.RemoveUser = function (index,cID) {
+            $scope.RemoveUser = function (index, cID) {
 
-                $scope.users.splice(index, 1);
+                for (var i = 0 ; i < $scope.users.length ; i++) {
+                    if ($scope.users[i].CID == cID) {
+                        if ($scope.users[i].CID == $scope.recentUser.CID) {
+                            $scope.recentUser = {};
+                        }
+                        $scope.users.splice(i, 1);
+                        break;
+                    }
+                }
                 signalR.removeUser(cID);
             };
 
@@ -56,6 +58,9 @@ angular
 
                 for (var i = 0 ; i < $scope.users.length ; i++) {
                     if ($scope.users[i].CID == cid) {
+                        if ($scope.users[i].CID == $scope.recentUser.CID) {
+                            $scope.recentUser = {};
+                        }
                         $scope.users.splice(i, 1);
                         break;
                     }
@@ -64,11 +69,26 @@ angular
 
             });
 
+
+            signalR.removeThisUser(function (cid) {
+
+                for (var i = 0 ; i < $scope.users.length ; i++) {
+                    if ($scope.users[i].CID == cid) {
+                        if ($scope.users[i].CID == $scope.recentUser.CID) {
+                            $scope.recentUser = {};
+                            $scope.$apply();
+                        }
+                        $scope.users.splice(i, 1);
+                        break;
+                    }
+                }
+                $scope.$apply();
+            });
+
+
             signalR.recieveMessage(function (msg, fromCID) {
 
                 $scope.package = { Msg: msg, User: fromCID };
-
-                console.log("new Message : ", $scope.package);
 
                 for (var i = 0 ; i < $scope.users.length ; i++) {
                     if ($scope.users[i].CID == $scope.package.User) {
@@ -97,7 +117,9 @@ angular
         '$timeout',
         '$scope',
         '$window',
-        function ($timeout, $scope, $window) {
+        '$state',
+        'dashService',
+        function ($timeout, $scope, $window, $state, dashService) {
 
             $scope.user_data = {
                 name: "Lue Feest",
@@ -125,39 +147,7 @@ angular
                     }
                 ],
                 messages: [
-                    {
-                        "title": "Reiciendis aut rerum.",
-                        "content": "In adipisci amet nostrum natus recusandae animi fugit consequatur.",
-                        "sender": "Korbin Doyle",
-                        "color": "cyan"
-                    },
-                    {
-                        "title": "Tenetur commodi animi.",
-                        "content": "Voluptate aut quis rerum laborum expedita qui eaque doloremque a corporis.",
-                        "sender": "Alia Walter",
-                        "color": "indigo",
-                        "avatar": "assets/img/avatars/avatar_07_tn.png"
-                    },
-                    {
-                        "title": "At quia quis.",
-                        "content": "Fugiat rerum aperiam et deleniti fugiat corporis incidunt aut enim et distinctio.",
-                        "sender": "William Block",
-                        "color": "light-green"
-                    },
-                    {
-                        "title": "Incidunt sunt.",
-                        "content": "Accusamus necessitatibus officia porro nisi consectetur dolorem.",
-                        "sender": "Delilah Littel",
-                        "color": "blue",
-                        "avatar": "assets/img/avatars/avatar_02_tn.png"
-                    },
-                    {
-                        "title": "Porro ut.",
-                        "content": "Est vitae magni eum expedita odit quisquam natus vel maiores.",
-                        "sender": "Amira Hagenes",
-                        "color": "amber",
-                        "avatar": "assets/img/avatars/avatar_09_tn.png"
-                    }
+                 
                 ]
             };
 
@@ -171,6 +161,15 @@ angular
                 }, 280)
             });
 
+
+            $scope.logout = function () {
+                var userID = sessionStorage.getItem("userID");
+                dashService.Logout(userID, function (response) {
+                    console.log(response);
+                    $state.go('login');
+                }, function () { })
+
+            };
 
         }
     ])
@@ -199,38 +198,10 @@ angular
             });
 
             // language switcher
-            $scope.langSwitcherModel = 'gb';
             var langData = $scope.langSwitcherOptions = [
-                { id: 1, title: 'English', value: 'gb' },
-                { id: 2, title: 'French', value: 'fr' },
-                { id: 3, title: 'Chinese', value: 'cn' },
-                { id: 4, title: 'Dutch', value: 'nl' },
-                { id: 5, title: 'Italian', value: 'it' },
-                { id: 6, title: 'Spanish', value: 'es' },
-                { id: 7, title: 'German', value: 'de' },
-                { id: 8, title: 'Polish', value: 'pl' }
+               
             ];
-            $scope.langSwitcherConfig = {
-                maxItems: 1,
-                render: {
-                    option: function (langData, escape) {
-                        return '<div class="option">' +
-                            '<i class="item-icon flag-' + escape(langData.value).toUpperCase() + '"></i>' +
-                            '<span>' + escape(langData.title) + '</span>' +
-                            '</div>';
-                    },
-                    item: function (langData, escape) {
-                        return '<div class="item"><i class="item-icon flag-' + escape(langData.value).toUpperCase() + '"></i></div>';
-                    }
-                },
-                valueField: 'value',
-                labelField: 'title',
-                searchField: 'title',
-                create: false,
-                onInitialize: function (selectize) {
-                    $('#lang_switcher').next().children('.selectize-input').find('input').attr('readonly', true);
-                }
-            };
+
 
             // menu entries
             $scope.sections = [
@@ -270,6 +241,4 @@ angular
             ]
 
         }
-    ])
-
-;
+    ]);

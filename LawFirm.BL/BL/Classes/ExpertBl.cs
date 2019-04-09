@@ -30,7 +30,7 @@ namespace LawFirm.BL
                     phone = ex.phone,
                     email = ex.email,
                     image = "http://devv.gearhostpreview.com/" + ex.image,
-                    // image = "http://localhost:20833" + ex.image,
+                     // image = "http://localhost:20833" + ex.image,
                     quote = ex.quote,
                     title = ex.title,
                     content1 = ex.content1,

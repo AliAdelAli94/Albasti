@@ -19,5 +19,8 @@ namespace LawFirm.BL
 
         int GetNumberOfOnlineUsers();
 
+        int Logout(string userID);
+
+
     }
 }
