@@ -74,7 +74,7 @@ namespace LawFirm.Webapi.Controllers
                 var mail = new MailMessage();
                 mail.To.Add(item.ToEmail);
                 mail.From = new MailAddress(item.Email);
-                mail.Subject = item.Subject + " - " + item.UserName + " - " + item.Phone;
+                mail.Subject = item.Subject + " - " + item.UserName + " - " + item.Phone + " - " + item.Email;
                 mail.IsBodyHtml = true;
                 string htmlBody;
                 htmlBody = item.Message;

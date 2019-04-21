@@ -10,9 +10,9 @@ app.run(function ($rootScope) {
 
 app.value('$', $);
 
-var consultationEmail = "albastiadvocates19@gmail.com";
+var consultationEmail = "info@albastiadvocates.com";
 
-var contactUsEmail = "albastiadvocates19@gmail.com";
+var contactUsEmail = "info@albastiadvocates.com";
 
 
 app.config(function ($stateProvider, $urlRouterProvider) {
